@@ -1,0 +1,1375 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/cart-craft-logo.png" />
+  <link rel="icon" type="image/png" href="assets/cart-craft-logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/cart-craft-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cart Craft Golf Cart Rentals — Experience luxury resort transportation, beachside cruisers, and family rental packages. Reserve your golf cart today." />
+  <meta name="theme-color" content="#173D32" />
+  <title>Cart Craft — Luxury Golf Cart Rentals | Resort &amp; Vacation Mobility</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="rentals.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER (Identical to Home 1, with Rentals page active) ===== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item nav-dropdown-parent">
+            <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" id="home-dropdown-btn">
+              Home
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu" aria-labelledby="home-dropdown-btn">
+              <a href="index.html" class="dropdown-item" role="menuitem">Home 1</a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
+          <li class="nav-item"><a href="rentals.html" class="nav-link nav-link--active">Rentals</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Service &amp; Parts</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR direction" title="Toggle direction">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h12M3 18h9"/><path d="M18 9l3 3-3 3"/>
+          </svg>
+        </button>
+        <a href="#rental-booking-widget" class="btn btn-primary btn-sm" id="header-book-btn">Book Now</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+      </a>
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="sales.html" class="mobile-nav-link">Sales</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link mobile-nav-link--active">Rentals</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Service &amp; Parts</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="#rental-booking-widget" class="btn btn-primary mobile-book-btn">Book Now</a>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="rental-main">
+
+    <!-- ============================================================
+         SECTION 1 — IMMERSIVE RENTAL HERO WITH FLOATING BOOKING WIDGET
+    ============================================================ -->
+    <section class="rental-hero" id="rental-hero" aria-label="Rental hero section">
+      <div class="rental-hero-bg" aria-hidden="true">
+        <img
+          src="assets/rentals-hero-luxury.jpg"
+          alt="Luxury Resort Golf Cart Rental Fleet"
+          class="rental-hero-bg-img"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="rental-hero-overlay"></div>
+      </div>
+      <div class="rental-hero-deco" aria-hidden="true">
+        <div class="rental-deco-glow"></div>
+      </div>
+
+      <div class="rental-container rental-hero-inner">
+        <div class="rental-hero-text">
+          <p class="rental-eyebrow rental-anim-up" style="--d:0.1s">
+            <span class="rental-eyebrow-dot"></span>
+            Luxury Resort &amp; Vacation Mobility
+          </p>
+          <h1 class="rental-hero-heading rental-anim-up" style="--d:0.25s">
+            Your Journey.<br />
+            <em class="rental-hero-heading-em">Your Ride. Your Way.</em>
+          </h1>
+          <p class="rental-hero-desc rental-anim-up" style="--d:0.4s">
+            Explore more, travel comfortably, and enjoy every moment with our premium golf cart rentals.
+          </p>
+          <div class="rental-hero-ctas rental-anim-up" style="--d:0.55s">
+            <a href="#rental-booking-widget" class="btn btn-primary btn-lg rental-hero-cta-primary" id="rental-hero-reserve-btn">
+              <span>Reserve Your Cart</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#rental-fleet" class="btn btn-ghost btn-lg rental-hero-cta-ghost" id="rental-hero-explore-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <span>Explore Fleet</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating Booking Widget -->
+        <div class="rental-booking-widget rental-anim-up" id="rental-booking-widget" style="--d:0.7s" aria-label="Golf cart reservation widget">
+          <div class="rental-widget-header">
+            <span class="rental-widget-title">Check Availability &amp; Reserve</span>
+            <span class="rental-widget-badge">Direct Doorstep Delivery</span>
+          </div>
+          <form class="rental-widget-form" id="rental-hero-form">
+            <div class="rental-widget-field">
+              <label for="widget-location" class="rental-widget-lbl">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Pickup Location
+              </label>
+              <select id="widget-location" class="rental-widget-select" required>
+                <option value="Resort Clubhouse &amp; Marina">Resort Clubhouse &amp; Marina</option>
+                <option value="Direct Villa / Hotel Delivery">Direct Villa / Hotel Delivery</option>
+                <option value="Beachside Cabana Hub">Beachside Cabana Hub</option>
+                <option value="Golf Pro Shop">Golf Pro Shop &amp; Course</option>
+                <option value="North Island Community">North Island Community</option>
+              </select>
+            </div>
+
+            <div class="rental-widget-field">
+              <label for="widget-pickup-date" class="rental-widget-lbl">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Pickup Date
+              </label>
+              <input type="date" id="widget-pickup-date" class="rental-widget-input" required />
+            </div>
+
+            <div class="rental-widget-field">
+              <label for="widget-return-date" class="rental-widget-lbl">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Return Date
+              </label>
+              <input type="date" id="widget-return-date" class="rental-widget-input" required />
+            </div>
+
+            <div class="rental-widget-field">
+              <label for="widget-passengers" class="rental-widget-lbl">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Passengers
+              </label>
+              <select id="widget-passengers" class="rental-widget-select" required>
+                <option value="4-Seater Cruiser (4 Passengers)">4-Seater Cruiser (Most Popular)</option>
+                <option value="2-Seater Fairway (2 Passengers)">2-Seater Fairway (2 Passengers)</option>
+                <option value="6-Seater Hospitality (6 Passengers)">6-Seater Hospitality (6 Passengers)</option>
+                <option value="Luxury Diamond LSV (4 Passengers)">Luxury Diamond LSV (4 Passengers)</option>
+                <option value="Custom Lifted Island (4 Passengers)">Custom Lifted Island (4 Passengers)</option>
+              </select>
+            </div>
+
+            <div class="rental-widget-action">
+              <button type="submit" class="btn btn-primary btn-lg rental-hero-cta-primary rental-btn--widget" id="widget-check-btn">
+                <span>Check Availability</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 2 — EXPLORE RENTAL EXPERIENCES (ASYMMETRIC LAYOUT)
+    ============================================================ -->
+    <section class="rental-section rental-experiences" id="rental-experiences" aria-labelledby="rental-exp-heading">
+      <div class="rental-container">
+        <div class="rental-section-header rental-reveal">
+          <p class="rental-label rental-label--center">Tailored Getaways</p>
+          <h2 class="rental-section-heading rental-section-heading--center" id="rental-exp-heading">
+            Explore Rental Experiences
+          </h2>
+          <p class="rental-section-sub">
+            From sunrise rounds on championship fairways to breezy beachside promenades, discover how our golf carts elevate every vacation moment.
+          </p>
+        </div>
+
+        <!-- Asymmetric Bento Grid: Top (Span 7 + Span 5) | Bottom (Span 4 + Span 4 + Span 4) -->
+        <div class="rental-exp-grid">
+
+          <!-- Experience 1: Resort & Villa Living (Featured Horizontal Card - Span 7) -->
+          <article class="rental-exp-card rental-exp-card--hsplit rental-reveal" style="--ri:0">
+            <div class="rental-exp-img-wrap">
+              <img
+                src="assets/sales-cat-luxury.jpg"
+                alt="Luxury 4-Seater Golf Cart at Private Resort Villa"
+                class="rental-exp-img"
+                loading="lazy"
+              />
+              <div class="rental-exp-overlay"></div>
+              <span class="rental-exp-price-badge">From $95/day</span>
+            </div>
+            <div class="rental-exp-content">
+              <div class="rental-exp-meta">
+                <span class="rental-exp-tag">Resort Living</span>
+                <span class="rental-exp-chip">4 Passengers</span>
+              </div>
+              <h3 class="rental-exp-title">Resort &amp; Villa Living</h3>
+              <p class="rental-exp-desc">
+                Glide effortlessly between private estate villas, infinity pools, and dining pavilions with whisper-quiet electric luxury. Purpose-built for private vacation retreats, clubhouse commutes, and scenic resort estates.
+              </p>
+              <ul class="rental-exp-inclusions" aria-label="Key Inclusions">
+                <li class="rental-exp-inclusion-item">
+                  <svg class="rental-exp-inc-icon" width="13" height="13" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Doorstep villa delivery &amp; white-glove handoff</span>
+                </li>
+                <li class="rental-exp-inclusion-item">
+                  <svg class="rental-exp-inc-icon" width="13" height="13" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>On-board insulated cooler &amp; dual USB chargers</span>
+                </li>
+                <li class="rental-exp-inclusion-item">
+                  <svg class="rental-exp-inc-icon" width="13" height="13" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Pre-charged 75 km range with digital battery telemetry</span>
+                </li>
+              </ul>
+              <div class="rental-exp-specs">
+                <span class="rental-exp-spec-pill">Whisper AC Motor</span>
+                <span class="rental-exp-spec-pill">Doorstep Delivery</span>
+                <span class="rental-exp-spec-pill">Quilted Leather</span>
+                <span class="rental-exp-spec-pill">24/7 Concierge</span>
+              </div>
+              <div class="rental-exp-footer">
+                <button class="rental-exp-btn" data-exp-title="Resort &amp; Villa Living" data-exp-img="assets/sales-cat-luxury.jpg" data-exp-desc="Perfect for expansive luxury resorts and gated vacation communities. Avoid waiting for shuttles and move freely between your villa, pools, and restaurants at your own leisure with dedicated doorstep delivery.">
+                  <span>Explore Experience</span>
+                  <span class="rental-exp-btn-arrow">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 2: Beachside Coastal Escapes (Span 5) -->
+          <article class="rental-exp-card rental-reveal" style="--ri:1">
+            <div class="rental-exp-img-wrap">
+              <img
+                src="assets/sales-cat-street.jpg"
+                alt="Street-Legal Lifted Golf Cart on Coastal Boardwalk"
+                class="rental-exp-img"
+                loading="lazy"
+              />
+              <div class="rental-exp-overlay"></div>
+              <span class="rental-exp-price-badge">From $110/day</span>
+            </div>
+            <div class="rental-exp-content">
+              <div class="rental-exp-meta">
+                <span class="rental-exp-tag">Coastal Escape</span>
+                <span class="rental-exp-chip">Street Legal</span>
+              </div>
+              <h3 class="rental-exp-title">Beach &amp; Marina Cruises</h3>
+              <p class="rental-exp-desc">
+                Feel the ocean breeze along scenic beach boulevards with lifted chassis and street-legal LSV freedom.
+              </p>
+              <div class="rental-exp-specs">
+                <span class="rental-exp-spec-pill">Lifted All-Terrain</span>
+                <span class="rental-exp-spec-pill">Cargo Deck</span>
+              </div>
+              <div class="rental-exp-footer">
+                <button class="rental-exp-btn" data-exp-title="Beach &amp; Marina Cruises" data-exp-img="assets/sales-cat-street.jpg" data-exp-desc="Pack your beach towels, umbrellas, and coolers into rear flip-down cargo decks. Cruise down to the surf with effortless parking, panoramic coastal views, and full street-legal road approval.">
+                  <span>Explore Experience</span>
+                  <span class="rental-exp-btn-arrow">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 3: Championship Fairways (Span 4) -->
+          <article class="rental-exp-card rental-reveal" style="--ri:2">
+            <div class="rental-exp-img-wrap">
+              <img
+                src="assets/sales-cat-electric.jpg"
+                alt="Tournament Electric Golf Cart on Fairway"
+                class="rental-exp-img"
+                loading="lazy"
+              />
+              <div class="rental-exp-overlay"></div>
+              <span class="rental-exp-price-badge">From $85/day</span>
+            </div>
+            <div class="rental-exp-content">
+              <div class="rental-exp-meta">
+                <span class="rental-exp-tag">Pro Fairways</span>
+                <span class="rental-exp-chip">2-4 Seater</span>
+              </div>
+              <h3 class="rental-exp-title">Championship Fairways</h3>
+              <p class="rental-exp-desc">
+                Outfitted with dual bag straps, beverage coolers, and GPS turf-friendly suspension for tournament rounds.
+              </p>
+              <div class="rental-exp-specs">
+                <span class="rental-exp-spec-pill">Dual Bag Straps</span>
+                <span class="rental-exp-spec-pill">Turf Safe</span>
+              </div>
+              <div class="rental-exp-footer">
+                <button class="rental-exp-btn" data-exp-title="Championship Fairways" data-exp-img="assets/sales-cat-electric.jpg" data-exp-desc="Engineered specifically for the green. Features turf-friendly tires, dual club bag straps, ball washers, and USB phone charging ports for uninterrupted golf sessions.">
+                  <span>Explore Experience</span>
+                  <span class="rental-exp-btn-arrow">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 4: VIP & Group Shuttles (Span 4) -->
+          <article class="rental-exp-card rental-reveal" style="--ri:3">
+            <div class="rental-exp-img-wrap">
+              <img
+                src="assets/sales-cat-six-seater.jpg"
+                alt="6-Seater Luxury Limousine Golf Cart for Events"
+                class="rental-exp-img"
+                loading="lazy"
+              />
+              <div class="rental-exp-overlay"></div>
+              <span class="rental-exp-price-badge">From $145/day</span>
+            </div>
+            <div class="rental-exp-content">
+              <div class="rental-exp-meta">
+                <span class="rental-exp-tag">Group Leisure</span>
+                <span class="rental-exp-chip">6-Seater</span>
+              </div>
+              <h3 class="rental-exp-title">VIP &amp; Group Shuttles</h3>
+              <p class="rental-exp-desc">
+                Multi-row diamond leather seating for wedding parties, executive retreats, and family events.
+              </p>
+              <div class="rental-exp-specs">
+                <span class="rental-exp-spec-pill">6-Passenger Limo</span>
+                <span class="rental-exp-spec-pill">Extended Chassis</span>
+              </div>
+              <div class="rental-exp-footer">
+                <button class="rental-exp-btn" data-exp-title="VIP &amp; Group Shuttles" data-exp-img="assets/sales-cat-six-seater.jpg" data-exp-desc="Spacious 6-passenger extended configurations allow whole families and executive groups to travel together in air-conditioned sea breezes with total convenience and prestige.">
+                  <span>Explore Experience</span>
+                  <span class="rental-exp-btn-arrow">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 5: Twilight & Evening Touring (Span 4) -->
+          <article class="rental-exp-card rental-reveal" style="--ri:4">
+            <div class="rental-exp-img-wrap">
+              <img
+                src="assets/sales-cat-bespoke.jpg"
+                alt="Noir Edition Luxury Golf Cart with Glowing LED Lights"
+                class="rental-exp-img"
+                loading="lazy"
+              />
+              <div class="rental-exp-overlay"></div>
+              <span class="rental-exp-price-badge">From $125/day</span>
+            </div>
+            <div class="rental-exp-content">
+              <div class="rental-exp-meta">
+                <span class="rental-exp-tag">Evening Glow</span>
+                <span class="rental-exp-chip">Bespoke Noir</span>
+              </div>
+              <h3 class="rental-exp-title">Twilight &amp; Evening Tours</h3>
+              <p class="rental-exp-desc">
+                Projector LED headlamps, ambient cabin glow, and marine Bluetooth sound for evening promenade drives.
+              </p>
+              <div class="rental-exp-specs">
+                <span class="rental-exp-spec-pill">LED Underglow</span>
+                <span class="rental-exp-spec-pill">Marine Audio</span>
+              </div>
+              <div class="rental-exp-footer">
+                <button class="rental-exp-btn" data-exp-title="Twilight &amp; Evening Tours" data-exp-img="assets/sales-cat-bespoke.jpg" data-exp-desc="Experience the resort community at dusk. Outfitted with luminous LED projector headlights, warm undercarriage glow, and a high-fidelity marine sound system.">
+                  <span>Explore Experience</span>
+                  <span class="rental-exp-btn-arrow">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 3 — CHOOSE YOUR RIDE (RENTAL FLEET SHOWCASE)
+    ============================================================ -->
+    <section class="rental-section rental-fleet" id="rental-fleet" aria-labelledby="rental-fleet-heading">
+      <div class="rental-container">
+        <div class="rental-section-header rental-reveal">
+          <p class="rental-label rental-label--center">Our Rental Fleet</p>
+          <h2 class="rental-section-heading rental-section-heading--center" id="rental-fleet-heading">
+            Choose Your Ride
+          </h2>
+          <p class="rental-section-sub">
+            Every vehicle in our rental fleet is meticulously maintained, fully charged, and delivered directly to your doorstep.
+          </p>
+        </div>
+
+        <!-- Staggered Fleet Carousel Cards -->
+        <div class="rental-fleet-grid">
+
+          <!-- Fleet 1: 2-Seater -->
+          <div class="rental-fleet-card rental-reveal" style="--ri:0" id="fleet-2-seater">
+            <div class="rental-fleet-img-wrap">
+              <img src="assets/rental-fleet-2seater.jpg" alt="2-Seater Fairway Cruiser" class="rental-fleet-img" loading="lazy" />
+              <span class="rental-fleet-cap-badge">2 Passengers</span>
+              <span class="rental-fleet-price-tag">From <strong>$85</strong>/day</span>
+            </div>
+            <div class="rental-fleet-body">
+              <div class="rental-fleet-cat-wrap">
+                <span class="rental-fleet-cat">Fairway Performance</span>
+                <span class="rental-fleet-model-code">AUR-02 PRO</span>
+              </div>
+              <h3 class="rental-fleet-title">2-Seater Fairway Cruiser</h3>
+              <div class="rental-fleet-features">
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dual Leather Golf Bag Mounts</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fold-Down Tinted Windshield</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> USB-C Fast Charging Hub</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Turf-Friendly Soft Tread Tires</span>
+              </div>
+              <div class="rental-fleet-footer">
+                <div class="rental-rate-wrap">
+                  <span class="rental-rate-lbl">Rental Starting</span>
+                  <span class="rental-rate-val">$85 <small>/ day</small></span>
+                </div>
+                <button class="btn btn-primary rental-fleet-btn" data-reserve-cart="2-Seater Fairway Cruiser">
+                  <span>Reserve Cart</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 2: 4-Seater -->
+          <div class="rental-fleet-card rental-reveal" style="--ri:1" id="fleet-4-seater">
+            <div class="rental-fleet-img-wrap">
+              <img src="assets/sales-cat-four-seater.jpg" alt="4-Seater Resort Cruiser" class="rental-fleet-img" loading="lazy" />
+              <span class="rental-fleet-cap-badge rental-fleet-cap-badge--popular">★ Most Popular &bull; 4 Pass</span>
+              <span class="rental-fleet-price-tag">From <strong>$110</strong>/day</span>
+            </div>
+            <div class="rental-fleet-body">
+              <div class="rental-fleet-cat-wrap">
+                <span class="rental-fleet-cat">Family Favorite</span>
+                <span class="rental-fleet-model-code">AUR-04 RESORT</span>
+              </div>
+              <h3 class="rental-fleet-title">4-Seater Resort Cruiser</h3>
+              <div class="rental-fleet-features">
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rear Flip-Down Cargo Bed</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Built-in Insulated Cooler</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Full Projector LED Headlights</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Diamond-Quilted Leather Seats</span>
+              </div>
+              <div class="rental-fleet-footer">
+                <div class="rental-rate-wrap">
+                  <span class="rental-rate-lbl">Rental Starting</span>
+                  <span class="rental-rate-val">$110 <small>/ day</small></span>
+                </div>
+                <button class="btn btn-primary rental-fleet-btn" data-reserve-cart="4-Seater Resort Cruiser">
+                  <span>Reserve Cart</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 3: 6-Seater -->
+          <div class="rental-fleet-card rental-reveal" style="--ri:2" id="fleet-6-seater">
+            <div class="rental-fleet-img-wrap">
+              <img src="assets/sales-cat-six-seater.jpg" alt="6-Seater Hospitality Limousine" class="rental-fleet-img" loading="lazy" />
+              <span class="rental-fleet-cap-badge">6 Passengers</span>
+              <span class="rental-fleet-price-tag">From <strong>$165</strong>/day</span>
+            </div>
+            <div class="rental-fleet-body">
+              <div class="rental-fleet-cat-wrap">
+                <span class="rental-fleet-cat">VIP &amp; Group Leisure</span>
+                <span class="rental-fleet-model-code">AUR-06 LIMO</span>
+              </div>
+              <h3 class="rental-fleet-title">6-Seater Hospitality Limo</h3>
+              <div class="rental-fleet-features">
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dual Forward-Facing Rows</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Extended UV Sun Canopy</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High-Capacity Lithium Pack</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Independent Smooth Coil Springs</span>
+              </div>
+              <div class="rental-fleet-footer">
+                <div class="rental-rate-wrap">
+                  <span class="rental-rate-lbl">Rental Starting</span>
+                  <span class="rental-rate-val">$165 <small>/ day</small></span>
+                </div>
+                <button class="btn btn-primary rental-fleet-btn" data-reserve-cart="6-Seater Hospitality Limousine">
+                  <span>Reserve Cart</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 4: Luxury Diamond Edition -->
+          <div class="rental-fleet-card rental-reveal" style="--ri:3" id="fleet-luxury">
+            <div class="rental-fleet-img-wrap">
+              <img src="assets/sales-cat-luxury.jpg" alt="Luxury Diamond Edition LSV" class="rental-fleet-img" loading="lazy" />
+              <span class="rental-fleet-cap-badge">DOT LSV &bull; 4 Pass</span>
+              <span class="rental-fleet-price-tag">From <strong>$195</strong>/day</span>
+            </div>
+            <div class="rental-fleet-body">
+              <div class="rental-fleet-cat-wrap">
+                <span class="rental-fleet-cat">Bespoke Elegance</span>
+                <span class="rental-fleet-model-code">AUR-DIAMOND</span>
+              </div>
+              <h3 class="rental-fleet-title">Luxury Diamond Edition</h3>
+              <div class="rental-fleet-features">
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Diamond Italian Marine Leather</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Wet Sounds Bluetooth Bar</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> DOT Street-Legal Package</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24K Brushed Gold Accents</span>
+              </div>
+              <div class="rental-fleet-footer">
+                <div class="rental-rate-wrap">
+                  <span class="rental-rate-lbl">Rental Starting</span>
+                  <span class="rental-rate-val">$195 <small>/ day</small></span>
+                </div>
+                <button class="btn btn-primary rental-fleet-btn" data-reserve-cart="Luxury Diamond Edition LSV">
+                  <span>Reserve Cart</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 5: Custom Lifted -->
+          <div class="rental-fleet-card rental-reveal" style="--ri:4" id="fleet-custom">
+            <div class="rental-fleet-img-wrap">
+              <img src="assets/sales-cat-street.jpg" alt="Custom Lifted Island Buggy" class="rental-fleet-img" loading="lazy" />
+              <span class="rental-fleet-cap-badge">Lifted &bull; 4 Pass</span>
+              <span class="rental-fleet-price-tag">From <strong>$145</strong>/day</span>
+            </div>
+            <div class="rental-fleet-body">
+              <div class="rental-fleet-cat-wrap">
+                <span class="rental-fleet-cat">All-Terrain Coastal</span>
+                <span class="rental-fleet-model-code">AUR-ISLAND</span>
+              </div>
+              <h3 class="rental-fleet-title">Custom Lifted Island Buggy</h3>
+              <div class="rental-fleet-features">
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 6" Heavy-Duty Suspension Lift</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 23" All-Terrain Rugged Tires</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Roof-Mounted LED Safari Lightbar</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Heavy-Duty Brush Guard &amp; Steps</span>
+              </div>
+              <div class="rental-fleet-footer">
+                <div class="rental-rate-wrap">
+                  <span class="rental-rate-lbl">Rental Starting</span>
+                  <span class="rental-rate-val">$145 <small>/ day</small></span>
+                </div>
+                <button class="btn btn-primary rental-fleet-btn" data-reserve-cart="Custom Lifted Island Buggy">
+                  <span>Reserve Cart</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 6: Utility & Luggage Hauler -->
+          <div class="rental-fleet-card rental-reveal" style="--ri:5" id="fleet-utility">
+            <div class="rental-fleet-img-wrap">
+              <img src="assets/sales-cat-utility.jpg" alt="Utility & Luggage Hauler" class="rental-fleet-img" loading="lazy" />
+              <span class="rental-fleet-cap-badge">2 Pass + Flatbed</span>
+              <span class="rental-fleet-price-tag">From <strong>$120</strong>/day</span>
+            </div>
+            <div class="rental-fleet-body">
+              <div class="rental-fleet-cat-wrap">
+                <span class="rental-fleet-cat">Estate &amp; Events</span>
+                <span class="rental-fleet-model-code">AUR-HAULER</span>
+              </div>
+              <h3 class="rental-fleet-title">Utility &amp; Luggage Hauler</h3>
+              <div class="rental-fleet-features">
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Aluminum Drop-Tail Flatbed</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 800 lb Cargo Payload Capacity</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Heavy-Duty 2" Hitch Receiver</span>
+                <span class="rental-fleet-feat"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High-Torque AC Electric Motor</span>
+              </div>
+              <div class="rental-fleet-footer">
+                <div class="rental-rate-wrap">
+                  <span class="rental-rate-lbl">Rental Starting</span>
+                  <span class="rental-rate-val">$120 <small>/ day</small></span>
+                </div>
+                <button class="btn btn-primary rental-fleet-btn" data-reserve-cart="Utility &amp; Luggage Hauler">
+                  <span>Reserve Cart</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 4 — RENTAL PACKAGES & EXPERIENCES
+    ============================================================ -->
+    <section class="rental-section rental-packages" id="rental-packages" aria-labelledby="rental-pkg-heading">
+      <div class="rental-container">
+        <div class="rental-section-header rental-reveal">
+          <p class="rental-label rental-label--center">Flexible Durations</p>
+          <h2 class="rental-section-heading rental-section-heading--center" id="rental-pkg-heading">
+            Rental Packages &amp; Experiences
+          </h2>
+          <p class="rental-section-sub">
+            Tailored packages designed around your vacation rhythm — from an afternoon coastal escape to multi-week estate stays.
+          </p>
+        </div>
+
+        <div class="rental-packages-grid">
+
+          <!-- Package 1: Hourly Escape -->
+          <div class="rental-pkg-card rental-reveal" style="--ri:0">
+            <div class="rental-pkg-top">
+              <div class="rental-pkg-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <span class="rental-pkg-tier-badge">Quick Escape</span>
+            </div>
+            <h3 class="rental-pkg-title">Hourly Escape</h3>
+            <div class="rental-pkg-duration-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>2 to 4 Hours</span>
+            </div>
+            <div class="rental-pkg-pricing">
+              <span class="rental-pkg-price-prefix">From</span>
+              <span class="rental-pkg-price-val">$45</span>
+              <span class="rental-pkg-price-unit">/ hour</span>
+            </div>
+            <p class="rental-pkg-desc">Ideal for afternoon beach runs, country club spectating, or trial neighborhood cruising.</p>
+            <div class="rental-pkg-divider"></div>
+            <ul class="rental-pkg-features" role="list">
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>100% Fully Charged Battery &amp; Telemetry</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Flexible 30-Min Return Grace Window</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Digital Scenic Navigation Map Access</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Instant Clubhouse or Marina Pickup</span>
+              </li>
+            </ul>
+            <button class="rental-btn rental-btn--outline rental-btn--full rental-pkg-btn" data-choose-package="Hourly Escape">
+              <span>Choose Package</span>
+              <span class="rental-pkg-btn-arrow" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </button>
+          </div>
+
+          <!-- Package 2: Full-Day Adventure -->
+          <div class="rental-pkg-card rental-reveal" style="--ri:1">
+            <div class="rental-pkg-top">
+              <div class="rental-pkg-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="5"/>
+                  <line x1="12" y1="1" x2="12" y2="3"/>
+                  <line x1="12" y1="21" x2="12" y2="23"/>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                  <line x1="1" y1="12" x2="3" y2="12"/>
+                  <line x1="21" y1="12" x2="23" y2="12"/>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+              </div>
+              <span class="rental-pkg-tier-badge">Day Cruise</span>
+            </div>
+            <h3 class="rental-pkg-title">Full-Day Adventure</h3>
+            <div class="rental-pkg-duration-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Up to 24 Hours</span>
+            </div>
+            <div class="rental-pkg-pricing">
+              <span class="rental-pkg-price-prefix">From</span>
+              <span class="rental-pkg-price-val">$135</span>
+              <span class="rental-pkg-price-unit">/ day</span>
+            </div>
+            <p class="rental-pkg-desc">Total freedom from morning coffee runs to late-night dinners with dedicated villa delivery.</p>
+            <div class="rental-pkg-divider"></div>
+            <ul class="rental-pkg-features" role="list">
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Sunrise to Sunset Unlimited Range</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Free Resort &amp; Villa Doorstep Delivery</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Smart Plug-in Fast Overnight Charger</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>24/7 Priority Roadside Assistance</span>
+              </li>
+            </ul>
+            <button class="rental-btn rental-btn--outline rental-btn--full rental-pkg-btn" data-choose-package="Full-Day Adventure">
+              <span>Choose Package</span>
+              <span class="rental-pkg-btn-arrow" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </button>
+          </div>
+
+          <!-- Package 3: Weekend Getaway (Featured Highlight) -->
+          <div class="rental-pkg-card rental-pkg-card--featured rental-reveal" style="--ri:2">
+            <div class="rental-pkg-ribbon"><span class="rental-pkg-ribbon-sparkle">✦</span> Most Popular • Concierge Pick</div>
+            <div class="rental-pkg-top">
+              <div class="rental-pkg-icon-box rental-pkg-icon-box--featured">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <span class="rental-pkg-tier-badge rental-pkg-tier-badge--featured">Vacation Favorite</span>
+            </div>
+            <h3 class="rental-pkg-title">Weekend Getaway</h3>
+            <div class="rental-pkg-duration-pill rental-pkg-duration-pill--featured">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Friday to Sunday (72 Hours)</span>
+            </div>
+            <div class="rental-pkg-pricing">
+              <span class="rental-pkg-price-prefix">From</span>
+              <span class="rental-pkg-price-val rental-pkg-price-val--featured">$295</span>
+              <span class="rental-pkg-price-unit">/ weekend</span>
+            </div>
+            <p class="rental-pkg-desc">Our flagship vacation tier. Delivered Friday afternoon and collected Monday morning with zero hassle.</p>
+            <div class="rental-pkg-divider"></div>
+            <ul class="rental-pkg-features" role="list">
+              <li>
+                <span class="rental-pkg-check-wrap rental-pkg-check-wrap--featured" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>White-Glove Doorstep Villa Delivery</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap rental-pkg-check-wrap--featured" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>High-Capacity Extended Lithium Battery</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap rental-pkg-check-wrap--featured" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Complimentary Insulated Beverage Pack</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap rental-pkg-check-wrap--featured" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Direct WhatsApp Dedicated Concierge</span>
+              </li>
+            </ul>
+            <button class="rental-btn rental-btn--primary rental-btn--full rental-pkg-btn rental-pkg-btn--featured" data-choose-package="Weekend Getaway">
+              <span>Choose Package</span>
+              <span class="rental-pkg-btn-arrow" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </button>
+          </div>
+
+          <!-- Package 4: Weekly Vacation Rental -->
+          <div class="rental-pkg-card rental-reveal" style="--ri:3">
+            <div class="rental-pkg-top">
+              <div class="rental-pkg-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                </svg>
+              </div>
+              <span class="rental-pkg-tier-badge">Extended Stay • Save 25%</span>
+            </div>
+            <h3 class="rental-pkg-title">Weekly Vacation</h3>
+            <div class="rental-pkg-duration-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>7+ Days Extended</span>
+            </div>
+            <div class="rental-pkg-pricing">
+              <span class="rental-pkg-price-prefix">From</span>
+              <span class="rental-pkg-price-val">$680</span>
+              <span class="rental-pkg-price-unit">/ 7 days</span>
+            </div>
+            <p class="rental-pkg-desc">Maximum convenience for holiday travelers and multi-family vacations with best value rates.</p>
+            <div class="rental-pkg-divider"></div>
+            <ul class="rental-pkg-features" role="list">
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Best Value Multi-Day Pricing Tier</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Mid-Week Detailing &amp; Technical Check</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Priority Cart Swap Guarantee on Request</span>
+              </li>
+              <li>
+                <span class="rental-pkg-check-wrap" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </span>
+                <span>Flexible Zero-Penalty Extension Option</span>
+              </li>
+            </ul>
+            <button class="rental-btn rental-btn--outline rental-btn--full rental-pkg-btn" data-choose-package="Weekly Vacation Rental">
+              <span>Choose Package</span>
+              <span class="rental-pkg-btn-arrow" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 5 — HOW YOUR RENTAL WORKS (TIMELINE & JOURNEY)
+    ============================================================ -->
+    <section class="rental-section rental-process" id="rental-process" aria-labelledby="rental-proc-heading">
+      <div class="rental-container">
+        <div class="rental-section-header rental-reveal">
+          <p class="rental-label rental-label--center">Effortless Experience</p>
+          <h2 class="rental-section-heading rental-section-heading--center" id="rental-proc-heading">
+            How Your Rental Works
+          </h2>
+          <p class="rental-section-sub">
+            From easy online selection to direct villa delivery in 4 effortless steps.
+          </p>
+        </div>
+
+        <div class="rental-process-layout">
+          <!-- Timeline Steps -->
+          <div class="rental-timeline">
+
+            <!-- Step 1 -->
+            <div class="rental-step rental-reveal" style="--ri:0">
+              <div class="rental-step-num-wrap">
+                <span class="rental-step-num">01</span>
+                <div class="rental-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="rental-step-content">
+                <h3 class="rental-step-title">Choose Your Golf Cart</h3>
+                <p class="rental-step-desc">Browse our fleet of 2, 4, or 6-seater cruisers, luxury diamond LSVs, or all-terrain lifted models based on your passenger and terrain needs.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="rental-step rental-reveal" style="--ri:1">
+              <div class="rental-step-num-wrap">
+                <span class="rental-step-num">02</span>
+                <div class="rental-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="rental-step-content">
+                <h3 class="rental-step-title">Select Your Dates</h3>
+                <p class="rental-step-desc">Pick your pickup and return dates, select hourly, daily, or weekly duration, and specify your preferred villa or clubhouse delivery location.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="rental-step rental-reveal" style="--ri:2">
+              <div class="rental-step-num-wrap">
+                <span class="rental-step-num">03</span>
+                <div class="rental-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="rental-step-content">
+                <h3 class="rental-step-title">Confirm Your Reservation</h3>
+                <p class="rental-step-desc">Lock in your cart with instant booking confirmation, transparent terms, zero hidden security charges, and flexible cancellation.</p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="rental-step rental-reveal" style="--ri:3">
+              <div class="rental-step-num-wrap">
+                <span class="rental-step-num">04</span>
+              </div>
+              <div class="rental-step-content">
+                <h3 class="rental-step-title">Enjoy Your Ride</h3>
+                <p class="rental-step-desc">We deliver your sparkling clean, fully charged golf cart with a quick walkthrough. Simply drive and return when finished!</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Supporting Luxury Golf Cart Dual Visual Composition -->
+          <div class="rental-process-visual rental-reveal" style="--ri:2">
+            <div class="rental-process-duo-stage">
+              
+              <!-- Primary Golf Cart Image (Top Asymmetric) -->
+              <div class="rental-process-card rental-process-card--primary">
+                <img
+                  src="assets/sales-hero-flagship.jpg"
+                  alt="Cart Craft Luxury Golf Cart Villa Delivery"
+                  class="rental-process-img"
+                  loading="lazy"
+                />
+                <div class="rental-process-card-overlay"></div>
+                <div class="rental-process-pill rental-process-pill--top">
+                  <span class="rental-process-pulse-dot"></span>
+                  <span>Doorstep Villa Delivery</span>
+                </div>
+              </div>
+
+              <!-- Secondary Golf Cart Image (Offset Floating Accent) -->
+              <div class="rental-process-card rental-process-card--secondary">
+                <img
+                  src="assets/detail-cart-studio.jpg"
+                  alt="Handcrafted Diamond Leather Golf Cart Interior"
+                  class="rental-process-img"
+                  loading="lazy"
+                />
+                <div class="rental-process-card-overlay"></div>
+                <div class="rental-process-pill rental-process-pill--bottom">
+                  <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>100% Inspected &amp; Fully Charged</span>
+                </div>
+              </div>
+
+              <!-- Ambient Glow Behind Cards -->
+              <div class="rental-process-ambient-glow" aria-hidden="true"></div>
+            </div>
+
+            <!-- Sleek Action Wrap -->
+            <div class="rental-process-cta-wrap">
+              <a href="#rental-booking-widget" class="rental-btn rental-btn--primary rental-process-btn" id="process-start-btn">
+                <span>Start Your Booking</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <p class="rental-process-guarantee">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Zero Hidden Fees • Guaranteed Model Availability</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 6 — IMMERSIVE CTA EXPERIENCE (COMPACT & PREMIUM)
+    ============================================================ -->
+    <section class="rental-section rental-cta-section" id="rental-cta" aria-labelledby="rental-cta-heading">
+      <div class="rental-container">
+        <div class="rental-cta-card rental-cta-card--compact rental-reveal">
+          <div class="rental-cta-bg" aria-hidden="true">
+            <img
+              src="assets/rentals-hero-luxury.jpg"
+              alt="Cart Craft Luxury Golf Cart Experience"
+              class="rental-cta-bg-img"
+              loading="lazy"
+            />
+            <div class="rental-cta-overlay"></div>
+          </div>
+          <div class="rental-cta-deco" aria-hidden="true">
+            <div class="rental-cta-ring rental-cta-ring--1"></div>
+            <div class="rental-cta-ring rental-cta-ring--2"></div>
+          </div>
+          <div class="rental-cta-glass">
+            <p class="rental-cta-eyebrow">
+              <span class="rental-cta-line"></span>
+              Begin Your Experience
+              <span class="rental-cta-line"></span>
+            </p>
+            <h2 class="rental-cta-heading" id="rental-cta-heading">
+              Your Vacation Ride Awaits
+            </h2>
+            <p class="rental-cta-desc">
+              Experience seamless resort mobility with bespoke luxury golf carts delivered directly to your doorstep.
+            </p>
+            <div class="rental-cta-badges" aria-label="Trust highlights">
+              <span class="rental-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Direct Villa Delivery
+              </span>
+              <span class="rental-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                100% Fully Charged
+              </span>
+              <span class="rental-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                24/7 Concierge Support
+              </span>
+            </div>
+            <div class="rental-cta-actions">
+              <a href="#rental-booking-widget" class="rental-btn rental-btn--cta rental-cta-btn-primary" id="cta-book-ride-btn">
+                <span>Book Your Ride</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#rental-experiences" class="rental-btn rental-btn--ghost-light rental-cta-btn-secondary" id="cta-contact-team-btn">
+                <span>Explore Fleet</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand" aria-label="Cart Craft Home">
+            <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+            <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+          </a>
+          <p class="footer-brand-desc">Premium golf carts for modern leisure, communities and everyday journeys.</p>
+          <div class="footer-badges">
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Certified Quality
+            </span>
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Since 1988
+            </span>
+          </div>
+          <span class="footer-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Your City, Country
+          </span>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Services</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="sales.html" class="footer-link">Sales</a></li>
+            <li><a href="rentals.html" class="footer-link">Rentals</a></li>
+            <li><a href="services.html" class="footer-link">Servicing</a></li>
+            <li><a href="#" class="footer-link">Customization</a></li>
+            <li><a href="#" class="footer-link">Parts &amp; Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Explore</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">Our Models</a></li>
+            <li><a href="#" class="footer-link">Testimonials</a></li>
+            <li><a href="#" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Our Story</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Press</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Address &amp; Contact</h3>
+          <ul class="footer-contact" role="list">
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="footer-text">100 Luxury Drive,<br>Your City, Country</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@cartcraft.com" class="footer-link">hello@cartcraft.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.71 8.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91"/></svg>
+              <a href="tel:+10000000000" class="footer-link">+1 000 000 0000</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="footer-text">Mon &ndash; Sat: 9AM &ndash; 6PM</span>
+            </li>
+          </ul>
+          <div class="footer-socials-inline" aria-label="Social media links">
+            <a href="#" class="social-icon" aria-label="Instagram" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Cart Craft. All rights reserved.</p>
+        <nav class="footer-legal-links" aria-label="Legal links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       INTERACTIVE MODAL 1: RESERVATION BOOKING MODAL
+  ============================================================ -->
+  <div class="rental-modal" id="reservation-modal" role="dialog" aria-modal="true" aria-labelledby="reserve-modal-title">
+    <div class="rental-modal-backdrop" id="reserve-modal-backdrop"></div>
+    <div class="rental-modal-container">
+      <button class="rental-modal-close" id="reserve-modal-close" aria-label="Close reservation modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="rental-modal-header">
+        <span class="rental-modal-tag">Cart Craft Reservation Concierge</span>
+        <h3 class="rental-modal-title" id="reserve-modal-title">Complete Your Reservation</h3>
+        <p class="rental-modal-sub">Confirm your vehicle, select your dates, and we'll deliver your ready-to-drive cart directly to your villa or clubhouse.</p>
+      </div>
+
+      <!-- Booking Summary Strip -->
+      <div class="rental-modal-summary" id="modal-summary-strip">
+        <div class="rental-summary-item">
+          <span class="rental-sum-k">Vehicle</span>
+          <span class="rental-sum-v" id="sum-vehicle">4-Seater Resort Cruiser</span>
+        </div>
+        <div class="rental-summary-item">
+          <span class="rental-sum-k">Dates</span>
+          <span class="rental-sum-v" id="sum-dates">Select Dates</span>
+        </div>
+        <div class="rental-summary-item">
+          <span class="rental-sum-k">Location</span>
+          <span class="rental-sum-v" id="sum-location">Resort Clubhouse</span>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="rental-booking-form" id="rental-booking-form">
+        <div class="rental-form-grid">
+          <div class="rental-form-field">
+            <label for="res-vehicle" class="rental-form-label">Golf Cart Model *</label>
+            <select id="res-vehicle" class="rental-form-select" required>
+              <option value="4-Seater Resort Cruiser">4-Seater Resort Cruiser (Most Popular)</option>
+              <option value="2-Seater Fairway Cruiser">2-Seater Fairway Cruiser</option>
+              <option value="6-Seater Hospitality Limousine">6-Seater Hospitality Limousine</option>
+              <option value="Luxury Diamond Edition LSV">Luxury Diamond Edition LSV</option>
+              <option value="Custom Lifted Island Buggy">Custom Lifted Island Buggy</option>
+              <option value="Utility &amp; Luggage Hauler">Utility &amp; Luggage Hauler</option>
+            </select>
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-package" class="rental-form-label">Rental Package / Duration *</label>
+            <select id="res-package" class="rental-form-select" required>
+              <option value="Standard Daily Rental">Standard Daily Rental</option>
+              <option value="Hourly Escape (2-4 Hours)">Hourly Escape (2-4 Hours)</option>
+              <option value="Full-Day Adventure (24 Hours)">Full-Day Adventure (24 Hours)</option>
+              <option value="Weekend Getaway (72 Hours)">Weekend Getaway (72 Hours)</option>
+              <option value="Weekly Vacation Rental (7+ Days)">Weekly Vacation Rental (7+ Days)</option>
+            </select>
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-pickup-date" class="rental-form-label">Pickup Date *</label>
+            <input type="date" id="res-pickup-date" class="rental-form-input" required />
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-return-date" class="rental-form-label">Return Date *</label>
+            <input type="date" id="res-return-date" class="rental-form-input" required />
+          </div>
+
+          <div class="rental-form-field rental-form-field--full">
+            <label for="res-location" class="rental-form-label">Delivery / Pickup Location *</label>
+            <input type="text" id="res-location" class="rental-form-input" placeholder="e.g. Villa 42, Ocean Crest Resort or Marina Slip #18" required />
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-name" class="rental-form-label">Guest Full Name *</label>
+            <input type="text" id="res-name" class="rental-form-input" placeholder="Alexander Vance" required />
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-email" class="rental-form-label">Email Address *</label>
+            <input type="email" id="res-email" class="rental-form-input" placeholder="alexander@example.com" required />
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-phone" class="rental-form-label">Mobile Phone Number *</label>
+            <input type="tel" id="res-phone" class="rental-form-input" placeholder="+1 (555) 019-2834" required />
+          </div>
+
+          <div class="rental-form-field">
+            <label for="res-passengers" class="rental-form-label">Number of Passengers</label>
+            <select id="res-passengers" class="rental-form-select">
+              <option value="2 Passengers">2 Passengers</option>
+              <option value="4 Passengers" selected>4 Passengers</option>
+              <option value="6 Passengers">6 Passengers</option>
+            </select>
+          </div>
+
+          <div class="rental-form-field rental-form-field--full">
+            <label for="res-requests" class="rental-form-label">Special Requests (Optional)</label>
+            <textarea id="res-requests" class="rental-form-textarea" rows="2" placeholder="Tell us if you need golf bag attachments, baby seat compatibility, extra cooler pack..."></textarea>
+          </div>
+        </div>
+
+        <div class="rental-form-footer">
+          <button type="submit" class="rental-btn rental-btn--primary rental-btn--full">Confirm Reservation Hold</button>
+          <p class="rental-form-privacy">Zero deposit required to check availability. Complimentary cancellation up to 24 hours prior to delivery.</p>
+        </div>
+      </form>
+
+      <!-- Success Screen -->
+      <div class="rental-reserve-success" id="rental-reserve-success">
+        <div class="rental-success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h4>Reservation Confirmed!</h4>
+        <div class="rental-ref-box">
+          <span class="rental-ref-lbl">Booking Reference Code</span>
+          <span class="rental-ref-code" id="booking-ref-code">AUR-RENT-84920</span>
+        </div>
+        <p>Your golf cart has been reserved and queued for direct delivery. We have dispatched a confirmation receipt with full rental details and your concierge contact.</p>
+        <button class="rental-btn rental-btn--outline" id="reserve-success-close">Return to Rentals</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       INTERACTIVE MODAL 2: EXPLORE EXPERIENCE MODAL
+  ============================================================ -->
+  <div class="rental-modal" id="experience-modal" role="dialog" aria-modal="true" aria-labelledby="exp-modal-title">
+    <div class="rental-modal-backdrop" id="exp-modal-backdrop"></div>
+    <div class="rental-modal-container rental-modal-container--large">
+      <button class="rental-modal-close" id="exp-modal-close" aria-label="Close experience modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="rental-exp-modal-layout">
+        <div class="rental-exp-modal-media">
+          <img id="exp-modal-img" src="" alt="Rental experience" class="rental-exp-modal-img" />
+          <div class="rental-exp-modal-badge" id="exp-modal-tag">Curated Experience</div>
+        </div>
+        <div class="rental-exp-modal-content">
+          <span class="rental-modal-tag">Vacation Highlight</span>
+          <h3 class="rental-modal-title" id="exp-modal-title">Resort &amp; Vacation Rides</h3>
+          <p class="rental-modal-sub" id="exp-modal-desc"></p>
+          <div class="rental-exp-highlights">
+            <h4 class="rental-exp-high-title">Recommended Package Features</h4>
+            <ul class="rental-exp-high-list" role="list">
+              <li><span class="rental-check">✓</span> <strong>Free Doorstep Drop-off</strong> — Delivered straight to your resort villa or marina</li>
+              <li><span class="rental-check">✓</span> <strong>Full Charge Ready</strong> — High-density lithium batteries offering 40+ miles of range</li>
+              <li><span class="rental-check">✓</span> <strong>Open-Air Cruising</strong> — Safe, comfortable, and scenic travel for the whole family</li>
+            </ul>
+          </div>
+          <button class="rental-btn rental-btn--primary rental-btn--full" id="exp-book-btn">Book This Experience</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="rentals.js"></script>
+</body>
+</html>

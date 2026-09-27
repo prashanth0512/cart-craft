@@ -1,0 +1,493 @@
+/* ============================================================
+   AURICART — 404 Error Page Stylesheet
+   404.css — Bespoke Styling Matching Reference Layout
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. RESET & BASE TOKENS
+   ------------------------------------------------------------ */
+:root {
+  --err-bg:              #1A070F;
+  --err-bg-subtle:       #241018;
+  --err-surface:         #34121E;
+  --err-text-title:      #F8F3E8;
+  --err-text-body:       #C9BEC0;
+  --err-text-muted:      #9E8E90;
+  --err-code-color:      #E1BD72;
+  --err-code-glow:       rgba(225, 189, 114, 0.22);
+  --err-btn-bg:          linear-gradient(135deg, #E1BD72 0%, #C9A45C 100%);
+  --err-btn-text:        #1A090E;
+  --err-btn-border:      rgba(201, 164, 92, 0.35);
+  --err-btn-hover:       rgba(225, 189, 114, 0.12);
+  --err-font-heading:    'Cormorant Garamond', Georgia, serif;
+  --err-font-serif:      'Cormorant Garamond', Georgia, serif;
+  --err-font-body:       'DM Sans', sans-serif;
+  --err-transition:      cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Light Theme (matches the exact natural aesthetic from reference image) */
+[data-theme="light"] {
+  --err-bg:              #F8F6F0;
+  --err-bg-subtle:       #FFFFFF;
+  --err-surface:         #F0ECE1;
+  --err-text-title:      #122018;
+  --err-text-body:       #4A5B52;
+  --err-text-muted:      #788A80;
+  --err-code-color:      #173D32;
+  --err-code-glow:       rgba(23, 61, 50, 0.08);
+  --err-btn-bg:          #173D32;
+  --err-btn-text:        #FFFFFF;
+  --err-btn-border:      rgba(23, 61, 50, 0.24);
+  --err-btn-hover:       rgba(23, 61, 50, 0.06);
+}
+
+/* ------------------------------------------------------------
+   2. BODY & WRAPPER
+   ------------------------------------------------------------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.err-body {
+  background-color: var(--err-bg);
+  color: var(--err-text-body);
+  font-family: var(--err-font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ------------------------------------------------------------
+   3. MINIMAL HEADER BAR (Top-Left Logo, Top-Right Controls)
+   ------------------------------------------------------------ */
+.err-header {
+  position: relative;
+  z-index: 10;
+  padding: 1.75rem 2.5rem 1rem;
+}
+
+.err-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Link */
+.err-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: var(--err-text-title);
+  transition: transform 0.25s ease;
+}
+
+.err-brand:hover {
+  transform: translateY(-1px);
+}
+
+.err-brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--err-surface);
+  border: 1px solid var(--err-btn-border);
+  color: var(--err-code-color);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.err-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.err-brand-name {
+  font-family: var(--err-font-heading);
+  font-size: 1.22rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--err-text-title);
+  line-height: 1.15;
+}
+
+.err-brand-tag {
+  font-family: var(--err-font-body);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--err-code-color);
+}
+
+/* Controls: RTL and Theme Toggle */
+.err-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.err-pill-btn {
+  background: transparent;
+  border: 1.5px solid var(--err-btn-border);
+  color: var(--err-text-title);
+  font-family: var(--err-font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s var(--err-transition);
+}
+
+.err-pill-btn:hover {
+  background: var(--err-btn-hover);
+  border-color: var(--err-code-color);
+  transform: translateY(-1px);
+}
+
+.err-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid var(--err-btn-border);
+  color: var(--err-text-title);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s var(--err-transition);
+}
+
+.err-circle-btn:hover {
+  background: var(--err-btn-hover);
+  border-color: var(--err-code-color);
+  transform: translateY(-1px);
+}
+
+/* Theme Icon Visibility */
+[data-theme="light"] .icon-sun {
+  display: none;
+}
+[data-theme="light"] .icon-moon {
+  display: block;
+}
+[data-theme="dark"] .icon-sun {
+  display: block;
+}
+[data-theme="dark"] .icon-moon {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   4. MAIN 404 CONTENT AREA
+   ------------------------------------------------------------ */
+.err-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.err-container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Decorative Background Silhouette */
+.err-deco-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.err-glow-orb {
+  width: 480px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, var(--err-code-glow) 0%, transparent 70%);
+  filter: blur(50px);
+}
+
+.err-cart-silhouette {
+  position: absolute;
+  width: 420px;
+  opacity: 0.04;
+  color: var(--err-text-title);
+  transform: translateY(20px);
+}
+
+[data-theme="dark"] .err-cart-silhouette {
+  opacity: 0.06;
+}
+
+/* ------------------------------------------------------------
+   5. MASSIVE 404 NUMBERS
+   ------------------------------------------------------------ */
+.err-code-wrap {
+  margin-bottom: 0.75rem;
+  line-height: 0.9;
+}
+
+.err-code {
+  font-family: var(--err-font-heading);
+  font-size: clamp(7.5rem, 16vw, 13rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--err-code-color);
+  line-height: 0.95;
+  user-select: none;
+  text-shadow: 0 12px 32px var(--err-code-glow);
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .err-code {
+  background: linear-gradient(180deg, #F8E8C2 0%, #E1BD72 50%, #C9A45C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------------------------------
+   6. HEADLINE & PARAGRAPH
+   ------------------------------------------------------------ */
+.err-heading {
+  font-family: var(--err-font-heading);
+  font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+  font-weight: 600;
+  color: var(--err-text-title);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 0.5rem auto 1.5rem;
+  max-width: 720px;
+}
+
+.err-description {
+  font-family: var(--err-font-body);
+  font-size: clamp(1.05rem, 1.8vw, 1.15rem);
+  color: var(--err-text-body);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto 2.75rem;
+}
+
+/* ------------------------------------------------------------
+   7. 3 PILL ACTION BUTTONS (Exact Match to Reference Screenshot)
+   ------------------------------------------------------------ */
+.err-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+  margin-bottom: 3rem;
+}
+
+.err-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--err-font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.92rem 2.15rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--err-transition);
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Button 1: Primary Dark/Gold Pill with Arrow */
+.err-btn--primary {
+  background: var(--err-btn-bg);
+  color: var(--err-btn-text);
+  border: 1.5px solid transparent;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.err-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.08);
+}
+
+.err-btn--primary:active {
+  transform: translateY(0);
+}
+
+.err-btn-arrow {
+  transition: transform 0.25s ease;
+}
+
+.err-btn--primary:hover .err-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Button 2 & 3: Secondary & Tertiary Outlined Pill Buttons */
+.err-btn--outline {
+  background: transparent;
+  border: 1.5px solid var(--err-btn-border);
+  color: var(--err-text-title);
+}
+
+.err-btn--outline:hover {
+  border-color: var(--err-code-color);
+  background: var(--err-btn-hover);
+  color: var(--err-code-color);
+  transform: translateY(-2px);
+}
+
+.err-btn--outline:active {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   8. QUICK DIRECT LINKS
+   ------------------------------------------------------------ */
+.err-quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--err-btn-border);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.err-quick-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--err-text-muted);
+}
+
+.err-quick-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.err-link {
+  color: var(--err-text-body);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.err-link:hover {
+  color: var(--err-code-color);
+  text-decoration: underline;
+}
+
+.err-dot {
+  color: var(--err-btn-border);
+  font-size: 0.8rem;
+}
+
+/* ------------------------------------------------------------
+   9. SUBTLE FOOTER
+   ------------------------------------------------------------ */
+.err-footer {
+  padding: 1.75rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.err-copy {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--err-text-muted);
+}
+
+/* ------------------------------------------------------------
+   10. RTL DIRECTIONAL SUPPORT
+   ------------------------------------------------------------ */
+[dir="rtl"] .err-btn--primary:hover .err-btn-arrow {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .err-btn-arrow {
+  transform: scaleX(-1);
+}
+
+/* ------------------------------------------------------------
+   11. RESPONSIVE BREAKPOINTS
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .err-header {
+    padding: 1.25rem 1.25rem 0.5rem;
+  }
+
+  .err-main {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .err-code {
+    font-size: clamp(6rem, 24vw, 8.5rem);
+  }
+
+  .err-heading {
+    font-size: 1.85rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .err-description {
+    font-size: 0.98rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .err-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.85rem;
+  }
+
+  .err-btn {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .err-quick-items {
+    font-size: 0.82rem;
+  }
+}

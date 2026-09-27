@@ -1,0 +1,1616 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/cart-craft-logo.png" />
+  <link rel="icon" type="image/png" href="assets/cart-craft-logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/cart-craft-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cart Craft Golf Cart Services & Parts — Factory-certified maintenance, lithium battery conversions, brake repairs, genuine OEM parts, and bespoke custom upgrades." />
+  <meta name="theme-color" content="#173D32" />
+  <title>Cart Craft — Complete Golf Cart Services &amp; Genuine Parts | Maintenance &amp; Upgrades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER (Identical to Home 1, with Service & Parts active) ===== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item nav-dropdown-parent">
+            <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" id="home-dropdown-btn">
+              Home
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu" aria-labelledby="home-dropdown-btn">
+              <a href="index.html" class="dropdown-item" role="menuitem">Home 1</a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
+          <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link nav-link--active">Service &amp; Parts</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR direction" title="Toggle direction">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h12M3 18h9"/><path d="M18 9l3 3-3 3"/>
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-sm" id="header-book-btn" data-open-service-modal>Book Now</button>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+      </a>
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="sales.html" class="mobile-nav-link">Sales</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="services.html" class="mobile-nav-link mobile-nav-link--active">Service &amp; Parts</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-footer">
+      <button class="btn btn-primary mobile-book-btn" data-open-service-modal>Book Now</button>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="services-main">
+
+    <!-- ============================================================
+         SECTION 1 — SERVICES & PARTS HERO
+    ============================================================ -->
+    <section class="srv-hero" id="services-hero" aria-label="Services &amp; Parts Hero Banner">
+      <div class="srv-hero-bg" aria-hidden="true">
+        <img
+          src="assets/customization.webp"
+          alt="Premium golf cart in authorized service workshop"
+          class="srv-hero-bg-img"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="srv-hero-overlay"></div>
+      </div>
+      <div class="srv-hero-deco" aria-hidden="true">
+        <div class="srv-deco-ring srv-deco-ring--1"></div>
+        <div class="srv-deco-ring srv-deco-ring--2"></div>
+      </div>
+
+      <div class="srv-container srv-hero-inner">
+        <div class="srv-hero-content">
+          <p class="srv-eyebrow srv-anim-up" style="--d:0.1s">
+            <span class="srv-eyebrow-dot"></span>
+            Authorized Golf Cart Service Center &amp; Parts Hub
+          </p>
+          <h1 class="srv-hero-heading srv-anim-up" style="--d:0.25s">
+            Complete Golf Cart<br />
+            <em class="srv-hero-heading-em">Services &amp; Parts.</em>
+          </h1>
+          <p class="srv-hero-desc srv-anim-up" style="--d:0.4s">
+            From routine diagnostics and certified lithium battery conversions to full bespoke performance builds and genuine OEM replacement components.
+          </p>
+          <div class="srv-hero-ctas srv-anim-up" style="--d:0.55s">
+            <button class="srv-btn srv-btn--primary" id="hero-book-service-btn" data-open-service-modal>
+              Book a Service
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#golf-cart-parts" class="srv-btn srv-btn--outline" id="hero-explore-parts-btn">
+              Explore Parts
+            </a>
+          </div>
+
+          <div class="srv-hero-trust srv-anim-up" style="--d:0.7s">
+            <div class="srv-trust-item">
+              <span class="srv-trust-val">100<sup>%</sup></span>
+              <span class="srv-trust-lbl">OEM Genuine Parts</span>
+            </div>
+            <div class="srv-trust-sep" aria-hidden="true"></div>
+            <div class="srv-trust-item">
+              <span class="srv-trust-val">15<sup>+</sup></span>
+              <span class="srv-trust-lbl">Master Technicians</span>
+            </div>
+            <div class="srv-trust-sep" aria-hidden="true"></div>
+            <div class="srv-trust-item">
+              <span class="srv-trust-val">24/7</span>
+              <span class="srv-trust-lbl">Service Concierge</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: 3 Images with Unique Luxury Mosaic Alignment -->
+        <div class="srv-hero-tri-stage srv-anim-right" style="--d:0.35s">
+          
+          <!-- Image 1: Main Portrait Feature (Multipoint Diagnostics) -->
+          <div class="srv-tri-card srv-tri-card--main">
+            <img
+              src="assets/craft-inspection.jpg"
+              alt="Certified Master Technician Performing Multipoint Golf Cart Inspection"
+              class="srv-tri-img"
+              loading="eager"
+            />
+            <div class="srv-tri-overlay"></div>
+            <div class="srv-tri-badge srv-tri-badge--top">
+              <span class="srv-badge-dot"></span>
+              <span>Multipoint Diagnostics</span>
+            </div>
+            <div class="srv-tri-badge srv-tri-badge--bottom">
+              <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Factory-Certified Facility</span>
+            </div>
+          </div>
+
+          <!-- Stacked Right Column: Image 2 & Image 3 -->
+          <div class="srv-tri-stack">
+            
+            <!-- Image 2: Precision Chassis Hoist -->
+            <div class="srv-tri-card srv-tri-card--accent">
+              <img
+                src="assets/chassis-hoist.jpg"
+                alt="Precision Golf Cart Chassis Engineering & Suspension Hoist"
+                class="srv-tri-img"
+                loading="eager"
+              />
+              <div class="srv-tri-overlay"></div>
+              <div class="srv-tri-badge srv-tri-badge--mini">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Chassis &amp; Lift Bay</span>
+              </div>
+            </div>
+
+            <!-- Image 3: Certified Performance & Lithium Upgrades -->
+            <div class="srv-tri-card srv-tri-card--accent">
+              <img
+                src="assets/sales-performance-chassis.jpg"
+                alt="Certified High-Voltage Lithium Conversion & Powertrain Upgrade"
+                class="srv-tri-img"
+                loading="eager"
+              />
+              <div class="srv-tri-overlay"></div>
+              <div class="srv-tri-badge srv-tri-badge--mini">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>Lithium &amp; OEM Parts</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Ambient Glow Accent -->
+          <div class="srv-tri-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="srv-scroll-cue" aria-hidden="true">
+        <div class="srv-scroll-line"></div>
+        <span class="srv-scroll-txt">Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 2 — GOLF CART SERVICES (COMPREHENSIVE CARE ATELIER)
+    ============================================================ -->
+    <section class="srv-section srv-services" id="golf-cart-services" aria-labelledby="srv-services-heading">
+      <div class="srv-container">
+        <div class="srv-section-header srv-reveal">
+          <p class="srv-label srv-label--center">Comprehensive Care &amp; Atelier Services</p>
+          <h2 class="srv-section-heading srv-section-heading--center" id="srv-services-heading">
+            Tailored Golf Cart <em class="srv-heading-em">Engineering &amp; Care</em>
+          </h2>
+          <p class="srv-section-sub">
+            Factory-certified master diagnostics, high-voltage powertrain engineering, and white-glove preventative care tailored for luxury golf carts.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filter Tabs -->
+        <div class="srv-filter-tabs srv-reveal" role="tablist" aria-label="Service Categories">
+          <button class="srv-filter-tab is-active" data-filter="all" role="tab" aria-selected="true">
+            <span>All Atelier Services</span>
+            <span class="srv-tab-count">6</span>
+          </button>
+          <button class="srv-filter-tab" data-filter="powertrain" role="tab" aria-selected="false">
+            <span>Powertrain &amp; Lithium</span>
+            <span class="srv-tab-count">2</span>
+          </button>
+          <button class="srv-filter-tab" data-filter="chassis" role="tab" aria-selected="false">
+            <span>Chassis &amp; Handling</span>
+            <span class="srv-tab-count">2</span>
+          </button>
+          <button class="srv-filter-tab" data-filter="bespoke" role="tab" aria-selected="false">
+            <span>Cockpit &amp; Detailing</span>
+            <span class="srv-tab-count">2</span>
+          </button>
+        </div>
+
+        <div class="srv-services-grid" id="srv-services-grid">
+
+          <!-- Service 1: Golf Cart Repair & Powertrain -->
+          <article class="srv-card srv-reveal" style="--ri:0" id="service-repair" data-category="powertrain">
+            <div class="srv-card-img-wrap">
+              <img
+                src="assets/srv-mechanical-repair.jpg"
+                alt="Certified master technician inspecting luxury golf cart powertrain in atelier workshop"
+                class="srv-card-img"
+                loading="lazy"
+              />
+              <div class="srv-card-overlay"></div>
+              
+              <!-- Luxury Floating Top Badges -->
+              <div class="srv-card-top-bar">
+                <span class="srv-card-serial">
+                  <span class="srv-serial-num">01</span>
+                  <span class="srv-serial-sep"></span>
+                  <span class="srv-serial-cat">Mechanical</span>
+                </span>
+                <span class="srv-card-chip">
+                  <span class="srv-chip-dot"></span>
+                  Master Certified
+                </span>
+              </div>
+
+              <!-- Quick Specs Pill Row -->
+              <div class="srv-card-quick-specs">
+                <span class="srv-q-pill">AC Motor Dyno</span>
+                <span class="srv-q-pill">Diff Servicing</span>
+                <span class="srv-q-pill">OEM Parts</span>
+              </div>
+            </div>
+
+            <div class="srv-card-body">
+              <span class="srv-card-tag">Drivetrain &amp; Chassis Integrity</span>
+              <h3 class="srv-card-title">Golf Cart Mechanical Repair</h3>
+              <p class="srv-card-desc">
+                Complete mechanical and electronic troubleshooting, AC motor overhauls, differential servicing, steering rack alignment, and structural frame safety checks.
+              </p>
+
+              <div class="srv-card-footer">
+                <div class="srv-card-turnaround">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>&lt; 24-Hr Turnaround</span>
+                </div>
+                <div class="srv-card-actions">
+                  <button class="srv-card-btn-scope" data-learn-service="repair">
+                    Scope Details
+                  </button>
+                  <button class="srv-card-btn-book" data-open-service-modal="repair">
+                    Book Service
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Battery Service & Lithium Conversion -->
+          <article class="srv-card srv-reveal" style="--ri:1" id="service-battery" data-category="powertrain">
+            <div class="srv-card-img-wrap">
+              <img
+                src="assets/srv-battery-service.jpg"
+                alt="72V high-performance lithium battery conversion for custom golf cart chassis"
+                class="srv-card-img"
+                loading="lazy"
+              />
+              <div class="srv-card-overlay"></div>
+              
+              <div class="srv-card-top-bar">
+                <span class="srv-card-serial">
+                  <span class="srv-serial-num">02</span>
+                  <span class="srv-serial-sep"></span>
+                  <span class="srv-serial-cat">High-Voltage</span>
+                </span>
+                <span class="srv-card-chip srv-card-chip--gold">
+                  <span class="srv-chip-dot"></span>
+                  5-Yr Warranty
+                </span>
+              </div>
+
+              <div class="srv-card-quick-specs">
+                <span class="srv-q-pill">48V / 72V LiFePO4</span>
+                <span class="srv-q-pill">Smart BMS</span>
+                <span class="srv-q-pill">+40% Accel</span>
+              </div>
+            </div>
+
+            <div class="srv-card-body">
+              <span class="srv-card-tag">Power Systems &amp; Energy</span>
+              <h3 class="srv-card-title">Battery Service &amp; Lithium Upgrade</h3>
+              <p class="srv-card-desc">
+                High-performance lithium drop-in conversions, deep-cycle cell diagnostics, terminal reconditioning, Bluetooth battery management, and smart charger calibration.
+              </p>
+
+              <div class="srv-card-footer">
+                <div class="srv-card-turnaround">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Same-Day Drop-In</span>
+                </div>
+                <div class="srv-card-actions">
+                  <button class="srv-card-btn-scope" data-learn-service="battery">
+                    Scope Details
+                  </button>
+                  <button class="srv-card-btn-book" data-open-service-modal="battery">
+                    Book Service
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Brake Service -->
+          <article class="srv-card srv-reveal" style="--ri:2" id="service-brake" data-category="chassis">
+            <div class="srv-card-img-wrap">
+              <img
+                src="assets/srv-brake-service.jpg"
+                alt="Gold performance brake caliper and cross-drilled rotor on luxury golf cart"
+                class="srv-card-img"
+                loading="lazy"
+              />
+              <div class="srv-card-overlay"></div>
+              
+              <div class="srv-card-top-bar">
+                <span class="srv-card-serial">
+                  <span class="srv-serial-num">03</span>
+                  <span class="srv-serial-sep"></span>
+                  <span class="srv-serial-cat">Stopping Power</span>
+                </span>
+                <span class="srv-card-chip">
+                  <span class="srv-chip-dot"></span>
+                  DOT Spec
+                </span>
+              </div>
+
+              <div class="srv-card-quick-specs">
+                <span class="srv-q-pill">Hydraulic 4-Wheel</span>
+                <span class="srv-q-pill">Ceramic Pads</span>
+                <span class="srv-q-pill">Regen Solenoid</span>
+              </div>
+            </div>
+
+            <div class="srv-card-body">
+              <span class="srv-card-tag">Hydraulics &amp; Safety Control</span>
+              <h3 class="srv-card-title">Hydraulic Disc Brake Service</h3>
+              <p class="srv-card-desc">
+                Hydraulic 4-wheel disc conversions, heavy-duty ceramic pad replacements, drum resurfacing, electronic hill-hold solenoids, and DOT 4 braided line bleeding.
+              </p>
+
+              <div class="srv-card-footer">
+                <div class="srv-card-turnaround">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>4-Hour Service</span>
+                </div>
+                <div class="srv-card-actions">
+                  <button class="srv-card-btn-scope" data-learn-service="brake">
+                    Scope Details
+                  </button>
+                  <button class="srv-card-btn-book" data-open-service-modal="brake">
+                    Book Service
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Tire & Wheel Service -->
+          <article class="srv-card srv-reveal" style="--ri:3" id="service-tire" data-category="chassis">
+            <div class="srv-card-img-wrap">
+              <img
+                src="assets/srv-wheel-tire.jpg"
+                alt="Digital laser wheel alignment rack with luxury custom gold wheels"
+                class="srv-card-img"
+                loading="lazy"
+              />
+              <div class="srv-card-overlay"></div>
+              
+              <div class="srv-card-top-bar">
+                <span class="srv-card-serial">
+                  <span class="srv-serial-num">04</span>
+                  <span class="srv-serial-sep"></span>
+                  <span class="srv-serial-cat">Geometry</span>
+                </span>
+                <span class="srv-card-chip">
+                  <span class="srv-chip-dot"></span>
+                  3D Hawkeye Aligned
+                </span>
+              </div>
+
+              <div class="srv-card-quick-specs">
+                <span class="srv-q-pill">Laser Camber/Toe</span>
+                <span class="srv-q-pill">Forged Alloys</span>
+                <span class="srv-q-pill">DOT Radials</span>
+              </div>
+            </div>
+
+            <div class="srv-card-body">
+              <span class="srv-card-tag">Tires, Wheels &amp; Alignment</span>
+              <h3 class="srv-card-title">Tire &amp; Laser Wheel Alignment</h3>
+              <p class="srv-card-desc">
+                High-speed electronic road-force balancing, custom machined alloy wheel installation, DOT street radial and turf tire mounting, and laser steering geometry.
+              </p>
+
+              <div class="srv-card-footer">
+                <div class="srv-card-turnaround">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>2-Hour Service</span>
+                </div>
+                <div class="srv-card-actions">
+                  <button class="srv-card-btn-scope" data-learn-service="tire">
+                    Scope Details
+                  </button>
+                  <button class="srv-card-btn-book" data-open-service-modal="tire">
+                    Book Service
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 5: Electrical Service -->
+          <article class="srv-card srv-reveal" style="--ri:4" id="service-electrical" data-category="bespoke">
+            <div class="srv-card-img-wrap">
+              <img
+                src="assets/srv-electrical-cockpit.jpg"
+                alt="Luxury golf cart digital touchscreen cockpit with ambient gold illumination"
+                class="srv-card-img"
+                loading="lazy"
+              />
+              <div class="srv-card-overlay"></div>
+              
+              <div class="srv-card-top-bar">
+                <span class="srv-card-serial">
+                  <span class="srv-serial-num">05</span>
+                  <span class="srv-serial-sep"></span>
+                  <span class="srv-serial-cat">Electronics</span>
+                </span>
+                <span class="srv-card-chip">
+                  <span class="srv-chip-dot"></span>
+                  Digital Cockpit
+                </span>
+              </div>
+
+              <div class="srv-card-quick-specs">
+                <span class="srv-q-pill">32 MPH Controller</span>
+                <span class="srv-q-pill">Touchscreen GPS</span>
+                <span class="srv-q-pill">Marine Audio</span>
+              </div>
+            </div>
+
+            <div class="srv-card-body">
+              <span class="srv-card-tag">Wiring, Telemetry &amp; Audio</span>
+              <h3 class="srv-card-title">Cockpit Telemetry &amp; Controller Tuning</h3>
+              <p class="srv-card-desc">
+                OEM wiring harness diagnostics, high-output 32 MPH controller programming, digital touchscreen telemetry displays, LED ambient strips, and marine audio.
+              </p>
+
+              <div class="srv-card-footer">
+                <div class="srv-card-turnaround">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Same-Day Protocol</span>
+                </div>
+                <div class="srv-card-actions">
+                  <button class="srv-card-btn-scope" data-learn-service="electrical">
+                    Scope Details
+                  </button>
+                  <button class="srv-card-btn-book" data-open-service-modal="electrical">
+                    Book Service
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 6: Golf Cart Maintenance & Detailing -->
+          <article class="srv-card srv-reveal" style="--ri:5" id="service-maintenance" data-category="bespoke">
+            <div class="srv-card-img-wrap">
+              <img
+                src="assets/srv-maintenance-detail.jpg"
+                alt="White-glove 25-point preventative maintenance and ceramic detailing in aesthetic studio"
+                class="srv-card-img"
+                loading="lazy"
+              />
+              <div class="srv-card-overlay"></div>
+              
+              <div class="srv-card-top-bar">
+                <span class="srv-card-serial">
+                  <span class="srv-serial-num">06</span>
+                  <span class="srv-serial-sep"></span>
+                  <span class="srv-serial-cat">Atelier Care</span>
+                </span>
+                <span class="srv-card-chip srv-card-chip--gold">
+                  <span class="srv-chip-dot"></span>
+                  White Glove
+                </span>
+              </div>
+
+              <div class="srv-card-quick-specs">
+                <span class="srv-q-pill">25-Point Check</span>
+                <span class="srv-q-pill">9H Ceramic Shield</span>
+                <span class="srv-q-pill">Trailer Pickup</span>
+              </div>
+            </div>
+
+            <div class="srv-card-body">
+              <span class="srv-card-tag">Preventative Care &amp; Detailing</span>
+              <h3 class="srv-card-title">25-Point Maintenance &amp; Ceramic Care</h3>
+              <p class="srv-card-desc">
+                Certified 25-point seasonal check: suspension greasing, brake tensioning, battery health profiling, undercarriage decontamination, and 9H ceramic paint coat.
+              </p>
+
+              <div class="srv-card-footer">
+                <div class="srv-card-turnaround">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Seasonal Care</span>
+                </div>
+                <div class="srv-card-actions">
+                  <button class="srv-card-btn-scope" data-learn-service="maintenance">
+                    Scope Details
+                  </button>
+                  <button class="srv-card-btn-book" data-open-service-modal="maintenance">
+                    Book Service
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Atelier Standards Guarantee Ribbon -->
+        <div class="srv-atelier-ribbon srv-reveal">
+          <div class="srv-ribbon-col">
+            <div class="srv-ribbon-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="srv-ribbon-text">
+              <h4 class="srv-ribbon-title">Master Factory Certified</h4>
+              <p class="srv-ribbon-desc">Factory-trained master technicians specialized in Club Car, EZ-GO, Yamaha, &amp; bespoke builds.</p>
+            </div>
+          </div>
+          <div class="srv-ribbon-divider" aria-hidden="true"></div>
+          <div class="srv-ribbon-col">
+            <div class="srv-ribbon-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="srv-ribbon-text">
+              <h4 class="srv-ribbon-title">100% Genuine Certified OEM</h4>
+              <p class="srv-ribbon-desc">Only certified authentic replacement components, high-density lithium cells, and mil-spec wiring.</p>
+            </div>
+          </div>
+          <div class="srv-ribbon-divider" aria-hidden="true"></div>
+          <div class="srv-ribbon-col">
+            <div class="srv-ribbon-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="srv-ribbon-text">
+              <h4 class="srv-ribbon-title">White-Glove Enclosed Transport</h4>
+              <p class="srv-ribbon-desc">Complimentary enclosed trailer pickup &amp; delivery across premium golf clubs, estates, and resorts.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 3 — GOLF CART PARTS (CERTIFIED INVENTORY ATELIER)
+    ============================================================ -->
+    <section class="srv-section srv-parts" id="golf-cart-parts" aria-labelledby="srv-parts-heading">
+      <div class="srv-container">
+        <div class="srv-section-header srv-reveal">
+          <p class="srv-label srv-label--center">Certified Inventory &amp; OEM Components</p>
+          <h2 class="srv-section-heading srv-section-heading--center" id="srv-parts-heading">
+            Curated Golf Cart <em class="srv-heading-em">Parts &amp; Upgrades</em>
+          </h2>
+          <p class="srv-section-sub">
+            Precision-engineered lithium battery banks, custom forged alloy wheels, hand-stitched marine leather seating, and mil-spec mechanical components.
+          </p>
+        </div>
+
+        <!-- Interactive Parts Category Filter Tabs -->
+        <div class="srv-parts-filter-tabs srv-reveal" role="tablist" aria-label="Parts Categories">
+          <button class="srv-parts-tab is-active" data-parts-filter="all" role="tab" aria-selected="true">
+            <span>All Components</span>
+            <span class="srv-tab-count">8</span>
+          </button>
+          <button class="srv-parts-tab" data-parts-filter="power" role="tab" aria-selected="false">
+            <span>Power &amp; Charging</span>
+            <span class="srv-tab-count">2</span>
+          </button>
+          <button class="srv-parts-tab" data-parts-filter="chassis" role="tab" aria-selected="false">
+            <span>Chassis &amp; Handling</span>
+            <span class="srv-tab-count">3</span>
+          </button>
+          <button class="srv-parts-tab" data-parts-filter="bespoke" role="tab" aria-selected="false">
+            <span>Bespoke &amp; Styling</span>
+            <span class="srv-tab-count">3</span>
+          </button>
+        </div>
+
+        <div class="srv-parts-grid" id="srv-parts-grid">
+
+          <!-- Part 1: Batteries -->
+          <article class="srv-part-card srv-reveal" style="--ri:0" data-parts-cat="power">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-batteries.jpg"
+                alt="72V Lithium Iron Phosphate Battery Pack for luxury golf carts"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">OEM</span>#LI-72100
+                </span>
+                <span class="srv-part-badge srv-part-badge--gold">
+                  <span class="srv-badge-dot"></span>High Demand
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">72V / 100Ah LiFePO4</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Power Storage &bull; In Stock</span>
+              <h3 class="srv-part-title">Golf Cart Lithium Batteries</h3>
+              <p class="srv-part-desc">
+                Drop-in 48V &amp; 72V LiFePO4 lithium banks with integrated Bluetooth BMS, carbon fiber protective casing, and rapid charge capability.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>In Stock &bull; 48-Hr Ship
+                </span>
+                <span class="srv-meta-fit">OEM Fit</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Golf Cart Batteries">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 2: Tires & Wheels -->
+          <article class="srv-part-card srv-reveal" style="--ri:1" data-parts-cat="chassis">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-wheels.jpg"
+                alt="14-inch custom forged alloy golf cart wheels with low profile tires"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">FORGED</span>#CW-1408
+                </span>
+                <span class="srv-part-badge">
+                  <span class="srv-badge-dot"></span>Top Upgrade
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">14" Concave Mesh Alloy</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Wheels &amp; Radial Tires</span>
+              <h3 class="srv-part-title">Forged Wheels &amp; Tires</h3>
+              <p class="srv-part-desc">
+                Bespoke 10" to 14" multi-spoke champagne gold &amp; satin black forged rims paired with high-performance DOT street radials.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>Pre-Mounted &bull; Aligned
+                </span>
+                <span class="srv-meta-fit">Universal Hub</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Tires &amp; Wheels">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 3: Seats & Seat Covers -->
+          <article class="srv-part-card srv-reveal" style="--ri:2" data-parts-cat="bespoke">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-seats.jpg"
+                alt="Hand-stitched cognac diamond quilted marine leather golf cart seats"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">BESPOKE</span>#ST-COGNAC
+                </span>
+                <span class="srv-part-badge srv-part-badge--gold">
+                  <span class="srv-badge-dot"></span>Hand-Stitched
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">Italian Marine Vinyl</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Interior Comfort &bull; Atelier</span>
+              <h3 class="srv-part-title">Custom Diamond Seats</h3>
+              <p class="srv-part-desc">
+                High-density molded foam bucket seats featuring diamond-quilted caramel marine leather, ergonomic bolster armrests, and gold piping.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>Custom Upholstery
+                </span>
+                <span class="srv-meta-fit">Plug &amp; Bolt</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Seats &amp; Seat Covers">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 4: Lights & Lighting -->
+          <article class="srv-part-card srv-reveal" style="--ri:3" data-parts-cat="bespoke">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-lights.jpg"
+                alt="Automotive grade bi-LED projector headlights with halo for golf cart"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">LED</span>#LT-HALO6K
+                </span>
+                <span class="srv-part-badge">
+                  <span class="srv-badge-dot"></span>Street Legal
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">Bi-LED &bull; Halo Sequential</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Illumination &amp; Signals</span>
+              <h3 class="srv-part-title">Automotive Projector LEDs</h3>
+              <p class="srv-part-desc">
+                Crystal optic Bi-LED projector housings with amber sequential halo indicators, high/low beam, integrated horn, and plug-and-play wiring.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>DOT Street Compliant
+                </span>
+                <span class="srv-meta-fit">Direct Harness</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Lights &amp; Lighting">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 5: Chargers & Plugs -->
+          <article class="srv-part-card srv-reveal" style="--ri:4" data-parts-cat="power">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-chargers.jpg"
+                alt="High frequency rapid intelligent battery charger for golf carts"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">SMART</span>#CH-72RAPID
+                </span>
+                <span class="srv-part-badge">
+                  <span class="srv-badge-dot"></span>Fast Charge
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">IP67 Waterproof &bull; 25A</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Charging Tech &bull; Intelligent</span>
+              <h3 class="srv-part-title">Rapid Intelligent Chargers</h3>
+              <p class="srv-part-desc">
+                High-frequency waterproof on-board chargers (48V &amp; 72V) with auto-float shutoff, reverse polarity shield, and heavy-duty magnetic receptacle.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>UL Certified &bull; In Stock
+                </span>
+                <span class="srv-meta-fit">Club Car / EZ-GO</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Chargers &amp; Plugs">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 6: Steering & Suspension -->
+          <article class="srv-part-card srv-reveal" style="--ri:5" data-parts-cat="chassis">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-suspension.jpg"
+                alt="Heavy duty independent A-arm suspension lift kit for golf carts"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">HD</span>#LK-6AARM
+                </span>
+                <span class="srv-part-badge srv-part-badge--gold">
+                  <span class="srv-badge-dot"></span>Performance
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">3" to 6" Independent A-Arm</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Chassis Dynamics &bull; Heavy Duty</span>
+              <h3 class="srv-part-title">Suspension Lift Packages</h3>
+              <p class="srv-part-desc">
+                Independent front suspension A-arms, adjustable coil-overs, heavy-duty rear leaf springs, and chromoly tie rods for stable high-speed tracking.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>Zero-Wobble Geometry
+                </span>
+                <span class="srv-meta-fit">Bolt-On Kit</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Steering &amp; Suspension">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 7: Brake Components -->
+          <article class="srv-part-card srv-reveal" style="--ri:6" data-parts-cat="chassis">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-brakes.jpg"
+                alt="Hydraulic disc brake conversion kit with gold Brembo caliper and drilled rotor"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">RACE</span>#BK-4PDISC
+                </span>
+                <span class="srv-part-badge">
+                  <span class="srv-badge-dot"></span>Safety First
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">4-Wheel Hydraulic Disc</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Braking Systems &bull; High Stop</span>
+              <h3 class="srv-part-title">Hydraulic Disc Brake Kits</h3>
+              <p class="srv-part-desc">
+                Ventilated stainless cross-drilled rotors, anodized gold 4-piston calipers, ceramic pads, and stainless braided fluid lines for instant stopping power.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>50% Shorter Stopping
+                </span>
+                <span class="srv-meta-fit">Complete Kit</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Brake Components">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Part 8: Accessories & Cockpit -->
+          <article class="srv-part-card srv-reveal" style="--ri:7" data-parts-cat="bespoke">
+            <div class="srv-part-img-wrap">
+              <img
+                src="assets/part-accessories.jpg"
+                alt="Luxury golf cart touchscreen dash telemetry and marine audio accessories"
+                class="srv-part-img"
+                loading="lazy"
+              />
+              <div class="srv-part-overlay"></div>
+              <div class="srv-part-top-bar">
+                <span class="srv-part-code">
+                  <span class="srv-code-tag">DELUXE</span>#AC-COCKPIT
+                </span>
+                <span class="srv-part-badge srv-part-badge--gold">
+                  <span class="srv-badge-dot"></span>Luxury Add-on
+                </span>
+              </div>
+              <div class="srv-part-spec-tag">Touchscreen &bull; Audio Bar</div>
+            </div>
+            <div class="srv-part-body">
+              <span class="srv-part-cat">Cockpit &amp; Entertainment</span>
+              <h3 class="srv-part-title">Accessories &amp; Add-ons</h3>
+              <p class="srv-part-desc">
+                Digital 10" GPS touchscreen consoles, Bluetooth soundbars with subwoofers, fold-down impact windshields, and carbon fiber glove lockers.
+              </p>
+              <div class="srv-part-meta">
+                <span class="srv-meta-avail">
+                  <span class="srv-avail-dot"></span>Plug &amp; Play Setup
+                </span>
+                <span class="srv-meta-fit">Custom Fit</span>
+              </div>
+              <button class="srv-part-btn" data-part-cat="Accessories &amp; Add-ons">
+                <span>Inquire Component</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Certified Inventory Trust Bar -->
+        <div class="srv-inventory-trust srv-reveal">
+          <div class="srv-inv-trust-item">
+            <div class="srv-inv-trust-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <span class="srv-inv-trust-title">5-Year Lithium Warranty</span>
+              <span class="srv-inv-trust-desc">Backed by comprehensive cell replacement</span>
+            </div>
+          </div>
+          <div class="srv-inv-trust-sep" aria-hidden="true"></div>
+          <div class="srv-inv-trust-item">
+            <div class="srv-inv-trust-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <span class="srv-inv-trust-title">Same-Day Express Dispatch</span>
+              <span class="srv-inv-trust-desc">Fast nationwide crated freight shipping</span>
+            </div>
+          </div>
+          <div class="srv-inv-trust-sep" aria-hidden="true"></div>
+          <div class="srv-inv-trust-item">
+            <div class="srv-inv-trust-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div>
+              <span class="srv-inv-trust-title">100% Guaranteed Fitment</span>
+              <span class="srv-inv-trust-desc">Verified by VIN and chassis serial number</span>
+            </div>
+          </div>
+          <div class="srv-inv-trust-sep" aria-hidden="true"></div>
+          <div class="srv-inv-trust-item">
+            <div class="srv-inv-trust-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <span class="srv-inv-trust-title">Master Tech Support</span>
+              <span class="srv-inv-trust-desc">Direct installation phone &amp; video guidance</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 4 — UPGRADE YOUR GOLF CART
+    ============================================================ -->
+    <section class="srv-section srv-upgrades" id="upgrade-your-cart" aria-labelledby="srv-upgrade-heading">
+      <div class="srv-container">
+        <div class="srv-section-header srv-reveal">
+          <p class="srv-label srv-label--center">Custom Fabrication</p>
+          <h2 class="srv-section-heading srv-section-heading--center" id="srv-upgrade-heading">
+            Upgrade Your Golf Cart
+          </h2>
+          <p class="srv-section-sub">
+            Transform your daily driver into a one-of-a-kind luxury statement piece with custom lift packages, high-speed controllers, and bespoke marine upholstery.
+          </p>
+        </div>
+
+        <div class="srv-upgrade-layout">
+          <!-- Main Large Golf Cart Visual -->
+          <div class="srv-upgrade-main-visual srv-reveal">
+            <div class="srv-upgrade-img-frame">
+              <img
+                src="assets/customization.webp"
+                alt="Fully customized luxury golf cart in fabrication workshop"
+                class="srv-upgrade-main-img"
+                loading="lazy"
+              />
+              <div class="srv-upgrade-badge">
+                <span class="srv-badge-dot"></span>
+                Custom Shop Build Program
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 Upgrade Feature Cards -->
+          <div class="srv-upgrade-grid">
+
+            <div class="srv-upgrade-card srv-reveal" style="--ri:0">
+              <div class="srv-upgrade-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <h3 class="srv-upgrade-card-title">Custom Wheels</h3>
+              <p class="srv-upgrade-card-desc">12" to 14" machine-faced alloys with low-profile street radials or all-terrain treads.</p>
+            </div>
+
+            <div class="srv-upgrade-card srv-reveal" style="--ri:1">
+              <div class="srv-upgrade-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h3 class="srv-upgrade-card-title">Premium Seats</h3>
+              <p class="srv-upgrade-card-desc">Diamond-pleated Italian marine vinyl with custom contrast stitching and cooled foam.</p>
+            </div>
+
+            <div class="srv-upgrade-card srv-reveal" style="--ri:2">
+              <div class="srv-upgrade-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h3 class="srv-upgrade-card-title">LED Lighting</h3>
+              <p class="srv-upgrade-card-desc">Street-legal projector beams, DRL halos, sequential indicators, and underbody glow.</p>
+            </div>
+
+            <div class="srv-upgrade-card srv-reveal" style="--ri:3">
+              <div class="srv-upgrade-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+              </div>
+              <h3 class="srv-upgrade-card-title">Lift Kits</h3>
+              <p class="srv-upgrade-card-desc">Heavy-duty 3" to 6" independent A-arm suspension lifts for commanding clearance.</p>
+            </div>
+
+            <div class="srv-upgrade-card srv-reveal" style="--ri:4">
+              <div class="srv-upgrade-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h3 class="srv-upgrade-card-title">Performance Upgrades</h3>
+              <p class="srv-upgrade-card-desc">High-torque AC motors, 600A programmable controllers, and high-density lithium packs.</p>
+            </div>
+
+            <div class="srv-upgrade-card srv-reveal" style="--ri:5">
+              <div class="srv-upgrade-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h3 class="srv-upgrade-card-title">Custom Accessories</h3>
+              <p class="srv-upgrade-card-desc">Wet Sounds Bluetooth bars, locking carbon dashes, and extended flow-through canopies.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="srv-upgrade-cta-bar srv-reveal">
+          <div class="srv-upgrade-cta-text">
+            <h3>Ready to Build Your Dream Custom Cart?</h3>
+            <p>Consult directly with our master fabricators for a free custom design rendering and quote.</p>
+          </div>
+          <button class="srv-btn srv-btn--primary" id="upgrade-ride-btn" data-open-service-modal="Custom Upgrade Build">
+            Upgrade Your Ride
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =================================================    <!-- ============================================================
+         SECTION 5 — SERVICE PROCESS (TRANSPARENT CARE)
+    ============================================================ -->
+    <section class="srv-section srv-process" id="service-process" aria-labelledby="srv-proc-heading">
+      <div class="srv-container">
+        <div class="srv-section-header srv-reveal">
+          <p class="srv-label srv-label--center">Transparent Care &amp; Service Workflow</p>
+          <h2 class="srv-section-heading srv-section-heading--center" id="srv-proc-heading">
+            Our White-Glove <em class="srv-heading-em">Service Process</em>
+          </h2>
+          <p class="srv-section-sub">
+            From initial booking to final road testing, experience seamless transparent care tailored for high-end golf carts.
+          </p>
+        </div>
+
+        <div class="srv-process-layout">
+          <!-- 4-Step Process List -->
+          <div class="srv-process-steps">
+
+            <div class="srv-step srv-reveal" style="--ri:0">
+              <div class="srv-step-num-wrap">
+                <span class="srv-step-num">01</span>
+                <div class="srv-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="srv-step-content">
+                <h3 class="srv-step-title">Book Your Service</h3>
+                <p class="srv-step-desc">Schedule your appointment online in 60 seconds, or connect with our dedicated service concierge to tailor your scope.</p>
+              </div>
+            </div>
+
+            <div class="srv-step srv-reveal" style="--ri:1">
+              <div class="srv-step-num-wrap">
+                <span class="srv-step-num">02</span>
+                <div class="srv-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="srv-step-content">
+                <h3 class="srv-step-title">White-Glove Logistics</h3>
+                <p class="srv-step-desc">Drop off at our authorized atelier, or request complimentary enclosed trailer transport directly from your estate or golf resort.</p>
+              </div>
+            </div>
+
+            <div class="srv-step srv-reveal" style="--ri:2">
+              <div class="srv-step-num-wrap">
+                <span class="srv-step-num">03</span>
+                <div class="srv-step-line" aria-hidden="true"></div>
+              </div>
+              <div class="srv-step-content">
+                <h3 class="srv-step-title">Diagnostics &amp; Precision Care</h3>
+                <p class="srv-step-desc">Factory-certified technicians perform computerized diagnostics, precision repairs, and genuine OEM parts integration with photo updates.</p>
+              </div>
+            </div>
+
+            <div class="srv-step srv-reveal" style="--ri:3">
+              <div class="srv-step-num-wrap">
+                <span class="srv-step-num">04</span>
+              </div>
+              <div class="srv-step-content">
+                <h3 class="srv-step-title">Road-Tested Handover</h3>
+                <p class="srv-step-desc">Receive your vehicle fully charged, hand-detailed, and dyno-tested, backed by our comprehensive 5-year service warranty.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Supporting Golf Cart Visual -->
+          <div class="srv-process-visual srv-reveal" style="--ri:2">
+            <div class="srv-process-img-frame">
+              <img
+                src="assets/detail-cart-studio.jpg"
+                alt="Certified Master Technician Conducting Multipoint Golf Cart Quality Inspection in Studio"
+                class="srv-process-img"
+                loading="lazy"
+              />
+              <div class="srv-process-overlay"></div>
+              <div class="srv-process-top-chip">
+                <span class="srv-badge-dot"></span>
+                <span>White-Glove Protocol</span>
+              </div>
+              <div class="srv-process-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Certified Technicians On-Site</span>
+              </div>
+            </div>
+            <button class="srv-btn srv-btn--primary srv-btn--full" id="process-schedule-btn" data-open-service-modal>
+              Schedule Service
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 6 — COMPACT & PREMIUM CTA
+    ============================================================ -->
+    <section class="srv-section srv-cta-section" id="services-cta" aria-labelledby="srv-cta-heading">
+      <div class="srv-container">
+        <div class="srv-cta-card srv-reveal">
+          <div class="srv-cta-bg" aria-hidden="true">
+            <img
+              src="assets/sales-hero-flagship.jpg"
+              alt="Luxury flagship golf cart illuminated in atelier"
+              class="srv-cta-bg-img"
+              loading="lazy"
+            />
+            <div class="srv-cta-overlay"></div>
+          </div>
+          <div class="srv-cta-deco" aria-hidden="true">
+            <div class="srv-cta-ring srv-cta-ring--1"></div>
+            <div class="srv-cta-ring srv-cta-ring--2"></div>
+          </div>
+          <div class="srv-cta-glass">
+            <p class="srv-label srv-label--center">Peak Performance Assured</p>
+            <h2 class="srv-cta-heading" id="srv-cta-heading">
+              Keep Your Golf Cart <em class="srv-heading-em">Running at Its Best.</em>
+            </h2>
+            <p class="srv-cta-desc">
+              From routine maintenance to certified lithium conversions and genuine OEM parts, experience the pinnacle of golf cart service.
+            </p>
+            <div class="srv-cta-badges" aria-label="Trust highlights">
+              <span class="srv-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Master Technicians
+              </span>
+              <span class="srv-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                100% Genuine OEM
+              </span>
+              <span class="srv-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                5-Year Warranty
+              </span>
+            </div>
+            <div class="srv-cta-actions">
+              <button class="srv-btn srv-btn--cta" id="cta-book-service-btn" data-open-service-modal>
+                Book a Service
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <a href="#golf-cart-parts" class="srv-btn srv-btn--ghost-light" id="cta-shop-parts-btn">
+                Explore Parts
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand" aria-label="Cart Craft Home">
+            <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+            <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+          </a>
+          <p class="footer-brand-desc">Premium golf carts for modern leisure, communities and everyday journeys.</p>
+          <div class="footer-badges">
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Certified Quality
+            </span>
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Since 1988
+            </span>
+          </div>
+          <span class="footer-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Your City, Country
+          </span>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Services</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="sales.html" class="footer-link">Sales</a></li>
+            <li><a href="rentals.html" class="footer-link">Rentals</a></li>
+            <li><a href="services.html" class="footer-link">Servicing</a></li>
+            <li><a href="#" class="footer-link">Customization</a></li>
+            <li><a href="#" class="footer-link">Parts &amp; Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Explore</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">Our Models</a></li>
+            <li><a href="#" class="footer-link">Testimonials</a></li>
+            <li><a href="#" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Our Story</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Press</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Address &amp; Contact</h3>
+          <ul class="footer-contact" role="list">
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="footer-text">100 Luxury Drive,<br>Your City, Country</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@cartcraft.com" class="footer-link">hello@cartcraft.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.71 8.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91"/></svg>
+              <a href="tel:+10000000000" class="footer-link">+1 000 000 0000</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="footer-text">Mon &ndash; Sat: 9AM &ndash; 6PM</span>
+            </li>
+          </ul>
+          <div class="footer-socials-inline" aria-label="Social media links">
+            <a href="#" class="social-icon" aria-label="Instagram" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Cart Craft. All rights reserved.</p>
+        <nav class="footer-legal-links" aria-label="Legal links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       INTERACTIVE MODAL 1: BOOK A SERVICE APPOINTMENT
+  ============================================================ -->
+  <div class="srv-modal" id="service-booking-modal" role="dialog" aria-modal="true" aria-labelledby="srv-modal-title">
+    <div class="srv-modal-backdrop" id="srv-modal-backdrop"></div>
+    <div class="srv-modal-container">
+      <button class="srv-modal-close" id="srv-modal-close" aria-label="Close service modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="srv-modal-header">
+        <span class="srv-modal-tag">Official Service Reservation</span>
+        <h3 class="srv-modal-title" id="srv-modal-title">Book a Service Appointment</h3>
+        <p class="srv-modal-sub">Schedule your golf cart maintenance, diagnostic, or custom upgrade with our master certified technicians.</p>
+      </div>
+
+      <form class="srv-form" id="service-appointment-form">
+        <div class="srv-form-grid">
+          <div class="srv-form-field">
+            <label for="srv-type" class="srv-form-label">Service Type *</label>
+            <select id="srv-type" class="srv-form-select" required>
+              <option value="Preventative Maintenance">Preventative Maintenance (25-Point Inspection)</option>
+              <option value="Battery Service">Battery Service &amp; Lithium Conversion</option>
+              <option value="Golf Cart Repair">Mechanical / Electrical Repair</option>
+              <option value="Brake Service">Brake Service &amp; Hydraulic Disc Upgrade</option>
+              <option value="Tire &amp; Wheel Service">Tire &amp; Wheel Mounting / Balancing</option>
+              <option value="Electrical Diagnostics">Electrical Diagnostics &amp; Controllers</option>
+              <option value="Custom Upgrade Build">Custom Shop Upgrade Consultation</option>
+            </select>
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-date" class="srv-form-label">Preferred Service Date *</label>
+            <input type="date" id="srv-date" class="srv-form-input" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-cart-info" class="srv-form-label">Golf Cart Make &amp; Model *</label>
+            <input type="text" id="srv-cart-info" class="srv-form-input" placeholder="e.g. 2024 Cart Craft Monarch 4 / Club Car / EZGO" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-delivery-pref" class="srv-form-label">Transport Option *</label>
+            <select id="srv-delivery-pref" class="srv-form-select">
+              <option value="Customer Drop-off at Service Center">I will drop off at the Service Center</option>
+              <option value="Schedule Enclosed Trailer Pickup">Schedule Enclosed Trailer Pickup (Resort / Villa)</option>
+            </select>
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-name" class="srv-form-label">Full Name *</label>
+            <input type="text" id="srv-name" class="srv-form-input" placeholder="e.g. Robert Sterling" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-email" class="srv-form-label">Email Address *</label>
+            <input type="email" id="srv-email" class="srv-form-input" placeholder="robert@example.com" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-phone" class="srv-form-label">Phone Number *</label>
+            <input type="tel" id="srv-phone" class="srv-form-input" placeholder="+1 (555) 234-8901" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="srv-location" class="srv-form-label">Pickup Location / Postal Code</label>
+            <input type="text" id="srv-location" class="srv-form-input" placeholder="e.g. Villa 18, Emerald Dunes Resort" />
+          </div>
+
+          <div class="srv-form-field srv-form-field--full">
+            <label for="srv-notes" class="srv-form-label">Symptoms or Requested Upgrades</label>
+            <textarea id="srv-notes" class="srv-form-textarea" rows="2" placeholder="Describe any noises, battery issues, steering symptoms, or specific parts you'd like installed..."></textarea>
+          </div>
+        </div>
+
+        <div class="srv-form-footer">
+          <button type="submit" class="srv-btn srv-btn--primary srv-btn--full">Confirm Service Booking</button>
+          <p class="srv-form-privacy">Complimentary inspection estimates. Transparent pricing with no work performed without your authorization.</p>
+        </div>
+      </form>
+
+      <!-- Success Screen -->
+      <div class="srv-success-view" id="srv-success-view">
+        <div class="srv-success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h4>Service Scheduled!</h4>
+        <div class="srv-ref-box">
+          <span class="srv-ref-lbl">Appointment Reference Code</span>
+          <span class="srv-ref-code" id="srv-ref-code">AUR-SRV-48192</span>
+        </div>
+        <p>Your golf cart service appointment has been booked. A master technician has been assigned and will contact you to confirm drop-off or arrange trailer transport.</p>
+        <button class="srv-btn srv-btn--outline" id="srv-success-close">Return to Service Page</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       INTERACTIVE MODAL 2: SERVICE DETAILS MODAL
+  ============================================================ -->
+  <div class="srv-modal" id="service-detail-modal" role="dialog" aria-modal="true" aria-labelledby="srv-detail-title">
+    <div class="srv-modal-backdrop" id="srv-detail-backdrop"></div>
+    <div class="srv-modal-container srv-modal-container--large">
+      <button class="srv-modal-close" id="srv-detail-close" aria-label="Close service detail modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="srv-detail-layout">
+        <div class="srv-detail-media">
+          <img id="srv-detail-img" src="" alt="Golf cart service detail" class="srv-detail-img" />
+          <div class="srv-detail-badge" id="srv-detail-badge">Certified Procedure</div>
+        </div>
+        <div class="srv-detail-content">
+          <span class="srv-modal-tag" id="srv-detail-tag">Service Scope</span>
+          <h3 class="srv-modal-title" id="srv-detail-title">Service Title</h3>
+          <p class="srv-modal-sub" id="srv-detail-desc"></p>
+          <div class="srv-detail-checklist-wrap">
+            <h4 class="srv-checklist-heading">What's Included in This Service:</h4>
+            <ul class="srv-checklist" id="srv-detail-checklist" role="list">
+              <!-- Populated by services.js -->
+            </ul>
+          </div>
+          <button class="srv-btn srv-btn--primary srv-btn--full" id="srv-detail-book-btn">Book This Service</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       INTERACTIVE MODAL 3: PARTS INQUIRY & QUOTE MODAL
+  ============================================================ -->
+  <div class="srv-modal" id="parts-inquiry-modal" role="dialog" aria-modal="true" aria-labelledby="parts-modal-title">
+    <div class="srv-modal-backdrop" id="parts-modal-backdrop"></div>
+    <div class="srv-modal-container">
+      <button class="srv-modal-close" id="parts-modal-close" aria-label="Close parts modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="srv-modal-header">
+        <span class="srv-modal-tag">Genuine Parts Department</span>
+        <h3 class="srv-modal-title" id="parts-modal-title">Inquire About Golf Cart Parts</h3>
+        <p class="srv-modal-sub">Confirm fitment, check inventory status, or request expedited parts delivery for your specific golf cart make and model.</p>
+      </div>
+
+      <form class="srv-form" id="parts-inquiry-form">
+        <div class="srv-form-grid">
+          <div class="srv-form-field srv-form-field--full">
+            <label for="part-category-select" class="srv-form-label">Parts Category</label>
+            <select id="part-category-select" class="srv-form-select">
+              <option value="Golf Cart Batteries">Golf Cart Batteries (Lithium &amp; AGM)</option>
+              <option value="Tires &amp; Wheels">Tires &amp; Wheels (Alloy Rims &amp; Radials)</option>
+              <option value="Seats &amp; Seat Covers">Seats &amp; Seat Covers (Diamond Vinyl &amp; Custom)</option>
+              <option value="Lights &amp; Lighting">Lights &amp; Lighting (Projector LEDs &amp; Halos)</option>
+              <option value="Chargers &amp; Plugs">Chargers &amp; Plugs (Rapid On-Board &amp; Cords)</option>
+              <option value="Steering &amp; Suspension">Steering &amp; Suspension (Lift Kits &amp; Springs)</option>
+              <option value="Brake Components">Brake Components (Hydraulic Disc &amp; Drums)</option>
+              <option value="Accessories &amp; Add-ons">Accessories &amp; Add-ons (Windshields &amp; Audio)</option>
+            </select>
+          </div>
+
+          <div class="srv-form-field">
+            <label for="part-cart-model" class="srv-form-label">Golf Cart Model &amp; Year *</label>
+            <input type="text" id="part-cart-model" class="srv-form-input" placeholder="e.g. 2023 Cart Craft Sovereign 6" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="part-quantity" class="srv-form-label">Quantity Needed</label>
+            <input type="number" id="part-quantity" class="srv-form-input" value="1" min="1" max="50" />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="part-name" class="srv-form-label">Your Name *</label>
+            <input type="text" id="part-name" class="srv-form-input" placeholder="Alexander Vance" required />
+          </div>
+
+          <div class="srv-form-field">
+            <label for="part-email" class="srv-form-label">Email Address *</label>
+            <input type="email" id="part-email" class="srv-form-input" placeholder="alexander@example.com" required />
+          </div>
+
+          <div class="srv-form-field srv-form-field--full">
+            <label for="part-details" class="srv-form-label">Specific Part Numbers or Fitment Notes</label>
+            <textarea id="part-details" class="srv-form-textarea" rows="2" placeholder="List desired tire sizes, battery voltage, color preferences, or ask for technician advice..."></textarea>
+          </div>
+        </div>
+
+        <div class="srv-form-footer">
+          <button type="submit" class="srv-btn srv-btn--primary srv-btn--full">Submit Parts Request</button>
+          <p class="srv-form-privacy">Guaranteed fitment verification by our parts specialists within 2 business hours.</p>
+        </div>
+      </form>
+
+      <!-- Parts Success -->
+      <div class="srv-success-view" id="parts-success-view">
+        <div class="srv-success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h4>Parts Request Received!</h4>
+        <p>Our parts department has received your inquiry. A specialist will verify compatibility for your golf cart model and contact you with stock availability and shipping rates.</p>
+        <button class="srv-btn srv-btn--outline" id="parts-success-close">Return to Parts</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="services.js"></script>
+</body>
+</html>

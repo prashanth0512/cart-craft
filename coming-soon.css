@@ -1,0 +1,714 @@
+/* ============================================================
+   AURICART — Coming Soon Page Stylesheet
+   coming-soon.css — Recreating the Screenshot Layout & Aesthetics
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. COLOR TOKENS & TYPOGRAPHY
+   ------------------------------------------------------------ */
+:root {
+  --cs-bg-base:        #F8F6F0;
+  --cs-text-primary:   #173D32;
+  --cs-text-secondary: #4A5B52;
+  --cs-text-muted:     #788A80;
+  --cs-accent-gold:    #D48D3B;
+  --cs-accent-gold-2:  #C9A45C;
+  --cs-accent-green:   #173D32;
+  --cs-card-bg:        #FFFFFF;
+  --cs-card-border:    rgba(23, 61, 50, 0.12);
+  --cs-card-shadow:    0 8px 24px rgba(23, 61, 50, 0.08);
+  --cs-btn-bg:         #173D32;
+  --cs-btn-text:       #FFFFFF;
+  --cs-input-bg:       #FFFFFF;
+  --cs-input-border:   rgba(23, 61, 50, 0.18);
+  --cs-font-heading:   'Cormorant Garamond', Georgia, serif;
+  --cs-font-serif:     'Cormorant Garamond', Georgia, serif;
+  --cs-font-sans:      'Plus Jakarta Sans', sans-serif;
+  --cs-font-body:      'DM Sans', sans-serif;
+  --cs-transition:     cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Dark Theme — Royal Burgundy & Antique Gold */
+[data-theme="dark"] {
+  --cs-bg-base:        #1A070F;
+  --cs-text-primary:   #F8F3E8;
+  --cs-text-secondary: #C9BEC0;
+  --cs-text-muted:     #9E8E90;
+  --cs-accent-gold:    #E1BD72;
+  --cs-accent-gold-2:  #C9A45C;
+  --cs-accent-green:   #E1BD72;
+  --cs-card-bg:        rgba(36, 16, 24, 0.85);
+  --cs-card-border:    rgba(201, 164, 92, 0.28);
+  --cs-card-shadow:    0 8px 32px rgba(0, 0, 0, 0.45);
+  --cs-btn-bg:         linear-gradient(135deg, #E1BD72 0%, #C9A45C 100%);
+  --cs-btn-text:       #1A090E;
+  --cs-input-bg:       rgba(20, 6, 11, 0.88);
+  --cs-input-border:   rgba(201, 164, 92, 0.35);
+  --cs-divider:        rgba(201, 164, 92, 0.25);
+}
+
+/* ------------------------------------------------------------
+   2. BODY & BACKGROUND IMAGERY
+   ------------------------------------------------------------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.cs-body {
+  background-color: var(--cs-bg-base);
+  color: var(--cs-text-secondary);
+  font-family: var(--cs-font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Full-bleed scenic resort background with gentle soft vignette */
+.cs-bg-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cs-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: scale(1.03);
+  transition: transform 10s ease-out;
+}
+
+.cs-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 75% 70% at 50% 48%,
+    rgba(248, 246, 240, 0.94) 0%,
+    rgba(248, 246, 240, 0.84) 50%,
+    rgba(240, 238, 230, 0.68) 100%
+  );
+  backdrop-filter: blur(2px);
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .cs-bg-overlay {
+  background: radial-gradient(
+    ellipse 75% 70% at 50% 48%,
+    rgba(26, 7, 15, 0.94) 0%,
+    rgba(36, 16, 24, 0.86) 50%,
+    rgba(20, 6, 11, 0.75) 100%
+  );
+}
+
+/* ------------------------------------------------------------
+   3. TOP HEADER BAR
+   ------------------------------------------------------------ */
+.cs-header {
+  position: relative;
+  z-index: 10;
+  padding: 1.5rem 2.5rem 1rem;
+}
+
+.cs-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand Logo */
+.cs-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: var(--cs-text-primary);
+  transition: transform 0.25s ease;
+}
+
+.cs-brand:hover {
+  transform: translateY(-1px);
+}
+
+.cs-brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cs-card-bg);
+  border: 1px solid var(--cs-card-border);
+  color: var(--cs-accent-green);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.cs-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-brand-name {
+  font-family: var(--cs-font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--cs-text-primary);
+  line-height: 1.1;
+}
+
+.cs-brand-tag {
+  font-family: var(--cs-font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--cs-accent-gold);
+}
+
+/* Right Header Group: Mottos & Controls */
+.cs-header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cs-motto-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--cs-font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--cs-text-secondary);
+  opacity: 0.85;
+}
+
+.cs-motto-dot {
+  color: var(--cs-accent-gold);
+  font-size: 0.85rem;
+}
+
+.cs-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cs-pill-btn {
+  background: var(--cs-card-bg);
+  border: 1.5px solid var(--cs-card-border);
+  color: var(--cs-text-primary);
+  font-family: var(--cs-font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1.15rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s var(--cs-transition);
+}
+
+.cs-pill-btn:hover {
+  border-color: var(--cs-accent-green);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cs-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cs-card-bg);
+  border: 1.5px solid var(--cs-card-border);
+  color: var(--cs-text-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s var(--cs-transition);
+}
+
+.cs-circle-btn:hover {
+  border-color: var(--cs-accent-green);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Theme Icon Visibility */
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+[data-theme="dark"] .icon-sun { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
+
+/* ------------------------------------------------------------
+   4. MAIN CONTAINER
+   ------------------------------------------------------------ */
+.cs-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cs-container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------------------------------------------
+   5. BADGE (UNDER CONSTRUCTION)
+   ------------------------------------------------------------ */
+.cs-badge-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.cs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--cs-font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cs-text-primary);
+  background: var(--cs-card-bg);
+  border: 1px solid var(--cs-card-border);
+  padding: 0.45rem 1.15rem;
+  border-radius: 9999px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cs-badge-icon {
+  color: var(--cs-accent-gold);
+}
+
+/* ------------------------------------------------------------
+   6. DUAL-TONE HEADLINE & SUBTITLE
+   ------------------------------------------------------------ */
+.cs-heading {
+  font-family: var(--cs-font-heading);
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-weight: 600;
+  color: var(--cs-text-primary);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.15rem;
+}
+
+.cs-heading-accent {
+  color: var(--cs-accent-gold);
+  background: linear-gradient(135deg, var(--cs-accent-gold) 0%, var(--cs-accent-gold-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cs-subheading {
+  font-family: var(--cs-font-body);
+  font-size: clamp(1.02rem, 1.8vw, 1.15rem);
+  color: var(--cs-text-secondary);
+  line-height: 1.65;
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+}
+
+/* ------------------------------------------------------------
+   7. LIVE COUNTDOWN TIMER (4 Pill Cards Matching Screenshot)
+   ------------------------------------------------------------ */
+.cs-countdown-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.cs-timer-card {
+  flex: 1;
+  background: var(--cs-card-bg);
+  border: 1px solid var(--cs-card-border);
+  border-radius: 16px;
+  padding: 1.15rem 0.75rem 0.95rem;
+  box-shadow: var(--cs-card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-timer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.cs-timer-num {
+  font-family: var(--cs-font-heading);
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--cs-text-primary);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.cs-timer-lbl {
+  font-family: var(--cs-font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cs-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Pulsing Live Dot next to MINS */
+.cs-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cs-accent-gold);
+  box-shadow: 0 0 6px var(--cs-accent-gold);
+  animation: csDotPulse 1.8s infinite;
+}
+
+@keyframes csDotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* ------------------------------------------------------------
+   8. EMAIL NOTIFICATION CAPSULE (Matching Screenshot)
+   ------------------------------------------------------------ */
+.cs-notify-box {
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 2.25rem;
+}
+
+.cs-notify-form {
+  width: 100%;
+}
+
+.cs-notify-capsule {
+  display: flex;
+  align-items: center;
+  background: var(--cs-input-bg);
+  border: 1px solid var(--cs-input-border);
+  border-radius: 9999px;
+  padding: 0.45rem 0.5rem 0.45rem 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.cs-notify-capsule:focus-within {
+  border-color: var(--cs-accent-green);
+  box-shadow: 0 8px 32px rgba(23, 61, 50, 0.18);
+}
+
+.cs-mail-icon {
+  color: var(--cs-text-muted);
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.cs-email-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--cs-font-body);
+  font-size: 0.95rem;
+  color: var(--cs-text-primary);
+  outline: none;
+  padding: 0.5rem 0;
+}
+
+.cs-email-input::placeholder {
+  color: var(--cs-text-muted);
+}
+
+.cs-notify-btn {
+  background: var(--cs-btn-bg);
+  color: var(--cs-btn-text);
+  border: none;
+  font-family: var(--cs-font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  transition: all 0.25s var(--cs-transition);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.cs-notify-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.cs-btn-arrow {
+  transition: transform 0.25s ease;
+}
+
+.cs-notify-btn:hover .cs-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Success Confirmation Toast */
+.cs-success-msg {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid #4CAF50;
+  color: #2E7D32;
+  font-family: var(--cs-font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  margin-top: 1rem;
+  animation: csFadeIn 0.4s ease;
+}
+
+[data-theme="dark"] .cs-success-msg {
+  color: #81C784;
+}
+
+.cs-success-msg.is-visible {
+  display: flex;
+}
+
+@keyframes csFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------------------------
+   9. RETURN TO HOME DIVIDER (Matching Screenshot)
+   ------------------------------------------------------------ */
+.cs-back-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 3.5rem;
+}
+
+.cs-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--cs-divider);
+}
+
+.cs-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--cs-font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--cs-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.cs-back-link:hover {
+  color: var(--cs-accent-gold);
+  transform: translateX(-2px);
+}
+
+/* ------------------------------------------------------------
+   10. FOUR PILLARS / FEATURES STRIP (Matching Screenshot Bottom)
+   ------------------------------------------------------------ */
+.cs-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 780px;
+  border-top: 1px solid var(--cs-divider);
+  padding-top: 2rem;
+}
+
+.cs-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.cs-feature-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: var(--cs-divider);
+}
+
+.cs-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cs-accent-green);
+  margin-bottom: 0.55rem;
+  transition: transform 0.25s ease;
+}
+
+.cs-feature-item:hover .cs-feature-icon {
+  transform: scale(1.1);
+}
+
+.cs-feature-title {
+  font-family: var(--cs-font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cs-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.cs-feature-sub {
+  font-family: var(--cs-font-body);
+  font-size: 0.74rem;
+  color: var(--cs-text-muted);
+}
+
+/* ------------------------------------------------------------
+   11. RTL DIRECTIONAL COMPATIBILITY
+   ------------------------------------------------------------ */
+[dir="rtl"] .cs-mail-icon {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .cs-btn-arrow {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .cs-notify-btn:hover .cs-btn-arrow {
+  transform: scaleX(-1) translateX(-3px);
+}
+
+[dir="rtl"] .cs-back-link svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .cs-feature-item:not(:last-child)::after {
+  right: auto;
+  left: 0;
+}
+
+/* ------------------------------------------------------------
+   12. RESPONSIVE BREAKPOINTS
+   ------------------------------------------------------------ */
+@media (max-width: 900px) {
+  .cs-header {
+    padding: 1.25rem 1.5rem 0.5rem;
+  }
+
+  .cs-motto-strip {
+    display: none;
+  }
+
+  .cs-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cs-feature-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-header {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .cs-main {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .cs-heading {
+    font-size: 2.1rem;
+  }
+
+  .cs-countdown-wrap {
+    gap: 0.5rem;
+  }
+
+  .cs-timer-card {
+    padding: 0.85rem 0.4rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  .cs-timer-num {
+    font-size: 1.75rem;
+  }
+
+  .cs-timer-lbl {
+    font-size: 0.6rem;
+  }
+
+  .cs-notify-capsule {
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    gap: 0.75rem;
+  }
+
+  .cs-notify-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cs-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

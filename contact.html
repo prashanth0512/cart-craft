@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/cart-craft-logo.png" />
+  <link rel="icon" type="image/png" href="assets/cart-craft-logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/cart-craft-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Cart Craft — Connect with our premier golf cart advisors for sales inquiries, fleet rentals, certified maintenance, genuine replacement parts, and custom build consultations." />
+  <meta name="theme-color" content="#241018" />
+  <title>Contact Us — Cart Craft | Golf Cart Sales, Rentals, Services &amp; Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER (Identical to Home 1, with Contact active) ===== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item nav-dropdown-parent">
+            <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" id="home-dropdown-btn">
+              Home
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu" aria-labelledby="home-dropdown-btn">
+              <a href="index.html" class="dropdown-item" role="menuitem">Home 1</a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
+          <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Service &amp; Parts</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link nav-link--active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR direction" title="Toggle direction">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6h18M3 12h12M3 18h9"/><path d="M18 9l3 3-3 3"/>
+          </svg>
+        </button>
+        <a href="#contact-form-section" class="btn btn-primary btn-sm" id="header-book-btn">Book Now</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+      </a>
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="sales.html" class="mobile-nav-link">Sales</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Service &amp; Parts</a></li>
+        <li><a href="contact.html" class="mobile-nav-link mobile-nav-link--active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="#contact-form-section" class="btn btn-primary mobile-book-btn">Book Now</a>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="contact-main">
+
+    <!-- ============================================================
+         SECTION 1 – CONTACT HERO
+    ============================================================ -->
+    <section class="cnt-hero" id="contact-hero" aria-label="Contact Hero Banner">
+      <div class="cnt-hero-bg" aria-hidden="true">
+        <video
+          class="cnt-hero-bg-video"
+          id="contact-hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          preload="auto"
+          poster="assets/rentals-hero-luxury.jpg"
+        >
+          <source src="assets/9208386-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          <img
+            src="assets/rentals-hero-luxury.jpg"
+            alt="Luxury golf cart fleet in estate grounds"
+            class="cnt-hero-bg-img"
+          />
+        </video>
+        <div class="cnt-hero-overlay"></div>
+      </div>
+      <div class="cnt-hero-deco" aria-hidden="true">
+        <div class="cnt-deco-ring cnt-deco-ring--1"></div>
+        <div class="cnt-deco-ring cnt-deco-ring--2"></div>
+      </div>
+
+      <!-- Live Atelier Video Indicator / Control -->
+      <button class="cnt-video-toggle" id="cnt-video-toggle" aria-label="Pause or play background video">
+        <span class="cnt-video-pulse"></span>
+        <svg class="cnt-video-icon-pause" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        <svg class="cnt-video-icon-play" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span class="cnt-video-txt">Atelier Film</span>
+      </button>
+
+      <div class="cnt-container cnt-hero-inner">
+        <div class="cnt-hero-content">
+          <p class="cnt-eyebrow cnt-anim-up" style="--d:0.1s">
+            <span class="cnt-eyebrow-dot"></span>
+            Dedicated Golf Cart Client Support &amp; Concierge
+          </p>
+          <h1 class="cnt-hero-heading cnt-anim-up" style="--d:0.25s">
+            Let's Get You<br />
+            <em class="cnt-hero-heading-em">Moving.</em>
+          </h1>
+          <p class="cnt-hero-desc cnt-anim-up" style="--d:0.4s">
+            Have a question about golf carts, rentals, services, or parts? Our team is ready to help.
+          </p>
+          <div class="cnt-hero-actions cnt-anim-up" style="--d:0.55s">
+            <a href="#contact-form-section" class="cnt-btn cnt-btn--primary" id="hero-contact-us-btn">
+              Contact Us
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="sales.html" class="cnt-btn cnt-btn--outline" id="hero-explore-carts-btn">
+              Explore Golf Carts
+            </a>
+          </div>
+
+          <!-- Hero Trust Metrics Bar -->
+          <div class="cnt-hero-stats cnt-anim-up" style="--d:0.7s" aria-label="Service metrics">
+            <div class="cnt-stat-pill">
+              <span class="cnt-stat-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="cnt-stat-text"><strong>&lt; 2 Hours</strong> Response Guarantee</span>
+            </div>
+            <div class="cnt-stat-pill">
+              <span class="cnt-stat-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span class="cnt-stat-text"><strong>6 Days a Week</strong> Live Concierge</span>
+            </div>
+            <div class="cnt-stat-pill">
+              <span class="cnt-stat-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </span>
+              <span class="cnt-stat-text"><strong>100%</strong> Certified Staff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 2 – CONTACT INFORMATION
+    ============================================================ -->
+    <section class="cnt-section cnt-info-section" id="contact-info" aria-labelledby="cnt-info-heading">
+      <div class="cnt-container">
+        <div class="cnt-section-header cnt-reveal">
+          <p class="cnt-label cnt-label--center">Direct Channels</p>
+          <h2 class="cnt-section-heading cnt-section-heading--center" id="cnt-info-heading">
+            Connect With Our Team
+          </h2>
+          <p class="cnt-section-sub">
+            Whether you want to test-drive a luxury golf cart, schedule an on-site service appointment, or enquire about custom fleet options, our advisors are here for you.
+          </p>
+        </div>
+
+        <div class="cnt-info-grid">
+
+          <!-- Card 1: Visit Us -->
+          <article class="cnt-info-card cnt-reveal" style="--ri:0" id="card-visit-us">
+            <div class="cnt-info-icon-wrap" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <span class="cnt-info-tag">Showroom &amp; Service Hub</span>
+            <h3 class="cnt-info-title">Visit Us</h3>
+            <p class="cnt-info-text">
+              100 Motorway Blvd<br />Your City, Country
+            </p>
+            <a href="#find-us" class="cnt-info-link" aria-label="View our location on map">
+              View on Map
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 2: Call Us -->
+          <article class="cnt-info-card cnt-reveal" style="--ri:1" id="card-call-us">
+            <div class="cnt-info-icon-wrap" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18"/>
+              </svg>
+            </div>
+            <span class="cnt-info-tag">Speak With An Advisor</span>
+            <h3 class="cnt-info-title">Call Us</h3>
+            <p class="cnt-info-text">
+              <a href="tel:+10000000000" class="cnt-contact-anchor">+1 000 000 0000</a><br />
+              <span class="cnt-info-note">Toll-free client concierge</span>
+            </p>
+            <a href="tel:+10000000000" class="cnt-info-link" aria-label="Call +1 000 000 0000 now">
+              Call Now
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 3: Email Us -->
+          <article class="cnt-info-card cnt-reveal" style="--ri:2" id="card-email-us">
+            <div class="cnt-info-icon-wrap" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <span class="cnt-info-tag">Written Inquiries</span>
+            <h3 class="cnt-info-title">Email Us</h3>
+            <p class="cnt-info-text">
+              <a href="mailto:hello@cartcraft.com" class="cnt-contact-anchor">hello@cartcraft.com</a><br />
+              <span class="cnt-info-note">24-hour inbox monitoring</span>
+            </p>
+            <a href="mailto:hello@cartcraft.com" class="cnt-info-link" aria-label="Send an email to hello@cartcraft.com">
+              Send Email
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 4: Business Hours -->
+          <article class="cnt-info-card cnt-reveal" style="--ri:3" id="card-hours">
+            <div class="cnt-info-icon-wrap" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <span class="cnt-info-tag">Showroom Schedule</span>
+            <h3 class="cnt-info-title">Business Hours</h3>
+            <p class="cnt-info-text">
+              Mon – Sat: 9:00 AM – 6:00 PM<br />
+              <span class="cnt-info-note">Sunday: Closed / By Appointment</span>
+            </p>
+            <span class="cnt-badge-status">Open Today</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 3 – CONTACT FORM + GOLF CART IMAGE
+    ============================================================ -->
+    <section class="cnt-section cnt-form-section" id="contact-form-section" aria-labelledby="cnt-form-heading">
+      <div class="cnt-container">
+        <div class="cnt-form-layout">
+
+          <!-- Left Side: Interactive Contact Form -->
+          <div class="cnt-form-card cnt-reveal" style="--ri:0">
+            <div class="cnt-form-header">
+              <span class="cnt-form-tag">Personalized Assistance</span>
+              <h2 class="cnt-form-heading" id="cnt-form-heading">Send Us a Message</h2>
+              <p class="cnt-form-sub">
+                Tell us about your golf cart requirements. An Cart Craft vehicle specialist will review your request and get in touch within 2 business hours.
+              </p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="cnt-form" id="main-contact-form" novalidate>
+              <div class="cnt-form-grid">
+
+                <!-- Full Name -->
+                <div class="cnt-form-field">
+                  <label for="contact-name" class="cnt-form-label">Full Name <span class="cnt-req" aria-hidden="true">*</span></label>
+                  <div class="cnt-input-wrap">
+                    <input
+                      type="text"
+                      id="contact-name"
+                      name="fullName"
+                      class="cnt-form-input"
+                      placeholder="e.g. Robert Vance"
+                      required
+                      autocomplete="name"
+                    />
+                    <span class="cnt-field-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </span>
+                  </div>
+                  <span class="cnt-error-msg" id="name-error">Please enter your full name.</span>
+                </div>
+
+                <!-- Email Address -->
+                <div class="cnt-form-field">
+                  <label for="contact-email" class="cnt-form-label">Email Address <span class="cnt-req" aria-hidden="true">*</span></label>
+                  <div class="cnt-input-wrap">
+                    <input
+                      type="email"
+                      id="contact-email"
+                      name="email"
+                      class="cnt-form-input"
+                      placeholder="e.g. robert@example.com"
+                      required
+                      autocomplete="email"
+                    />
+                    <span class="cnt-field-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </span>
+                  </div>
+                  <span class="cnt-error-msg" id="email-error">Please enter a valid email address.</span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="cnt-form-field">
+                  <label for="contact-phone" class="cnt-form-label">Phone Number <span class="cnt-req" aria-hidden="true">*</span></label>
+                  <div class="cnt-input-wrap">
+                    <input
+                      type="tel"
+                      id="contact-phone"
+                      name="phone"
+                      class="cnt-form-input"
+                      placeholder="e.g. +1 (555) 234-8901"
+                      required
+                      autocomplete="tel"
+                    />
+                    <span class="cnt-field-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18"/></svg>
+                    </span>
+                  </div>
+                  <span class="cnt-error-msg" id="phone-error">Please enter your telephone number.</span>
+                </div>
+
+                <!-- Service Type -->
+                <div class="cnt-form-field">
+                  <label for="contact-service" class="cnt-form-label">Service Type <span class="cnt-req" aria-hidden="true">*</span></label>
+                  <div class="cnt-input-wrap">
+                    <select id="contact-service" name="serviceType" class="cnt-form-select" required>
+                      <option value="" disabled selected>Select an Inquiry Topic</option>
+                      <option value="Golf Cart Sales">Golf Cart Sales</option>
+                      <option value="Golf Cart Rental">Golf Cart Rental</option>
+                      <option value="Golf Cart Service">Golf Cart Service</option>
+                      <option value="Golf Cart Parts">Golf Cart Parts</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                    <span class="cnt-field-icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                  </div>
+                  <span class="cnt-error-msg" id="service-error">Please select a service type.</span>
+                </div>
+
+                <!-- Preferred Date -->
+                <div class="cnt-form-field cnt-form-field--full">
+                  <label for="contact-date" class="cnt-form-label">Preferred Date (For Test Drives, Service, or Rental Pickup)</label>
+                  <div class="cnt-input-wrap">
+                    <input
+                      type="date"
+                      id="contact-date"
+                      name="preferredDate"
+                      class="cnt-form-input"
+                    />
+                    <span class="cnt-field-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="cnt-form-field cnt-form-field--full">
+                  <label for="contact-message" class="cnt-form-label">Message <span class="cnt-req" aria-hidden="true">*</span></label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    class="cnt-form-textarea"
+                    rows="4"
+                    placeholder="Tell us about the cart model you're interested in, rental dates, specific repair symptoms, or any custom build preferences..."
+                    required
+                  ></textarea>
+                  <span class="cnt-error-msg" id="message-error">Please describe how we can assist you.</span>
+                </div>
+
+              </div>
+
+              <!-- Submit Button -->
+              <div class="cnt-form-footer">
+                <button type="submit" class="cnt-btn cnt-btn--primary cnt-btn--full" id="contact-submit-btn">
+                  <span>Send Message</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <p class="cnt-privacy-notice">
+                  We respect your privacy. Your information is encrypted and will only be used to respond to your inquiry.
+                </p>
+              </div>
+            </form>
+
+            <!-- Success Confirmation Screen -->
+            <div class="cnt-success-view" id="contact-success-view" role="status" aria-live="polite">
+              <div class="cnt-success-icon" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="cnt-success-title">Message Received!</h3>
+              <p class="cnt-success-desc">
+                Thank you for contacting Cart Craft. Your inquiry has been routed to our specialized vehicle concierge team.
+              </p>
+              <div class="cnt-ticket-box">
+                <span class="cnt-ticket-lbl">Inquiry Reference Number</span>
+                <span class="cnt-ticket-code" id="contact-ticket-code">AUR-MSG-84912</span>
+              </div>
+              <div class="cnt-success-details" id="contact-success-summary">
+                <!-- Dynamically populated by contact.js -->
+              </div>
+              <button class="cnt-btn cnt-btn--outline" id="contact-reset-btn">
+                Send Another Inquiry
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side: Large HD Golf Cart Visual & Floating Card -->
+          <div class="cnt-form-visual cnt-reveal" style="--ri:1">
+            <div class="cnt-form-img-frame">
+              <img
+                src="assets/cart-model-01.webp"
+                alt="Luxury Cart Craft Sovereign 6-passenger golf cart in dealership environment"
+                class="cnt-form-img"
+                loading="lazy"
+              />
+              <div class="cnt-form-img-overlay"></div>
+
+              <!-- Floating Concierge Information Card -->
+              <div class="cnt-floating-card">
+                <div class="cnt-floating-badge">
+                  <span class="cnt-live-dot"></span>
+                  Active Concierge Desk
+                </div>
+                <h4 class="cnt-floating-title">Personalized Golf Cart Assistance</h4>
+                <p class="cnt-floating-desc">
+                  Our factory-certified consultants are standing by to guide your cart purchase, schedule maintenance, or assemble custom commercial fleets.
+                </p>
+                <div class="cnt-floating-chips">
+                  <span class="cnt-chip">Instant Quotes</span>
+                  <span class="cnt-chip">Doorstep Delivery</span>
+                  <span class="cnt-chip">OEM Warranties</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 4 – FIND US
+    ============================================================ -->
+    <section class="cnt-section cnt-map-section" id="find-us" aria-labelledby="cnt-map-heading">
+      <div class="cnt-container">
+        <div class="cnt-section-header cnt-reveal">
+          <p class="cnt-label cnt-label--center">Our Dealership &amp; Service Hub</p>
+          <h2 class="cnt-section-heading cnt-section-heading--center" id="cnt-map-heading">
+            Find Our Showroom
+          </h2>
+          <p class="cnt-section-sub">
+            Conveniently situated to serve private golf cart owners, championship resort communities, and golf clubs across the region.
+          </p>
+        </div>
+
+        <div class="cnt-map-layout">
+
+          <!-- Left Side: Interactive Stylized Map Interface -->
+          <div class="cnt-map-card cnt-reveal" style="--ri:0">
+            <div class="cnt-map-viewport" id="map-canvas-container" role="region" aria-label="Showroom interactive map location">
+              
+              <!-- Stylized Vector Map Backdrop -->
+              <div class="cnt-map-vector" aria-hidden="true">
+                <svg viewBox="0 0 800 500" class="cnt-map-svg" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="mapWaterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1B2B34" stop-opacity="0.85"/>
+                      <stop offset="100%" stop-color="#101C23" stop-opacity="0.95"/>
+                    </linearGradient>
+                    <radialGradient id="mapPinGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#E1BD72" stop-opacity="0.6"/>
+                      <stop offset="100%" stop-color="#E1BD72" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+
+                  <!-- Map Background Fill -->
+                  <rect width="800" height="500" fill="#1C0E14" />
+
+                  <!-- Coastal / Fairway Waterbody -->
+                  <path d="M 0,380 Q 220,320 440,390 T 800,340 L 800,500 L 0,500 Z" fill="url(#mapWaterGrad)" opacity="0.6" />
+                  
+                  <!-- Golf Course Fairway Zones -->
+                  <path d="M 120,60 Q 220,40 320,110 T 480,90 T 540,210 T 360,250 T 180,180 Z" fill="rgba(46, 125, 50, 0.15)" stroke="rgba(201, 164, 92, 0.12)" stroke-width="1.5" />
+                  <path d="M 520,180 Q 640,160 740,230 T 780,310 T 660,330 T 560,260 Z" fill="rgba(46, 125, 50, 0.12)" stroke="rgba(201, 164, 92, 0.12)" stroke-width="1.5" />
+
+                  <!-- Primary Highway & Motorway Arteries -->
+                  <path d="M -20,240 Q 240,220 410,260 T 820,210" fill="none" stroke="rgba(225, 189, 114, 0.45)" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M -20,240 Q 240,220 410,260 T 820,210" fill="none" stroke="#E1BD72" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6"/>
+
+                  <!-- Secondary Avenue (Motorway Blvd) -->
+                  <path d="M 410,0 L 410,500" fill="none" stroke="rgba(201, 164, 92, 0.35)" stroke-width="4"/>
+                  <path d="M 410,0 L 410,500" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" stroke-dasharray="6 4"/>
+
+                  <!-- Connecting Boulevard Loops -->
+                  <path d="M 180,180 C 260,280 340,320 410,260" fill="none" stroke="rgba(255, 255, 255, 0.18)" stroke-width="2"/>
+                  <path d="M 410,260 C 490,200 580,210 660,260" fill="none" stroke="rgba(255, 255, 255, 0.18)" stroke-width="2"/>
+
+                  <!-- Highway Exit Ramp -->
+                  <path d="M 360,250 Q 380,280 410,280" fill="none" stroke="#E1BD72" stroke-width="2.5"/>
+
+                  <!-- Pulse Ring under Pin -->
+                  <circle cx="410" cy="260" r="48" fill="url(#mapPinGlow)" class="cnt-map-pulse-anim" />
+                  <circle cx="410" cy="260" r="16" fill="rgba(201, 164, 92, 0.3)" />
+
+                  <!-- Landmark Labels -->
+                  <text x="170" y="110" fill="rgba(248, 243, 232, 0.55)" font-family="DM Sans" font-size="12" font-weight="600" letter-spacing="1">CHAMPIONSHIP GOLF GREENS</text>
+                  <text x="428" y="235" fill="#E1BD72" font-family="DM Sans" font-size="13" font-weight="700" letter-spacing="0.5">MOTORWAY BLVD (EXIT 14)</text>
+                  <text x="590" y="380" fill="rgba(248, 243, 232, 0.55)" font-family="DM Sans" font-size="12" font-weight="600" letter-spacing="1">RESORT COASTLINE</text>
+                </svg>
+              </div>
+
+              <!-- Animated Pin Overlay Element -->
+              <div class="cnt-map-pin-overlay" style="top: 52%; left: 51.2%;">
+                <div class="cnt-pin-beacon"></div>
+                <div class="cnt-pin-marker">
+                  <svg width="28" height="38" viewBox="0 0 24 32" fill="none">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 9 12 20 12 20s12-11 12-20c0-6.63-5.37-12-12-12z" fill="#E1BD72"/>
+                    <circle cx="12" cy="12" r="5" fill="#241018"/>
+                  </svg>
+                </div>
+                <div class="cnt-pin-tooltip">
+                  <strong>Cart Craft Showroom</strong>
+                  <span>100 Motorway Blvd</span>
+                </div>
+              </div>
+
+              <!-- Coordinates Bar -->
+              <div class="cnt-map-hud">
+                <span class="cnt-hud-coords">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
+                  34°03'21.6"N &bull; 118°15'04.2"W
+                </span>
+                <span class="cnt-hud-badge">Direct Access Facility</span>
+              </div>
+            </div>
+
+            <!-- Get Directions Action Strip -->
+            <div class="cnt-map-actions-strip">
+              <div class="cnt-map-address-block">
+                <strong>Cart Craft Showroom &amp; Service Center</strong>
+                <span>100 Motorway Blvd, Your City, Country</span>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=100+Motorway+Blvd"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cnt-btn cnt-btn--primary"
+                id="get-directions-btn"
+              >
+                <span>Get Directions</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side: Golf Cart Visual Beside Map -->
+          <div class="cnt-map-details-wrap cnt-reveal" style="--ri:1">
+            <div class="cnt-map-img-frame">
+              <img
+                src="assets/cart-model-02.webp"
+                alt="Cart Craft Monarch 4 golf cart outside dealership showroom"
+                class="cnt-map-img"
+                loading="lazy"
+              />
+              <div class="cnt-map-img-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Test Drive Track On-Site</span>
+              </div>
+            </div>
+
+            <!-- Direction Guidelines -->
+            <div class="cnt-directions-card">
+              <h3 class="cnt-dir-title">Driving Directions</h3>
+              <p class="cnt-dir-text">
+                Conveniently located off Exit 14 on Motorway Boulevard, minutes from the Grand Dunes Resort and championship golf clubs. Guest parking and trailer turn-around available.
+              </p>
+              <ul class="cnt-dir-list" role="list">
+                <li>
+                  <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
+                  <span><strong>From Resort Communities:</strong> 5 minutes via Coastal Highway North.</span>
+                </li>
+                <li>
+                  <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
+                  <span><strong>From Downtown:</strong> Take Exit 14 and follow Motorway Blvd eastbound.</span>
+                </li>
+                <li>
+                  <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
+                  <span><strong>Trailer Haulers:</strong> Dedicated rear staging yard with pull-through bays.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 5 – FREQUENTLY ASKED QUESTIONS
+    ============================================================ -->
+    <section class="cnt-section cnt-faq-section" id="faq-section" aria-labelledby="cnt-faq-heading">
+      <div class="cnt-container">
+        <div class="cnt-section-header cnt-reveal">
+          <p class="cnt-label cnt-label--center">Clear Answers</p>
+          <h2 class="cnt-section-heading cnt-section-heading--center" id="cnt-faq-heading">
+            Frequently Asked Questions
+          </h2>
+          <p class="cnt-section-sub">
+            Got questions about golf cart models, rental arrangements, certified repairs, or custom builds? Find instant clarity below.
+          </p>
+        </div>
+
+        <div class="cnt-faq-accordion" role="region" aria-label="Golf Cart Frequently Asked Questions">
+
+          <!-- FAQ 1 -->
+          <div class="cnt-faq-item cnt-reveal is-open" style="--ri:0">
+            <button
+              class="cnt-faq-trigger"
+              aria-expanded="true"
+              aria-controls="faq-ans-1"
+              id="faq-btn-1"
+            >
+              <span class="cnt-faq-q">What types of golf carts do you offer?</span>
+              <span class="cnt-faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="cnt-faq-content" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="cnt-faq-body">
+                <p>
+                  We offer a complete spectrum of premium 2, 4, and 6-passenger electric golf carts, including lifted off-road models, street-legal LSVs (Low-Speed Vehicles), and high-capacity resort shuttles. Every vehicle is engineered with aerospace-grade aluminum frames, regenerative braking, and high-efficiency lithium or AGM powertrains.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="cnt-faq-item cnt-reveal" style="--ri:1">
+            <button
+              class="cnt-faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-2"
+              id="faq-btn-2"
+            >
+              <span class="cnt-faq-q">Do you offer golf cart rentals?</span>
+              <span class="cnt-faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="cnt-faq-content" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
+              <div class="cnt-faq-body">
+                <p>
+                  Yes, we maintain an immaculate rental fleet available for daily, weekend, weekly, and monthly reservations. We cater to vacationing families, private weddings, golf tournaments, resort guests, and film productions, with complimentary white-glove delivery and pickup directly to your villa or venue.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="cnt-faq-item cnt-reveal" style="--ri:2">
+            <button
+              class="cnt-faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-3"
+              id="faq-btn-3"
+            >
+              <span class="cnt-faq-q">Do you provide golf cart repairs?</span>
+              <span class="cnt-faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="cnt-faq-content" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+              <div class="cnt-faq-body">
+                <p>
+                  Absolutely. Our authorized service center handles full mechanical, electrical, and battery repairs for all major golf cart brands. Our certified master technicians execute comprehensive 25-point preventative maintenance inspections, differential rebuilds, brake replacements, and computerized motor controller calibrations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="cnt-faq-item cnt-reveal" style="--ri:3">
+            <button
+              class="cnt-faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-4"
+              id="faq-btn-4"
+            >
+              <span class="cnt-faq-q">Can I purchase replacement parts?</span>
+              <span class="cnt-faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="cnt-faq-content" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
+              <div class="cnt-faq-body">
+                <p>
+                  Yes. Our genuine parts department stocks certified OEM components, drop-in 48V/72V lithium battery conversion kits, smart on-board chargers, custom alloy rims, DOT street radial tires, hydraulic disc brake packages, and weather-resistant marine vinyl seat covers with fast fulfillment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="cnt-faq-item cnt-reveal" style="--ri:4">
+            <button
+              class="cnt-faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-5"
+              id="faq-btn-5"
+            >
+              <span class="cnt-faq-q">Can golf carts be customized?</span>
+              <span class="cnt-faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="cnt-faq-content" id="faq-ans-5" role="region" aria-labelledby="faq-btn-5">
+              <div class="cnt-faq-body">
+                <p>
+                  Customization is one of our flagship specialties. Our bespoke fabrication shop provides custom multi-stage automotive paint, 3" to 6" independent A-arm suspension lift kits, marine diamond-stitched seating with custom embroidery, high-output Bluetooth soundbars, digital dash tablets, and underbody ambient LED packages.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="cnt-faq-item cnt-reveal" style="--ri:5">
+            <button
+              class="cnt-faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-6"
+              id="faq-btn-6"
+            >
+              <span class="cnt-faq-q">How can I request a quote?</span>
+              <span class="cnt-faq-indicator" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="cnt-faq-content" id="faq-ans-6" role="region" aria-labelledby="faq-btn-6">
+              <div class="cnt-faq-body">
+                <p>
+                  You can submit the form on this page with your preferred vehicle specs or service scope, call our concierge directly at +1 000 000 0000, or visit our showroom at 100 Motorway Blvd. We provide transparent, itemized quotes with guaranteed pricing within 2 business hours.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cnt-faq-footer cnt-reveal">
+          <p>
+            Still have questions? Our specialists are available to consult with you directly.
+          </p>
+          <a href="#contact-form-section" class="cnt-link-gold">Submit an Inquiry &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 6 – PREMIUM CTA
+    ============================================================ -->
+    <section class="cnt-section cnt-cta-section" id="contact-cta" aria-labelledby="cnt-cta-heading">
+      <div class="cnt-container">
+        <div class="cnt-cta-card cnt-reveal">
+          <div class="cnt-cta-bg" aria-hidden="true">
+            <img
+              src="assets/sales-hero-flagship.jpg"
+              alt=""
+              class="cnt-cta-bg-img"
+              loading="lazy"
+            />
+            <div class="cnt-cta-overlay"></div>
+          </div>
+
+          <div class="cnt-cta-grid">
+            <!-- Left Side: Concierge Content -->
+            <div class="cnt-cta-content">
+              <p class="cnt-cta-eyebrow">
+                <span class="cnt-cta-eyebrow-dot"></span>
+                Direct Client Concierge
+              </p>
+              <h2 class="cnt-cta-heading" id="cnt-cta-heading">
+                Have Questions?<br />
+                <em class="cnt-cta-heading-em">We're Here to Help.</em>
+              </h2>
+              <p class="cnt-cta-desc">
+                Whether you're looking to purchase, rent, service, or customize your luxury golf cart, our factory-certified advisors are ready.
+              </p>
+              <div class="cnt-cta-badges" aria-label="Trust highlights">
+                <span class="cnt-cta-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Certified Advisors
+                </span>
+                <span class="cnt-cta-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  &lt; 2hr Response
+                </span>
+                <span class="cnt-cta-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Doorstep Handover
+                </span>
+              </div>
+              <div class="cnt-cta-actions">
+                <a href="#contact-form-section" class="cnt-btn cnt-btn--cta" id="cta-get-in-touch-btn">
+                  <span>Get in Touch</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="tel:+18002874227" class="cnt-btn cnt-btn--ghost-light" id="cta-call-btn">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>Call Concierge</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Side: Rotating Circle Ring with Luxury Golf Cart Image -->
+            <div class="cnt-cta-visual">
+              <div class="cnt-cta-circle-wrap">
+                <!-- Ambient Glow Halo -->
+                <div class="cnt-cta-circle-glow" aria-hidden="true"></div>
+
+                <!-- Outer Rotating Dashed Ring -->
+                <div class="cnt-cta-ring-rotator cnt-cta-ring-rotator--outer" aria-hidden="true">
+                  <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="cnt-cta-rotator-svg">
+                    <circle cx="150" cy="150" r="144" stroke="rgba(225, 189, 114, 0.45)" stroke-width="1.5" stroke-dasharray="8 8"/>
+                    <circle cx="150" cy="150" r="148" stroke="rgba(201, 164, 92, 0.25)" stroke-width="1"/>
+                  </svg>
+                </div>
+
+                <!-- Inner Rotating Ticks Ring (Counter Direction) -->
+                <div class="cnt-cta-ring-rotator cnt-cta-ring-rotator--inner" aria-hidden="true">
+                  <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="cnt-cta-rotator-svg">
+                    <circle cx="150" cy="150" r="132" stroke="rgba(225, 189, 114, 0.55)" stroke-width="2" stroke-dasharray="3 14" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <!-- Inner Core with Luxury Golf Cart Image -->
+                <div class="cnt-cta-circle-core">
+                  <img
+                    src="assets/sales-hero-flagship.jpg"
+                    alt="Cart Craft Flagship Luxury Golf Cart in Atelier"
+                    class="cnt-cta-circle-img"
+                    loading="lazy"
+                  />
+                  <div class="cnt-cta-circle-overlay" aria-hidden="true"></div>
+                  <div class="cnt-cta-circle-chip">
+                    <span class="cnt-cta-chip-dot"></span>
+                    <span>Cart Craft Atelier</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand" aria-label="Cart Craft Home">
+            <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+            <span class="brand-stack"><span class="brand-name">Cart Craft</span><span class="brand-tagline">Luxury Rides, Crafted for You</span></span>
+          </a>
+          <p class="footer-brand-desc">Premium golf carts for modern leisure, communities and everyday journeys.</p>
+          <div class="footer-badges">
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Certified Quality
+            </span>
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Since 1988
+            </span>
+          </div>
+          <span class="footer-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Your City, Country
+          </span>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Services</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="sales.html" class="footer-link">Sales</a></li>
+            <li><a href="rentals.html" class="footer-link">Rentals</a></li>
+            <li><a href="services.html" class="footer-link">Servicing</a></li>
+            <li><a href="#" class="footer-link">Customization</a></li>
+            <li><a href="#" class="footer-link">Parts &amp; Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Explore</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">Our Models</a></li>
+            <li><a href="#" class="footer-link">Testimonials</a></li>
+            <li><a href="#" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Our Story</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Press</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Address &amp; Contact</h3>
+          <ul class="footer-contact" role="list">
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="footer-text">100 Luxury Drive,<br>Your City, Country</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@cartcraft.com" class="footer-link">hello@cartcraft.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.71 8.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91"/></svg>
+              <a href="tel:+10000000000" class="footer-link">+1 000 000 0000</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="footer-text">Mon &ndash; Sat: 9AM &ndash; 6PM</span>
+            </li>
+          </ul>
+          <div class="footer-socials-inline" aria-label="Social media links">
+            <a href="#" class="social-icon" aria-label="Instagram" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Cart Craft. All rights reserved.</p>
+        <nav class="footer-legal-links" aria-label="Legal links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
