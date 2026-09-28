@@ -1,5 +1,5 @@
-/**
- * AURICART — Luxury Golf Cart Rentals Module
+﻿/**
+ * Cart Craft — Luxury Golf Cart Rentals Module
  * rentals.js — Interactive booking widget, reservation modal, experience modal, and scroll reveals
  */
 

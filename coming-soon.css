@@ -1,5 +1,5 @@
-/* ============================================================
-   AURICART — Coming Soon Page Stylesheet
+﻿/* ============================================================
+   Cart Craft — Coming Soon Page Stylesheet
    coming-soon.css — Recreating the Screenshot Layout & Aesthetics
    ============================================================ */
 
@@ -53,7 +53,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .cs-body {
@@ -62,9 +63,10 @@ html, body {
   font-family: var(--cs-font-body);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -114,7 +116,8 @@ html, body {
 .cs-header {
   position: relative;
   z-index: 10;
-  padding: 1.5rem 2.5rem 1rem;
+  padding: 0.75rem 2.5rem 0.5rem;
+  flex-shrink: 0;
 }
 
 .cs-header-inner {
@@ -140,18 +143,72 @@ html, body {
   transform: translateY(-1px);
 }
 
-.cs-brand-logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+/* Brand Logo Sticker (Not A Card!) */
+.cs-brand-logo-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--cs-card-bg);
-  border: 1px solid var(--cs-card-border);
-  color: var(--cs-accent-green);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  background: transparent;
+  border: none;
+  box-shadow: none;
   flex-shrink: 0;
+}
+
+.cs-brand-logo-sticker {
+  height: 60px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain;
+  display: block;
+  transform: rotate(-2.5deg);
+  /* Die-cut sticker contour + realistic sticker drop shadow */
+  filter: 
+    drop-shadow(2px 0 0 #ffffff)
+    drop-shadow(-2px 0 0 #ffffff)
+    drop-shadow(0 2px 0 #ffffff)
+    drop-shadow(0 -2px 0 #ffffff)
+    drop-shadow(1.5px 1.5px 0 #ffffff)
+    drop-shadow(-1.5px -1.5px 0 #ffffff)
+    drop-shadow(1.5px -1.5px 0 #ffffff)
+    drop-shadow(-1.5px 1.5px 0 #ffffff)
+    drop-shadow(0 4px 12px rgba(23, 61, 50, 0.22));
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.cs-brand:hover .cs-brand-logo-sticker {
+  transform: scale(1.1) rotate(1.5deg);
+  filter: 
+    drop-shadow(2.5px 0 0 #ffffff)
+    drop-shadow(-2.5px 0 0 #ffffff)
+    drop-shadow(0 2.5px 0 #ffffff)
+    drop-shadow(0 -2.5px 0 #ffffff)
+    drop-shadow(1.8px 1.8px 0 #ffffff)
+    drop-shadow(-1.8px -1.8px 0 #ffffff)
+    drop-shadow(0 8px 18px rgba(212, 141, 59, 0.45));
+}
+
+[data-theme="dark"] .cs-brand-logo-sticker {
+  filter: 
+    drop-shadow(2px 0 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(-2px 0 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(0 2px 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(0 -2px 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(1.5px 1.5px 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(-1.5px -1.5px 0 rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 16px rgba(225, 189, 114, 0.5))
+    drop-shadow(0 6px 18px rgba(0, 0, 0, 0.7));
+}
+
+[data-theme="dark"] .cs-brand:hover .cs-brand-logo-sticker {
+  filter: 
+    drop-shadow(2.5px 0 0 #ffffff)
+    drop-shadow(-2.5px 0 0 #ffffff)
+    drop-shadow(0 2.5px 0 #ffffff)
+    drop-shadow(0 -2.5px 0 #ffffff)
+    drop-shadow(0 0 24px rgba(225, 189, 114, 0.8))
+    drop-shadow(0 8px 24px rgba(0, 0, 0, 0.85));
 }
 
 .cs-brand-text {
@@ -161,7 +218,7 @@ html, body {
 
 .cs-brand-name {
   font-family: var(--cs-font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--cs-text-primary);
@@ -170,7 +227,7 @@ html, body {
 
 .cs-brand-tag {
   font-family: var(--cs-font-body);
-  font-size: 0.65rem;
+  font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   color: var(--cs-accent-gold);
@@ -206,34 +263,11 @@ html, body {
   gap: 0.75rem;
 }
 
-.cs-pill-btn {
-  background: var(--cs-card-bg);
-  border: 1.5px solid var(--cs-card-border);
-  color: var(--cs-text-primary);
-  font-family: var(--cs-font-body);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 0.45rem 1.15rem;
-  border-radius: 9999px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all 0.25s var(--cs-transition);
-}
-
-.cs-pill-btn:hover {
-  border-color: var(--cs-accent-green);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
+.cs-icon-btn,
 .cs-circle-btn {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 12px;
   background: var(--cs-card-bg);
   border: 1.5px solid var(--cs-card-border);
   color: var(--cs-text-primary);
@@ -243,12 +277,25 @@ html, body {
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.25s var(--cs-transition);
+  padding: 0;
+  flex-shrink: 0;
 }
 
+.cs-icon-btn:hover,
 .cs-circle-btn:hover {
   border-color: var(--cs-accent-green);
+  color: var(--cs-accent-gold);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cs-icon-btn svg {
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+[dir="rtl"] .rtl-toggle svg {
+  transform: scaleX(-1);
 }
 
 /* Theme Icon Visibility */
@@ -265,9 +312,11 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1.5rem 3.5rem;
+  padding: 0.5rem 1.5rem;
   position: relative;
   z-index: 2;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .cs-container {
@@ -278,13 +327,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0;
 }
 
 /* ------------------------------------------------------------
    5. BADGE (UNDER CONSTRUCTION)
    ------------------------------------------------------------ */
 .cs-badge-wrap {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .cs-badge {
@@ -313,12 +363,12 @@ html, body {
    ------------------------------------------------------------ */
 .cs-heading {
   font-family: var(--cs-font-heading);
-  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 600;
   color: var(--cs-text-primary);
-  line-height: 1.12;
+  line-height: 1.1;
   letter-spacing: -0.015em;
-  margin: 0 0 1.15rem;
+  margin: 0 0 0.6rem;
 }
 
 .cs-heading-accent {
@@ -330,11 +380,11 @@ html, body {
 
 .cs-subheading {
   font-family: var(--cs-font-body);
-  font-size: clamp(1.02rem, 1.8vw, 1.15rem);
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
   color: var(--cs-text-secondary);
-  line-height: 1.65;
-  max-width: 580px;
-  margin: 0 auto 2.5rem;
+  line-height: 1.55;
+  max-width: 560px;
+  margin: 0 auto 1.1rem;
 }
 
 /* ------------------------------------------------------------
@@ -344,18 +394,18 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.15rem;
-  margin-bottom: 2.5rem;
+  gap: 0.85rem;
+  margin-bottom: 1.1rem;
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
 }
 
 .cs-timer-card {
   flex: 1;
   background: var(--cs-card-bg);
   border: 1px solid var(--cs-card-border);
-  border-radius: 16px;
-  padding: 1.15rem 0.75rem 0.95rem;
+  border-radius: 14px;
+  padding: 0.7rem 0.6rem 0.6rem;
   box-shadow: var(--cs-card-shadow);
   display: flex;
   flex-direction: column;
@@ -371,11 +421,11 @@ html, body {
 
 .cs-timer-num {
   font-family: var(--cs-font-heading);
-  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 800;
   color: var(--cs-text-primary);
   line-height: 1;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .cs-timer-lbl {
@@ -410,8 +460,8 @@ html, body {
    ------------------------------------------------------------ */
 .cs-notify-box {
   width: 100%;
-  max-width: 540px;
-  margin-bottom: 2.25rem;
+  max-width: 520px;
+  margin-bottom: 1rem;
 }
 
 .cs-notify-form {
@@ -530,7 +580,7 @@ html, body {
   gap: 1.25rem;
   width: 100%;
   max-width: 440px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .cs-divider-line {
@@ -566,7 +616,7 @@ html, body {
   width: 100%;
   max-width: 780px;
   border-top: 1px solid var(--cs-divider);
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .cs-feature-item {
@@ -574,7 +624,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   position: relative;
 }
 
@@ -589,14 +639,14 @@ html, body {
 }
 
 .cs-feature-icon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--cs-accent-green);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.3rem;
   transition: transform 0.25s ease;
 }
 
@@ -648,7 +698,7 @@ html, body {
    ------------------------------------------------------------ */
 @media (max-width: 900px) {
   .cs-header {
-    padding: 1.25rem 1.5rem 0.5rem;
+    padding: 0.65rem 1.5rem 0.4rem;
   }
 
   .cs-motto-strip {
@@ -657,7 +707,7 @@ html, body {
 
   .cs-features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 
   .cs-feature-item:not(:last-child)::after {
@@ -667,48 +717,119 @@ html, body {
 
 @media (max-width: 600px) {
   .cs-header {
-    padding: 1rem 1rem 0.5rem;
+    padding: 0.5rem 0.8rem 0.3rem;
+  }
+
+  .cs-brand {
+    gap: 6px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .cs-brand-logo-sticker {
+    height: 36px;
+    max-width: 48px;
+  }
+
+  .cs-brand-name {
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .cs-brand-tag {
+    font-size: 0.44rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    opacity: 0.85;
+  }
+
+  .cs-controls {
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .cs-icon-btn,
+  .cs-circle-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+  }
+
+  .cs-icon-btn svg,
+  .cs-circle-btn svg {
+    width: 17px;
+    height: 17px;
   }
 
   .cs-main {
-    padding: 2rem 1rem 3rem;
+    padding: 0.25rem 1rem;
   }
 
   .cs-heading {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .cs-subheading {
+    font-size: 0.82rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cs-badge-wrap {
+    margin-bottom: 0.45rem;
   }
 
   .cs-countdown-wrap {
-    gap: 0.5rem;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
   }
 
   .cs-timer-card {
-    padding: 0.85rem 0.4rem 0.75rem;
-    border-radius: 12px;
+    padding: 0.55rem 0.3rem 0.45rem;
+    border-radius: 10px;
   }
 
   .cs-timer-num {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
   }
 
   .cs-timer-lbl {
-    font-size: 0.6rem;
+    font-size: 0.56rem;
+  }
+
+  .cs-notify-box {
+    margin-bottom: 0.75rem;
   }
 
   .cs-notify-capsule {
     flex-direction: column;
-    padding: 0.75rem 1rem;
-    border-radius: 20px;
-    gap: 0.75rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 16px;
+    gap: 0.5rem;
   }
 
   .cs-notify-btn {
     width: 100%;
     justify-content: center;
+    padding: 0.55rem 1.2rem;
+  }
+
+  .cs-back-wrap {
+    margin-bottom: 0.75rem;
   }
 
   .cs-features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding-top: 0.6rem;
+  }
+
+  .cs-feature-title {
+    font-size: 0.9rem;
+  }
+
+  .cs-feature-sub {
+    font-size: 0.65rem;
   }
 }

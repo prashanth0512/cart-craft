@@ -1,5 +1,5 @@
-/**
- * AURICART — Premium Golf Cart Sales Module
+﻿/**
+ * Cart Craft — Premium Golf Cart Sales Module
  * sales.js — Inventory filtering, interactive quote & specs modals, scroll reveals
  */
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ============================================================ */
   const VEHICLE_DATA = {
     'monarch-4': {
-      brand: 'AURICART Signature',
+      brand: 'Cart Craft Signature',
       title: 'Monarch 4 Luxury LSV',
       price: '$16,490',
       finance: 'Financing from $249/mo on approved credit',
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'sovereign-6': {
-      brand: 'AURICART Executive',
+      brand: 'Cart Craft Executive',
       title: 'Sovereign 6 Executive Tourer',
       price: '$21,850',
       finance: 'Financing from $329/mo on approved credit',
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'apex-gt': {
-      brand: 'AURICART Sport',
+      brand: 'Cart Craft Sport',
       title: 'Apex GT Sport Edition',
       price: '$14,990',
       finance: 'Financing from $229/mo on approved credit',
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'boulevard': {
-      brand: 'AURICART Urban',
+      brand: 'Cart Craft Urban',
       title: 'Boulevard Street-Legal LSV',
       price: '$15,750',
       finance: 'Financing from $239/mo on approved credit',
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'estate-cruiser': {
-      brand: 'AURICART Classic',
+      brand: 'Cart Craft Classic',
       title: 'Estate Cruiser Classic 4',
       price: '$12,890',
       finance: 'Financing from $195/mo on approved credit',
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'grand-horizon': {
-      brand: 'AURICART Commercial',
+      brand: 'Cart Craft Commercial',
       title: 'Grand Horizon 6 Resort Limo',
       price: '$23,400',
       finance: 'Financing from $355/mo or Fleet Lease',
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'outlaw': {
-      brand: 'AURICART Off-Road',
+      brand: 'Cart Craft Off-Road',
       title: 'Outlaw 4x4 Off-Road Custom',
       price: '$17,250',
       finance: 'Financing from $265/mo on approved credit',
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'gas-gt': {
-      brand: 'AURICART Powertrain',
+      brand: 'Cart Craft Powertrain',
       title: 'Whispering Gas GT 4',
       price: '$13,650',
       finance: 'Financing from $205/mo on approved credit',

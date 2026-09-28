@@ -1,5 +1,5 @@
-/* ============================================================
-   AURICART — Complete Golf Cart Services & Parts Stylesheet
+﻿/* ============================================================
+   Cart Craft — Complete Golf Cart Services & Parts Stylesheet
    Authorized Service Center & Parts Distribution
    services.css
    ============================================================ */
@@ -1705,34 +1705,63 @@
    6. SECTION 4 — UPGRADE YOUR GOLF CART
    ------------------------------------------------------------ */
 .srv-upgrades {
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--srv-burgundy-800) 50%, var(--color-bg) 100%);
+}
+
+.srv-upgrades .srv-section-header {
+  margin-bottom: 2rem;
+}
+
+.srv-upgrades .srv-section-heading {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.srv-upgrades .srv-section-sub {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  max-width: 580px;
 }
 
 .srv-upgrade-layout {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: clamp(2.5rem, 5vw, 4.5rem);
-  align-items: center;
-  margin-bottom: 3.5rem;
+  grid-template-columns: 1fr 1.08fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: stretch;
+  max-width: 1040px;
+  margin: 0 auto 2rem auto;
 }
 
 .srv-upgrade-main-visual {
   position: relative;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .srv-upgrade-img-frame {
   position: relative;
-  border-radius: 26px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--srv-card-shadow);
   border: 1.5px solid var(--srv-glass-border);
-  aspect-ratio: 4 / 3.4;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1;
 }
 
 .srv-upgrade-main-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform 0.8s var(--srv-transition);
 }
 
@@ -1742,57 +1771,75 @@
 
 .srv-upgrade-badge {
   position: absolute;
-  bottom: 1.25rem;
-  left: 1.25rem;
+  bottom: 0.9rem;
+  left: 0.9rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(20, 6, 11, 0.88);
+  gap: 0.45rem;
+  background: rgba(20, 6, 11, 0.9);
   border: 1px solid var(--color-supportive);
   color: var(--color-supportive);
   font-family: var(--srv-font-sans);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.45rem 1rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.8rem;
   border-radius: 9999px;
   backdrop-filter: blur(8px);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .srv-upgrade-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.75rem;
+  height: 100%;
+  min-height: 0;
 }
 
 .srv-upgrade-card {
   background: var(--srv-glass-bg);
   border: 1px solid var(--srv-glass-border);
-  border-radius: 18px;
-  padding: 1.65rem 1.5rem;
+  border-radius: 14px;
+  padding: 1.05rem 1.15rem;
   box-shadow: var(--srv-card-shadow);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: transform 0.4s var(--srv-transition), border-color 0.4s var(--srv-transition);
+  transition: transform 0.35s var(--srv-transition), border-color 0.35s var(--srv-transition), box-shadow 0.35s var(--srv-transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .srv-upgrade-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: var(--color-supportive);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4), 0 0 16px var(--srv-gold-glow);
 }
 
 .srv-upgrade-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 10px;
   background: rgba(201, 164, 92, 0.12);
   border: 1px solid rgba(201, 164, 92, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-supportive);
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
+  flex-shrink: 0;
+  transition: all 0.35s var(--srv-transition);
+}
+
+.srv-upgrade-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .srv-upgrade-card:hover .srv-upgrade-icon {
@@ -1802,43 +1849,48 @@
 
 .srv-upgrade-card-title {
   font-family: var(--srv-font-serif);
-  font-size: 1.35rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--color-text-primary);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
 }
 
 .srv-upgrade-card-desc {
   font-family: var(--srv-font-body);
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   color: var(--color-text-secondary);
-  line-height: 1.55;
+  line-height: 1.45;
+  margin: 0;
 }
 
 .srv-upgrade-cta-bar {
+  max-width: 1040px;
+  margin: 0 auto;
   background: var(--srv-glass-bg);
   border: 1.5px solid var(--color-supportive);
-  border-radius: 20px;
-  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  padding: 1.15rem 1.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--srv-gold-glow);
+  gap: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 24px var(--srv-gold-glow);
   backdrop-filter: blur(16px);
 }
 
 .srv-upgrade-cta-text h3 {
   font-family: var(--srv-font-serif);
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   color: var(--color-text-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .srv-upgrade-cta-text p {
   font-family: var(--srv-font-body);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
+  margin: 0;
 }
 
 /* ------------------------------------------------------------
@@ -2554,6 +2606,11 @@
   left: 1.5rem;
 }
 
+[dir="rtl"] .srv-upgrade-badge {
+  left: auto;
+  right: 1.25rem;
+}
+
 [dir="rtl"] .srv-part-badge {
   right: auto;
   left: 0.85rem;
@@ -2607,6 +2664,34 @@
 
   .srv-upgrade-layout {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 1.75rem;
+  }
+
+  .srv-upgrade-main-visual {
+    height: auto;
+  }
+
+  .srv-upgrade-img-frame {
+    height: 300px;
+    min-height: 240px;
+    aspect-ratio: 16 / 10;
+    flex: none;
+    position: relative;
+  }
+
+  .srv-upgrade-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+    gap: 0.75rem;
+  }
+
+  .srv-upgrade-card {
+    height: auto;
+    padding: 1rem 1.1rem;
+    justify-content: flex-start;
   }
 
   .srv-upgrade-cta-bar {
@@ -2744,8 +2829,24 @@
     margin-top: 3rem;
   }
 
+  .srv-upgrade-layout {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .srv-upgrade-img-frame {
+    height: 240px;
+    min-height: 200px;
+    aspect-ratio: 16 / 10;
+  }
+
   .srv-upgrade-grid {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .srv-upgrade-card {
+    padding: 0.9rem 1rem;
   }
 
   .srv-form-grid {

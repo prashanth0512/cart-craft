@@ -1,5 +1,5 @@
 /**
- * AURICART — Premium Golf Cart Website
+ * Cart Craft — Premium Golf Cart Website
  * index.js — Main JavaScript Module
  */
 
@@ -11,7 +11,7 @@
 (function initTheme() {
   const root = document.documentElement;
   const btn  = document.getElementById('theme-toggle');
-  const STORAGE_KEY = 'auricart-theme';
+  const STORAGE_KEY = 'Cart Craft-theme';
 
   // Determine initial theme
   const saved = localStorage.getItem(STORAGE_KEY);
@@ -38,7 +38,7 @@
 (function initRTL() {
   const root = document.documentElement;
   const btn  = document.getElementById('rtl-toggle');
-  const STORAGE_KEY = 'auricart-dir';
+  const STORAGE_KEY = 'Cart Craft-dir';
 
   // Restore saved preference
   const saved = localStorage.getItem(STORAGE_KEY);
@@ -51,6 +51,22 @@
   btn.addEventListener('click', () => {
     const current = root.getAttribute('dir') || 'ltr';
     const next = current === 'ltr' ? 'rtl' : 'ltr';
+
+    // SAFETY: On desktop, ensure mobile menu is fully closed before switching direction.
+    // Toggling dir on <html> can cause a brief reflow that triggers mobile menu visibility.
+    if (window.innerWidth > 1024) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const overlay    = document.getElementById('mobile-overlay');
+      const hamburger  = document.getElementById('hamburger');
+      if (mobileMenu)  { mobileMenu.classList.remove('is-open'); }
+      if (overlay)     { overlay.classList.remove('is-open'); }
+      if (hamburger)   {
+        hamburger.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+
     root.setAttribute('dir', next);
     localStorage.setItem(STORAGE_KEY, next);
     btn.setAttribute('aria-label', `Switch to ${current === 'rtl' ? 'LTR' : 'RTL'} direction`);
@@ -627,7 +643,7 @@
    13. INITIALIZATION LOG
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('%cAURICART — Premium Golf Cart Website', 'color:#9B9AE8;font-size:14px;font-weight:700;');
+  console.log('%cCart Craft — Premium Golf Cart Website', 'color:#9B9AE8;font-size:14px;font-weight:700;');
   console.log('%cBespoke Hero Stage & Sticker Module Initialized.', 'color:#C9A45C;font-size:11px;');
 });
 

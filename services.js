@@ -1,5 +1,5 @@
-/**
- * AURICART — Golf Cart Services & Genuine Parts Module
+﻿/**
+ * Cart Craft — Golf Cart Services & Genuine Parts Module
  * services.js — Interactive booking modal, service detail modal, parts inquiry modal, and scroll animations
  */
 

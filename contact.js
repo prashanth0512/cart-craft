@@ -1,5 +1,5 @@
-/**
- * AURICART — Luxury Golf Cart Contact Page
+﻿/**
+ * Cart Craft — Luxury Golf Cart Contact Page
  * contact.js — FAQ accordion, contact form validation & ticket generation, and scroll reveals
  */
 

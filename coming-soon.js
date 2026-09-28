@@ -1,5 +1,5 @@
-/**
- * AURICART — Luxury Golf Cart Rentals Coming Soon
+﻿/**
+ * Cart Craft — Luxury Golf Cart Rentals Coming Soon
  * coming-soon.js — Live ticking countdown timer and email notify form handler
  */
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const secsEl  = document.getElementById('cd-secs');
 
   // Set target launch timestamp: 28 days, 12 hours, 37 mins, 26 secs from first view
-  const STORAGE_KEY_LAUNCH = 'auricart-launch-target';
+  const STORAGE_KEY_LAUNCH = 'Cart Craft-launch-target';
   let targetTime = localStorage.getItem(STORAGE_KEY_LAUNCH);
 
   if (!targetTime) {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Store in localStorage
       try {
-        localStorage.setItem('auricart-notify-email', emailVal);
+        localStorage.setItem('Cart Craft-notify-email', emailVal);
       } catch (err) {
         /* storage disabled */
       }

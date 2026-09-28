@@ -1,5 +1,5 @@
-/**
- * AURICART — Home 2 JavaScript Module
+﻿/**
+ * Cart Craft — Home 2 JavaScript Module
  * Interactive features, scroll reveals, stats counters, and 3D card tilt
  */
 
