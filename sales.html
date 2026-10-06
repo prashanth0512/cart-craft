@@ -42,6 +42,7 @@
               <a href="home2.html" class="dropdown-item" role="menuitem">Home 2</a>
             </div>
           </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
           <li class="nav-item"><a href="sales.html" class="nav-link nav-link--active">Sales</a></li>
           <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
           <li class="nav-item"><a href="services.html" class="nav-link">Service &amp; Parts</a></li>
@@ -61,7 +62,8 @@
         </button>
         <button class="icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR direction" title="Toggle direction">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 6h18M3 12h12M3 18h9"/><path d="M18 9l3 3-3 3"/>
+            <path d="M16 3l4 4-4 4M20 7H4" />
+            <path d="M8 21l-4-4 4-4M4 17h16" />
           </svg>
         </button>
         <a href="#sales-categories" class="btn btn-primary btn-sm" id="header-book-btn">Book Now</a>
@@ -93,6 +95,7 @@
       <ul class="mobile-nav-list" role="list">
         <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
         <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
         <li><a href="sales.html" class="mobile-nav-link mobile-nav-link--active">Sales</a></li>
         <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
         <li><a href="services.html" class="mobile-nav-link">Service &amp; Parts</a></li>
@@ -141,7 +144,7 @@
         <!-- LEFT — Headline Column -->
         <div class="sales-hero-content">
           <p class="sales-eyebrow sales-anim-up" style="--d:0.1s">
-            <span class="sales-eyebrow-dot"></span>
+            <span class="sales-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Official Flagship Showroom &amp; Dealership
           </p>
           <h1 class="sales-hero-heading sales-anim-up" style="--d:0.25s">
@@ -272,7 +275,7 @@
         <!-- Section Header -->
         <div class="sales-section-header sales-reveal" style="--ri:0">
           <p class="sales-label sales-label--center">
-            <span class="sales-label-dot"></span>
+            <span class="sales-label-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Browse By Type
           </p>
           <h2 class="sales-section-heading sales-section-heading--center" id="sales-cat-heading">
@@ -582,7 +585,7 @@
         <!-- Section Header -->
         <div class="sales-section-header sales-reveal">
           <p class="sales-label sales-label--center">
-            <span class="sales-label-dot"></span>
+            <span class="sales-label-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Crafted Without Compromise
           </p>
           <h2 class="sales-section-heading sales-section-heading--center" id="purpose-heading">
@@ -838,7 +841,7 @@
         <!-- Section Header -->
         <div class="sales-section-header sales-reveal">
           <p class="sales-label sales-label--center">
-            <span class="sales-perf-pulse-dot" aria-hidden="true"></span>
+            <span class="sales-perf-pulse-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Aerospace Architecture &bull; Uncompromised Dynamics
           </p>
           <h2 class="sales-section-heading sales-section-heading--center" id="sales-perf-heading">
@@ -1072,69 +1075,120 @@
       </div>
       <div class="sales-container">
         <div class="sales-section-header sales-reveal">
-          <p class="sales-label sales-label--center">The Cart Craft Standard</p>
+          <p class="sales-label sales-label--center">
+            <span class="sales-label-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            The Cart Craft Standard &bull; What You Receive
+          </p>
           <h2 class="sales-section-heading sales-section-heading--center" id="sales-why-heading">
-            Why Buy From Us
+            Why Buy <em class="sales-sh-em">From Us</em>
           </h2>
           <p class="sales-section-sub">
-            We deliver a seamless luxury dealership experience — from your initial consultation to custom fabrication and enclosed doorstep delivery.
+            We deliver a seamless luxury dealership experience &mdash; from hand-curated vehicle collections and bespoke fabrication to enclosed white-glove doorstep delivery.
           </p>
         </div>
 
         <div class="sales-why-grid">
 
-          <!-- Benefit 1 -->
+          <!-- Benefit 1: Premium Golf Cart Collection -->
           <div class="sales-why-card sales-reveal" style="--ri:0">
-            <div class="sales-why-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="card-corner tl" aria-hidden="true"></div>
+            <div class="card-corner tr" aria-hidden="true"></div>
+            <div class="card-corner bl" aria-hidden="true"></div>
+            <div class="card-corner br" aria-hidden="true"></div>
+            <div class="sales-why-img-wrap">
+              <img src="assets/philosophy-luxury-cart.jpg" alt="Cart Craft Luxury Golf Cart Collection on private estate" class="sales-why-img" loading="lazy" />
+              <div class="sales-why-img-overlay"></div>
+              <span class="sales-why-chip">Curated Collection</span>
             </div>
-            <h3 class="sales-why-title">Premium Golf Cart Collection</h3>
-            <p class="sales-why-desc">Hand-selected luxury models engineered to the highest automotive tolerances, verified for performance, safety, and lasting reliability.</p>
+            <div class="sales-why-body">
+              <h3 class="sales-why-title">Premium Golf Cart Collection</h3>
+              <p class="sales-why-desc">Hand-selected luxury models engineered to the highest automotive tolerances, verified for performance, safety, and lasting reliability.</p>
+            </div>
           </div>
 
-          <!-- Benefit 2 -->
+          <!-- Benefit 2: Quality & Durability -->
           <div class="sales-why-card sales-reveal" style="--ri:1">
-            <div class="sales-why-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="card-corner tl" aria-hidden="true"></div>
+            <div class="card-corner tr" aria-hidden="true"></div>
+            <div class="card-corner bl" aria-hidden="true"></div>
+            <div class="card-corner br" aria-hidden="true"></div>
+            <div class="sales-why-img-wrap">
+              <img src="assets/chassis-hoist.jpg" alt="Aircraft-grade 6061-T6 aluminum golf cart chassis on service hoist" class="sales-why-img" loading="lazy" />
+              <div class="sales-why-img-overlay"></div>
+              <span class="sales-why-chip">Aerospace Chassis</span>
             </div>
-            <h3 class="sales-why-title">Quality &amp; Durability</h3>
-            <p class="sales-why-desc">Rust-proof aircraft-grade aluminum chassis, sealed electronic systems, and weather-proof upholstery designed to endure all climates.</p>
+            <div class="sales-why-body">
+              <h3 class="sales-why-title">Quality &amp; Durability</h3>
+              <p class="sales-why-desc">Rust-proof aircraft-grade aluminum chassis, sealed electronic systems, and weather-proof upholstery designed to endure all climates.</p>
+            </div>
           </div>
 
-          <!-- Benefit 3 -->
+          <!-- Benefit 3: Customization Options -->
           <div class="sales-why-card sales-reveal" style="--ri:2">
-            <div class="sales-why-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <div class="card-corner tl" aria-hidden="true"></div>
+            <div class="card-corner tr" aria-hidden="true"></div>
+            <div class="card-corner bl" aria-hidden="true"></div>
+            <div class="card-corner br" aria-hidden="true"></div>
+            <div class="sales-why-img-wrap">
+              <img src="assets/customization-interior.jpg" alt="Hand-stitched Italian leather interior and bespoke 24K gold golf cart detailing" class="sales-why-img" loading="lazy" />
+              <div class="sales-why-img-overlay"></div>
+              <span class="sales-why-chip">Bespoke Atelier</span>
             </div>
-            <h3 class="sales-why-title">Customization Options</h3>
-            <p class="sales-why-desc">Collaborate with our in-house master artisans to tailor body paint, diamond stitching, high-performance lifts, and custom lighting packages.</p>
+            <div class="sales-why-body">
+              <h3 class="sales-why-title">Customization Options</h3>
+              <p class="sales-why-desc">Collaborate with our in-house master artisans to tailor body paint, diamond stitching, high-performance lifts, and custom lighting packages.</p>
+            </div>
           </div>
 
-          <!-- Benefit 4 -->
+          <!-- Benefit 4: Customer Support -->
           <div class="sales-why-card sales-reveal" style="--ri:3">
-            <div class="sales-why-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91"/></svg>
+            <div class="card-corner tl" aria-hidden="true"></div>
+            <div class="card-corner tr" aria-hidden="true"></div>
+            <div class="card-corner bl" aria-hidden="true"></div>
+            <div class="card-corner br" aria-hidden="true"></div>
+            <div class="sales-why-img-wrap">
+              <img src="assets/craft-inspection.jpg" alt="Certified master technician inspecting luxury golf cart powertrain" class="sales-why-img" loading="lazy" />
+              <div class="sales-why-img-overlay"></div>
+              <span class="sales-why-chip">Master Concierge</span>
             </div>
-            <h3 class="sales-why-title">Customer Support</h3>
-            <p class="sales-why-desc">Our dedicated team is ready with direct phone, email, and video concierge assistance, backed by a comprehensive 5-year certified warranty program.</p>
+            <div class="sales-why-body">
+              <h3 class="sales-why-title">Customer Support</h3>
+              <p class="sales-why-desc">Our dedicated team is ready with direct phone, email, and video concierge assistance, backed by a comprehensive 5-year certified warranty program.</p>
+            </div>
           </div>
 
-          <!-- Benefit 5 -->
+          <!-- Benefit 5: Convenient Shopping Experience -->
           <div class="sales-why-card sales-reveal" style="--ri:4">
-            <div class="sales-why-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div class="card-corner tl" aria-hidden="true"></div>
+            <div class="card-corner tr" aria-hidden="true"></div>
+            <div class="card-corner bl" aria-hidden="true"></div>
+            <div class="card-corner br" aria-hidden="true"></div>
+            <div class="sales-why-img-wrap">
+              <img src="assets/sales-why-delivery.jpg" alt="Enclosed luxury carrier unloading bespoke golf cart at private estate" class="sales-why-img" loading="lazy" />
+              <div class="sales-why-img-overlay"></div>
+              <span class="sales-why-chip">Enclosed Delivery</span>
             </div>
-            <h3 class="sales-why-title">Convenient Shopping Experience</h3>
-            <p class="sales-why-desc">Browse transparent specs, request real-time walkaround videos, and enjoy insured, enclosed direct-to-driveway delivery across the country.</p>
+            <div class="sales-why-body">
+              <h3 class="sales-why-title">Convenient Shopping Experience</h3>
+              <p class="sales-why-desc">Browse transparent specs, request real-time walkaround videos, and enjoy insured, enclosed direct-to-driveway delivery across the country.</p>
+            </div>
           </div>
 
-          <!-- Benefit 6 -->
+          <!-- Benefit 6: Financing & Leasing Available -->
           <div class="sales-why-card sales-reveal" style="--ri:5">
-            <div class="sales-why-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            <div class="card-corner tl" aria-hidden="true"></div>
+            <div class="card-corner tr" aria-hidden="true"></div>
+            <div class="card-corner bl" aria-hidden="true"></div>
+            <div class="card-corner br" aria-hidden="true"></div>
+            <div class="sales-why-img-wrap">
+              <img src="assets/sales-why-financing.jpg" alt="Executive VIP handover of custom luxury electric golf cart in showroom" class="sales-why-img" loading="lazy" />
+              <div class="sales-why-img-overlay"></div>
+              <span class="sales-why-chip">VIP Handover &amp; Lease</span>
             </div>
-            <h3 class="sales-why-title">Financing &amp; Leasing Available</h3>
-            <p class="sales-why-desc">Take advantage of competitive low-rate financing, zero-down options on approved credit, and tax-advantaged commercial lease terms.</p>
+            <div class="sales-why-body">
+              <h3 class="sales-why-title">Financing &amp; Leasing Available</h3>
+              <p class="sales-why-desc">Take advantage of competitive low-rate financing, zero-down options on approved credit, and tax-advantaged commercial lease terms.</p>
+            </div>
           </div>
 
         </div>

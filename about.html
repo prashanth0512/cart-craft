@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/cart-craft-logo.png" />
+  <link rel="icon" type="image/png" href="assets/cart-craft-logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/cart-craft-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description"
+    content="Cart Craft — About our luxury golf cart atelier, bespoke custom shop, white-glove rental fleets, 35-year heritage, master craftsman team, and mission for zero-emission estate mobility." />
+  <meta name="theme-color" content="#181820" />
+  <title>About Us — Cart Craft | Luxury Golf Cart Atelier &amp; Rentals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER (CONSISTENT WITH HOME 1) ===== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack">
+          <span class="brand-name">Cart Craft</span>
+          <span class="brand-tagline">Luxury Rides, Crafted for You</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item nav-dropdown-parent">
+            <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true"
+              id="home-dropdown-btn">
+              Home
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu" aria-labelledby="home-dropdown-btn">
+              <a href="index.html" class="dropdown-item" role="menuitem">Home 1</a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link nav-link--active" aria-current="page">About Us</a>
+          </li>
+          <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
+          <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Service &amp; Parts</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme"
+          title="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button class="icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR direction"
+          title="Toggle direction">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 3l4 4-4 4M20 7H4" />
+            <path d="M8 21l-4-4 4-4M4 17h16" />
+          </svg>
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" id="header-book-btn" data-open-booking-modal="test-drive" aria-haspopup="dialog" aria-controls="cc-booking-modal">Book Now</button>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="brand" aria-label="Cart Craft Home">
+        <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+        <span class="brand-stack">
+          <span class="brand-name">Cart Craft</span>
+          <span class="brand-tagline">Luxury Rides, Crafted for You</span>
+        </span>
+      </a>
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link mobile-nav-link--active">About Us</a></li>
+        <li><a href="sales.html" class="mobile-nav-link">Sales</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Service &amp; Parts</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-footer">
+      <button type="button" class="btn btn-primary mobile-book-btn" data-open-booking-modal="test-drive" aria-haspopup="dialog" aria-controls="cc-booking-modal">Book Now</button>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="about-main">
+
+    <!-- ============================================================
+         SECTION 1: PREMIUM HERO BANNER
+         ============================================================ -->
+    <section class="abt-hero" id="about-hero" aria-labelledby="about-hero-heading">
+      <!-- Luxury Atmospheric Backdrop & Lighting -->
+      <div class="abt-hero-bg-stage" aria-hidden="true">
+        <div class="abt-hero-spotlight"></div>
+        <div class="abt-hero-radial"></div>
+        <div class="abt-hero-beam abt-hero-beam--1"></div>
+        <div class="abt-hero-beam abt-hero-beam--2"></div>
+        <div class="abt-hero-particles">
+          <span class="particle" style="--p-x: 14%; --p-y: 28%; --p-d: 4.2s; --p-s: 4px;"></span>
+          <span class="particle" style="--p-x: 78%; --p-y: 18%; --p-d: 5.1s; --p-s: 5px;"></span>
+          <span class="particle" style="--p-x: 44%; --p-y: 72%; --p-d: 3.9s; --p-s: 3px;"></span>
+          <span class="particle" style="--p-x: 85%; --p-y: 65%; --p-d: 4.8s; --p-s: 4px;"></span>
+          <span class="particle" style="--p-x: 22%; --p-y: 82%; --p-d: 5.5s; --p-s: 3px;"></span>
+        </div>
+      </div>
+
+      <div class="container abt-hero-inner">
+        <!-- Left Hero Content -->
+        <div class="abt-hero-content">
+          <!-- Eyebrow Badge -->
+          <div class="abt-eyebrow-wrap">
+            <span class="abt-eyebrow-pill">
+              <span class="abt-eyebrow-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+              <span class="abt-eyebrow-text">EST. 1988 &bull; BESPOKE LEISURE</span>
+              <span class="abt-eyebrow-badge">ATELIER HERITAGE</span>
+            </span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="abt-hero-heading" id="about-hero-heading">
+            Crafting the Future of<br />
+            <span class="abt-heading-accent">Luxury Electric Mobility.</span>
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="abt-hero-desc">
+            Born from an unwavering dedication to coachbuilding precision, Cart Craft designs, engineers, and hand-tailors
+            the world's most distinguished luxury golf carts and white-glove rental fleets for private estates,
+            championship courses, and elite resorts worldwide.
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="abt-hero-ctas">
+            <a href="#about-story" class="btn btn-primary btn-lg" id="abt-hero-story-btn">
+              <span>Explore Our Heritage</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#about-team" class="btn btn-ghost btn-lg" id="abt-hero-team-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span>Meet The Atelier Team</span>
+            </a>
+          </div>
+
+          <!-- Telemetry Trust Metrics Strip -->
+          <div class="abt-hero-telemetry" aria-label="Atelier key statistics">
+            <div class="abt-telemetry-item">
+              <span class="abt-telemetry-val">35<small>+</small></span>
+              <span class="abt-telemetry-lbl">Years Atelier Heritage</span>
+            </div>
+            <div class="abt-telemetry-sep" aria-hidden="true"></div>
+            <div class="abt-telemetry-item">
+              <span class="abt-telemetry-val">4,200<small>+</small></span>
+              <span class="abt-telemetry-lbl">Bespoke Carts Delivered</span>
+            </div>
+            <div class="abt-telemetry-sep" aria-hidden="true"></div>
+            <div class="abt-telemetry-item">
+              <span class="abt-telemetry-val">100<small>%</small></span>
+              <span class="abt-telemetry-lbl">Whisper Electric AC</span>
+            </div>
+            <div class="abt-telemetry-sep" aria-hidden="true"></div>
+            <div class="abt-telemetry-item">
+              <span class="abt-telemetry-val">99.8<small>%</small></span>
+              <span class="abt-telemetry-lbl">Client Precision Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase -->
+        <div class="abt-hero-visual">
+          <div class="abt-hero-card-stack">
+            <!-- Ambient Stage Glow Behind Image -->
+            <div class="abt-hero-glow" aria-hidden="true"></div>
+
+            <!-- Rotating Seal Badge -->
+            <div class="abt-seal-badge" aria-hidden="true">
+              <svg class="abt-seal-svg" viewBox="0 0 100 100">
+                <path id="abt-seal-path" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="none" />
+                <text font-size="8.6" fill="#E1BD72" font-weight="700" letter-spacing="2.2">
+                  <textPath href="#abt-seal-path" startOffset="0%">
+                    • CART CRAFT ATELIER • EST. 1988 •
+                  </textPath>
+                </text>
+              </svg>
+              <div class="abt-seal-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L14.5 8L21 9L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9L9.5 8L12 2Z" fill="#E1BD72"
+                    stroke="#FFFDF7" stroke-width="0.5" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Main Feature Frame -->
+            <div class="abt-hero-frame">
+              <img src="assets/philosophy-luxury-cart.jpg"
+                alt="Cart Craft flagship bespoke electric golf cart with 24K gold accents and hand-quilted leather in atelier showroom"
+                class="abt-hero-img" loading="eager" />
+              <div class="abt-hero-overlay"></div>
+              
+              <!-- Floating Pill Overlays -->
+              <div class="abt-hero-tag abt-hero-tag--top">
+                <span class="abt-tag-dot"></span>
+                <span>HAND-TAILORED ATELIER BUILD</span>
+              </div>
+              <div class="abt-hero-tag abt-hero-tag--bottom">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Zero Tolerance CNC Chassis Alignment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 2: ABOUT GOLF CART SHOP & RENTALS + MISSION & VISION
+         ============================================================ -->
+    <section class="abt-section abt-overview" id="about-story" aria-labelledby="about-story-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="abt-section-header">
+          <div class="abt-header-eyebrow">
+            <span class="abt-eyebrow-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            <span class="abt-eyebrow-num">02</span>
+            <span class="abt-eyebrow-title">OUR DUAL HERITAGE</span>
+          </div>
+          <h2 class="abt-section-heading" id="about-story-heading">
+            Where Bespoke Coachbuilding Meets<br />
+            <span class="abt-heading-accent">Turnkey Fleet Hospitality.</span>
+          </h2>
+          <p class="abt-section-sub">
+            Cart Craft operates two distinct yet seamlessly integrated divisions: our private bespoke custom shop
+            for private homeowners, and our white-glove golf cart rental fleet serving premier tournaments and 5-star resorts.
+          </p>
+        </div>
+
+        <!-- Dual Division Cards -->
+        <div class="abt-divisions-grid">
+          
+          <!-- Division 1: The Custom Shop -->
+          <article class="abt-division-card abt-card--shop">
+            <div class="abt-division-img-frame">
+              <img src="assets/craft-inspection.jpg"
+                alt="Master technician inspecting precision electric golf cart chassis with laser geometry"
+                class="abt-division-img" loading="lazy" />
+              <span class="abt-division-badge">THE BESPOKE ATELIER SHOP</span>
+            </div>
+            <div class="abt-division-body">
+              <div class="abt-division-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </div>
+              <h3 class="abt-division-title">Private Estate Sales &amp; Custom Fabrication</h3>
+              <p class="abt-division-text">
+                Every vehicle in our atelier begins as raw aerospace alloy, computerized laser geometry, and high-efficiency dual AC regenerative powertrain.
+                Clients commission bespoke paint finishes matched to their supercars, hand-quilted Italian marine leather, and 24K gold foil emblem inlays.
+              </p>
+              <ul class="abt-feature-pills" role="list">
+                <li><span>Robotic CNC Chassis</span></li>
+                <li><span>120 KM Lithium Range</span></li>
+                <li><span>Napa Diamond Leather</span></li>
+                <li><span>Street-Legal LSV Certified</span></li>
+              </ul>
+              <div class="abt-division-action">
+                <a href="sales.html" class="abt-link-cta">
+                  <span>Explore Sales Collection</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Division 2: The VIP Rental Fleet -->
+          <article class="abt-division-card abt-card--rentals">
+            <div class="abt-division-img-frame">
+              <img src="assets/rental-fleet-2seater.jpg"
+                alt="Pristine fleet of luxury Cart Craft golf carts ready for tournament and resort staging"
+                class="abt-division-img" loading="lazy" />
+              <span class="abt-division-badge">WHITE-GLOVE RENTAL FLEET</span>
+            </div>
+            <div class="abt-division-body">
+              <div class="abt-division-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <h3 class="abt-division-title">VIP Tournament &amp; Resort Rental Logistics</h3>
+              <p class="abt-division-text">
+                Providing turnkey golf cart fleet deployments for PGA-sanctioned tournaments, high-profile celebrity weddings, private estate galas,
+                and season-long 5-star resort leases. Every fleet arrives fully charged in enclosed transport with dedicated on-site technician support.
+              </p>
+              <ul class="abt-feature-pills" role="list">
+                <li><span>2, 4, 6 &amp; 8-Passenger Fleets</span></li>
+                <li><span>Enclosed Nationwide Transit</span></li>
+                <li><span>Turnkey Staging &amp; Charging</span></li>
+                <li><span>24/7 On-Site Logistics</span></li>
+              </ul>
+              <div class="abt-division-action">
+                <a href="rentals.html" class="abt-link-cta">
+                  <span>Explore Rental Fleet</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 3: MISSION & VISION (GUIDING PHILOSOPHY)
+         ============================================================ -->
+    <section class="abt-section abt-mission-vision-section" id="about-mission-vision" aria-labelledby="about-mission-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="abt-section-header">
+          <div class="abt-header-eyebrow">
+            <span class="abt-eyebrow-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            <span class="abt-eyebrow-num">03</span>
+            <span class="abt-eyebrow-title">MISSION &amp; VISION</span>
+          </div>
+          <h2 class="abt-section-heading" id="about-mission-heading">
+            Driven by Purpose, <span class="abt-heading-accent">Guided by Vision.</span>
+          </h2>
+          <p class="abt-section-sub">
+            The foundational convictions that guide every bespoke stitch of marine leather, every aerospace chassis tolerance,
+            and our commitment to sustainable zero-emission luxury mobility.
+          </p>
+        </div>
+
+        <!-- Twin Pillar Cards: Mission & Vision -->
+        <div class="abt-pillars-grid">
+          
+          <!-- Pillar 1: Mission -->
+          <div class="abt-pillar-card abt-pillar--mission">
+            <div class="abt-pillar-glow" aria-hidden="true"></div>
+            <div class="abt-pillar-header">
+              <div class="abt-pillar-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </div>
+              <span class="abt-pillar-tag">PURPOSE &amp; COMMITMENT</span>
+            </div>
+            <h3 class="abt-pillar-title">Our Mission</h3>
+            <p class="abt-pillar-lead">
+              To elevate everyday estate journeys and tournament transit into unforgettable moments of quiet, refined luxury.
+            </p>
+            <p class="abt-pillar-desc">
+              We eliminate the compromises of standard golf carts by fusing whisper-silent electric powertrains, bespoke aerospace coachbuilding,
+              and meticulous client care. Every cart we build or rent reflects our commitment to zero emissions, uncompromising craftsmanship,
+              and white-glove integrity.
+            </p>
+            <div class="abt-pillar-metric">
+              <span class="abt-pillar-metric-num">100%</span>
+              <span class="abt-pillar-metric-lbl">Tailored to Client Specifications</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Vision -->
+          <div class="abt-pillar-card abt-pillar--vision">
+            <div class="abt-pillar-glow" aria-hidden="true"></div>
+            <div class="abt-pillar-header">
+              <div class="abt-pillar-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <span class="abt-pillar-tag">HORIZON &amp; AMBITION</span>
+            </div>
+            <h3 class="abt-pillar-title">Our Vision</h3>
+            <p class="abt-pillar-lead">
+              To define the global pinnacle of low-speed luxury electric vehicles across private estates, golf meccas, and ultra-luxury resorts.
+            </p>
+            <p class="abt-pillar-desc">
+              We envision a future where electric estate mobility is as revered as grand touring automobiles. By continually advancing
+              dense solid-state lithium battery chemistry, aerospace composites, and bespoke artisanal coachwork, Cart Craft sets the benchmark
+              for sustainable elegance.
+            </p>
+            <div class="abt-pillar-metric">
+              <span class="abt-pillar-metric-num">2030</span>
+              <span class="abt-pillar-metric-lbl">Next-Gen Solid-State Architecture</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 4: HERITAGE TIMELINE (35-YEAR CHRONICLE)
+         ============================================================ -->
+    <section class="abt-section abt-timeline-section" id="about-timeline" aria-labelledby="about-timeline-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="abt-section-header">
+          <div class="abt-header-eyebrow">
+            <span class="abt-eyebrow-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            <span class="abt-eyebrow-num">04</span>
+            <span class="abt-eyebrow-title">35-YEAR CHRONICLE</span>
+          </div>
+          <h2 class="abt-section-heading" id="about-timeline-heading">
+            The Evolution of Precision, <span class="abt-heading-accent">Step by Step.</span>
+          </h2>
+          <p class="abt-section-sub">
+            From our founding as an artisanal restoration workshop in 1988 to today’s internationally recognized electric coachbuilder,
+            discover the defining milestones in our heritage.
+          </p>
+        </div>
+
+        <!-- Interactive Timeline Container -->
+        <div class="abt-timeline-wrap">
+          <div class="abt-timeline-spine" aria-hidden="true"></div>
+
+          <!-- Milestone 1: 1988 -->
+          <div class="abt-timeline-item" data-year="1988">
+            <div class="abt-timeline-marker">
+              <span class="abt-marker-dot"></span>
+              <span class="abt-marker-year">1988</span>
+            </div>
+            <div class="abt-timeline-content">
+              <div class="abt-timeline-media">
+                <img src="assets/timeline-vintage.jpg"
+                  alt="Cart Craft vintage workshop in 1988 restoring classic golf carts"
+                  class="abt-timeline-img" loading="lazy" />
+                <span class="abt-timeline-badge">FOUNDING MILESTONE</span>
+              </div>
+              <div class="abt-timeline-info">
+                <span class="abt-timeline-date">FOUNDED IN PALM BEACH</span>
+                <h3 class="abt-timeline-title">The Vintage Foundry &amp; Restoration Workshop</h3>
+                <p class="abt-timeline-desc">
+                  Julian Vance founds Cart Craft with a singular objective: restoring classic golf carts for private estate owners
+                  with zero-tolerance mechanical care. Word quickly spreads across championship clubs about our master coachbuilding standards.
+                </p>
+                <div class="abt-timeline-tags">
+                  <span>Classic Coachwork</span>
+                  <span>Handcrafted Metalwork</span>
+                  <span>Estate Concierge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: 2004 -->
+          <div class="abt-timeline-item abt-timeline-item--invert" data-year="2004">
+            <div class="abt-timeline-marker">
+              <span class="abt-marker-dot"></span>
+              <span class="abt-marker-year">2004</span>
+            </div>
+            <div class="abt-timeline-content">
+              <div class="abt-timeline-media">
+                <img src="assets/timeline-custom.jpg"
+                  alt="Cart Craft aerospace CNC chassis fabrication and custom coachbuilding facility"
+                  class="abt-timeline-img" loading="lazy" />
+                <span class="abt-timeline-badge">ENGINEERING INNOVATION</span>
+              </div>
+              <div class="abt-timeline-info">
+                <span class="abt-timeline-date">PROPRIETARY CHASSIS REVOLUTION</span>
+                <h3 class="abt-timeline-title">Robotic CNC Aluminum Chassis Architecture</h3>
+                <p class="abt-timeline-desc">
+                  Cart Craft transitions from custom coachbuilding on third-party frames to engineering proprietary robotic CNC-machined
+                  aerospace aluminum chassis. Featuring marine anodization to prevent coastal rust, our carts set a new endurance benchmark.
+                </p>
+                <div class="abt-timeline-tags">
+                  <span>Aerospace Alloy</span>
+                  <span>Marine Anodization</span>
+                  <span>Zero Flex Stability</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 2016 -->
+          <div class="abt-timeline-item" data-year="2016">
+            <div class="abt-timeline-marker">
+              <span class="abt-marker-dot"></span>
+              <span class="abt-marker-year">2016</span>
+            </div>
+            <div class="abt-timeline-content">
+              <div class="abt-timeline-media">
+                <img src="assets/timeline-resort.jpg"
+                  alt="Luxury golf cart rental fleet deployed at five-star island resort"
+                  class="abt-timeline-img" loading="lazy" />
+                <span class="abt-timeline-badge">NATIONWIDE FLEET EXPANSION</span>
+              </div>
+              <div class="abt-timeline-info">
+                <span class="abt-timeline-date">WHITE-GLOVE RENTAL DIVISION</span>
+                <h3 class="abt-timeline-title">Premier Resort &amp; PGA Tournament Fleet Division</h3>
+                <p class="abt-timeline-desc">
+                  In response to overwhelming demand from championship organizers and 5-star island resorts, Cart Craft establishes its nationwide
+                  rental concierge. Deploying fleets of 50 to 200 bespoke carts in fully enclosed transport, fully charged and turn-key.
+                </p>
+                <div class="abt-timeline-tags">
+                  <span>PGA Hospitality</span>
+                  <span>5-Star Resort Leases</span>
+                  <span>Turnkey Transport</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4: 2026 -->
+          <div class="abt-timeline-item abt-timeline-item--invert" data-year="2026">
+            <div class="abt-timeline-marker">
+              <span class="abt-marker-dot"></span>
+              <span class="abt-marker-year">2026</span>
+            </div>
+            <div class="abt-timeline-content">
+              <div class="abt-timeline-media">
+                <img src="assets/timeline-bespoke.jpg"
+                  alt="Modern Cart Craft Noir Edition bespoke electric golf cart with high-density lithium powertrain"
+                  class="abt-timeline-img" loading="lazy" />
+                <span class="abt-timeline-badge">FLAGSHIP ERA</span>
+              </div>
+              <div class="abt-timeline-info">
+                <span class="abt-timeline-date">THE BESPOKE ELECTRIC ERA</span>
+                <h3 class="abt-timeline-title">120 KM Lithium Platform &amp; 24K Gold Atelier Program</h3>
+                <p class="abt-timeline-desc">
+                  Launch of our flagship 120 km ultra-dense lithium battery platform, dual AC regenerative whisper-quiet motors,
+                  street-legal LSV certification, and individual client bespoke commissions with hand-applied 24K gold foil and diamond quilting.
+                </p>
+                <div class="abt-timeline-tags">
+                  <span>120 KM Lithium Range</span>
+                  <span>Regenerative Dual AC</span>
+                  <span>24K Gold Inlays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 5: MASTER ATELIER TEAM CARDS
+         ============================================================ -->
+    <section class="abt-section abt-team-section" id="about-team" aria-labelledby="about-team-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="abt-section-header">
+          <div class="abt-header-eyebrow">
+            <span class="abt-eyebrow-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            <span class="abt-eyebrow-num">05</span>
+            <span class="abt-eyebrow-title">LEADERSHIP &amp; ARTISANS</span>
+          </div>
+          <h2 class="abt-section-heading" id="about-team-heading">
+            Led by Visionaries, <span class="abt-heading-accent">Built by Artisans.</span>
+          </h2>
+          <p class="abt-section-sub">
+            Our atelier brings together automotive master coachbuilders, high-voltage EV powertrain engineers,
+            and luxury hospitality directors with one collective obsession: perfection.
+          </p>
+        </div>
+
+        <!-- Team Cards Grid -->
+        <div class="abt-team-grid">
+          
+          <!-- Team Member 1 -->
+          <article class="abt-team-card">
+            <div class="abt-team-img-wrap">
+              <img src="assets/team-founder-julian.jpg"
+                alt="Julian Vance, Founder and Master Coachbuilder at Cart Craft"
+                class="abt-team-img" loading="lazy" />
+              <div class="abt-team-badge">FOUNDER &amp; COACHBUILDER</div>
+            </div>
+            <div class="abt-team-info">
+              <span class="abt-team-exp">35+ YRS IN AUTOMOTIVE DESIGN</span>
+              <h3 class="abt-team-name">Julian Vance</h3>
+              <p class="abt-team-role">Founder &amp; Chief Coachbuilder</p>
+              <p class="abt-team-bio">
+                Trained with British coachbuilders, founding Cart Craft in 1988. Oversees bespoke chassis blueprints and geometry benchmarks.
+              </p>
+              <div class="abt-team-skills">
+                <span>Chassis Geometry</span>
+                <span>Bespoke Coachbuilding</span>
+              </div>
+              <div class="abt-team-socials" aria-label="Julian Vance Social Links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="LinkedIn profile of Julian Vance" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 1.63-1.63 1.64 1.64 0 0 0-1.63-1.63 1.64 1.64 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="X profile of Julian Vance" title="X (Twitter)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="Instagram profile of Julian Vance" title="Instagram">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="mailto:julian@cartcraft.com" class="abt-team-social-btn" aria-label="Email Julian Vance" title="Email">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Team Member 2 -->
+          <article class="abt-team-card">
+            <div class="abt-team-img-wrap">
+              <img src="assets/team-designer-elena.jpg"
+                alt="Elena Rostova, Head of Bespoke Materials and Interior Tailoring"
+                class="abt-team-img" loading="lazy" />
+              <div class="abt-team-badge">HEAD OF BESPOKE DESIGN</div>
+            </div>
+            <div class="abt-team-info">
+              <span class="abt-team-exp">MASTER LEATHER ARTISAN</span>
+              <h3 class="abt-team-name">Elena Rostova</h3>
+              <p class="abt-team-role">Head of Bespoke Materials &amp; Interiors</p>
+              <p class="abt-team-bio">
+                Milanese luxury upholstery specialist curating hand-quilted marine leathers, ergonomics, and 24K gold detailing.
+              </p>
+              <div class="abt-team-skills">
+                <span>Italian Napa Leather</span>
+                <span>Diamond Quilting</span>
+              </div>
+              <div class="abt-team-socials" aria-label="Elena Rostova Social Links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="LinkedIn profile of Elena Rostova" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 1.63-1.63 1.64 1.64 0 0 0-1.63-1.63 1.64 1.64 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="X profile of Elena Rostova" title="X (Twitter)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="Instagram profile of Elena Rostova" title="Instagram">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="mailto:elena@cartcraft.com" class="abt-team-social-btn" aria-label="Email Elena Rostova" title="Email">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Team Member 3 -->
+          <article class="abt-team-card">
+            <div class="abt-team-img-wrap">
+              <img src="assets/team-operations-marcus.jpg"
+                alt="Marcus Sterling, VP of Rental Fleet Operations and Resort Concierge"
+                class="abt-team-img" loading="lazy" />
+              <div class="abt-team-badge">RENTAL CONCIERGE VP</div>
+            </div>
+            <div class="abt-team-info">
+              <span class="abt-team-exp">PGA &amp; RESORT LOGISTICS</span>
+              <h3 class="abt-team-name">Marcus Sterling</h3>
+              <p class="abt-team-role">VP of Rental Fleet Operations &amp; Concierge</p>
+              <p class="abt-team-bio">
+                Directs nationwide rental fleet logistics, PGA tournament staging, and multi-year resort concierge operations.
+              </p>
+              <div class="abt-team-skills">
+                <span>Tournament Staging</span>
+                <span>White-Glove Delivery</span>
+              </div>
+              <div class="abt-team-socials" aria-label="Marcus Sterling Social Links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="LinkedIn profile of Marcus Sterling" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 1.63-1.63 1.64 1.64 0 0 0-1.63-1.63 1.64 1.64 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="X profile of Marcus Sterling" title="X (Twitter)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="Instagram profile of Marcus Sterling" title="Instagram">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="mailto:marcus@cartcraft.com" class="abt-team-social-btn" aria-label="Email Marcus Sterling" title="Email">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Team Member 4 -->
+          <article class="abt-team-card">
+            <div class="abt-team-img-wrap">
+              <img src="assets/team-engineer-aris.jpg"
+                alt="Dr. Aris Thorne, Chief Powertrain and EV Systems Engineer"
+                class="abt-team-img" loading="lazy" />
+              <div class="abt-team-badge">CHIEF EV ENGINEER</div>
+            </div>
+            <div class="abt-team-info">
+              <span class="abt-team-exp">PH.D. IN ELECTRIC POWERTRAINS</span>
+              <h3 class="abt-team-name">Dr. Aris Thorne</h3>
+              <p class="abt-team-role">Chief Powertrain &amp; EV Systems Engineer</p>
+              <p class="abt-team-bio">
+                Former EV racing powertrain pioneer leading our whisper-quiet AC motor architecture and high-density lithium platforms.
+              </p>
+              <div class="abt-team-skills">
+                <span>High-Density Lithium</span>
+                <span>Regenerative AC</span>
+              </div>
+              <div class="abt-team-socials" aria-label="Dr. Aris Thorne Social Links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="LinkedIn profile of Dr. Aris Thorne" title="LinkedIn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 0 0 1.63-1.63 1.64 1.64 0 0 0-1.63-1.63 1.64 1.64 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="X profile of Dr. Aris Thorne" title="X (Twitter)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="abt-team-social-btn" aria-label="Instagram profile of Dr. Aris Thorne" title="Instagram">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="mailto:aris@cartcraft.com" class="abt-team-social-btn" aria-label="Email Dr. Aris Thorne" title="Email">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 6: FREQUENTLY ASKED QUESTIONS (FAQS)
+         ============================================================ -->
+    <section class="abt-section abt-faqs-section" id="about-faqs" aria-labelledby="about-faqs-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="abt-section-header">
+          <div class="abt-header-eyebrow">
+            <span class="abt-eyebrow-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            <span class="abt-eyebrow-num">06</span>
+            <span class="abt-eyebrow-title">FREQUENT INQUIRIES</span>
+          </div>
+          <h2 class="abt-section-heading" id="about-faqs-heading">
+            Everything You Need <span class="abt-heading-accent">To Know.</span>
+          </h2>
+          <p class="abt-section-sub">
+            Answers to common questions regarding our bespoke custom shop builds, VIP rental fleets,
+            battery engineering, and white-glove nationwide delivery.
+          </p>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="abt-faq-accordion" role="region" aria-label="About Cart Craft FAQs">
+          
+          <!-- FAQ Item 1 -->
+          <div class="abt-faq-item is-open">
+            <button class="abt-faq-trigger" aria-expanded="true">
+              <span class="abt-faq-num">01</span>
+              <span class="abt-faq-question">What sets Cart Craft apart from standard golf cart manufacturers?</span>
+              <span class="abt-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+            </button>
+            <div class="abt-faq-content">
+              <div class="abt-faq-body">
+                <p>
+                  Unlike mass-produced plastic carts, every Cart Craft is individually hand-assembled like a luxury automobile.
+                  We utilize robotic CNC-machined aerospace alloy chassis, marine-grade anodization, whisper-silent dual AC regenerative motors,
+                  and hand-tailored Italian marine Napa leather. Our vehicles are engineered for a 20+ year service life on private estates and championship courses.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="abt-faq-item">
+            <button class="abt-faq-trigger" aria-expanded="false">
+              <span class="abt-faq-num">02</span>
+              <span class="abt-faq-question">Can I fully customize a cart to match my estate or car collection?</span>
+              <span class="abt-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+            </button>
+            <div class="abt-faq-content">
+              <div class="abt-faq-body">
+                <p>
+                  Yes, our Bespoke Atelier program offers virtually limitless personalization. You can select exact paint codes
+                  (including metallic, satin matte, and ceramic coats matched to your supercars), hand-quilted leather patterns,
+                  24K gold or platinum leaf emblem inlays, carbon-fiber dash finishes, bespoke Bluetooth audio acoustics, and custom monogramming.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="abt-faq-item">
+            <button class="abt-faq-trigger" aria-expanded="false">
+              <span class="abt-faq-num">03</span>
+              <span class="abt-faq-question">How does the VIP golf cart rental fleet program work?</span>
+              <span class="abt-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+            </button>
+            <div class="abt-faq-content">
+              <div class="abt-faq-body">
+                <p>
+                  Our rental division caters to PGA tournaments, corporate hospitality, private celebrity weddings, and luxury resort seasonal leases.
+                  We provide 2, 4, 6, and 8-passenger fleets delivered in specialized enclosed transporters, 100% battery charged, detailed to showroom standards,
+                  and accompanied by an on-site technician team for complete operational peace of mind.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="abt-faq-item">
+            <button class="abt-faq-trigger" aria-expanded="false">
+              <span class="abt-faq-num">04</span>
+              <span class="abt-faq-question">What is the range, charging speed, and lifespan of your lithium battery packs?</span>
+              <span class="abt-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+            </button>
+            <div class="abt-faq-content">
+              <div class="abt-faq-body">
+                <p>
+                  Our ultra-dense lithium packs deliver up to 120 km (75 miles) on a single charge under typical estate driving conditions.
+                  Equipped with an onboard rapid-charge smart management system, our carts reach 80% charge in approximately 2.5 hours using any standard
+                  110V/220V household outlet. The lithium cells are rated for over 3,500 charge cycles and backed by a comprehensive 5-year warranty.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="abt-faq-item">
+            <button class="abt-faq-trigger" aria-expanded="false">
+              <span class="abt-faq-num">05</span>
+              <span class="abt-faq-question">Are Cart Craft vehicles street legal (LSV certified)?</span>
+              <span class="abt-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+            </button>
+            <div class="abt-faq-content">
+              <div class="abt-faq-body">
+                <p>
+                  Yes, our carts can be configured to meet full US DOT FMVSS 500 Low-Speed Vehicle (LSV) compliance.
+                  This package includes a 17-digit VIN, automotive three-point seat belts, DOT-approved safety glass windshield with wiper,
+                  dual side mirrors, turn signals, high/low beam LED headlamps, horn, and rearview camera, permitting legal driving on roads with speed limits up to 35 mph.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="abt-faq-item">
+            <button class="abt-faq-trigger" aria-expanded="false">
+              <span class="abt-faq-num">06</span>
+              <span class="abt-faq-question">How does nationwide delivery and after-sales service work?</span>
+              <span class="abt-faq-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </span>
+            </button>
+            <div class="abt-faq-content">
+              <div class="abt-faq-body">
+                <p>
+                  We coordinate enclosed, climate-controlled transport directly to your driveway, club dock, or estate gate.
+                  Upon arrival, our technician performs a comprehensive walk-through, hand-delivers your custom vehicle documentation,
+                  and configures your charging station. For maintenance, our mobile service fleet handles on-site diagnostics, scheduled care, and warranty servicing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 7: LUXURY CALL TO ACTION (CTA CARD)
+         ============================================================ -->
+    <section class="abt-section abt-cta-section" id="about-cta" aria-labelledby="about-cta-heading">
+      <div class="container">
+        
+        <div class="abt-cta-card">
+          <!-- Ambient Glow & Stage Background -->
+          <div class="abt-cta-bg">
+            <img src="assets/offer-sales-showroom.jpg" alt="Cart Craft luxury golf cart showroom" class="abt-cta-bg-img" loading="lazy" />
+            <div class="abt-cta-overlay"></div>
+          </div>
+
+          <!-- Glassmorphism Content Area -->
+          <div class="abt-cta-glass">
+            <div class="abt-cta-eyebrow-pill" role="button" tabindex="0" data-open-booking-modal="custom-build" aria-label="Commission or reserve your Cart Craft — Open booking reservation" title="Click to commission or reserve your Cart Craft">
+              <span class="abt-pill-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+              <span>COMMISSION OR RESERVE YOUR CART CRAFT</span>
+            </div>
+
+            <h2 class="abt-cta-heading" id="about-cta-heading">
+              Ready to Experience the Art of<br />
+              <em class="abt-heading-em">Bespoke Estate Mobility?</em>
+            </h2>
+
+            <p class="abt-cta-desc">
+              Whether commissioning a one-of-a-kind custom golf cart for your private residence or reserving an immaculate fleet
+              for an upcoming tournament or resort season, our master team is ready to serve you.
+            </p>
+
+            <!-- Trust Badges -->
+            <div class="abt-cta-badges" aria-label="Trust highlights">
+              <span class="abt-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Master Coachbuilders
+              </span>
+              <span class="abt-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                White-Glove Delivery
+              </span>
+              <span class="abt-cta-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                5-Year Warranty
+              </span>
+            </div>
+
+            <!-- CTA Action Buttons -->
+            <div class="abt-cta-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg abt-btn--cta" id="abt-cta-contact-btn">
+                <span>Schedule Atelier Consultation</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="rentals.html" class="btn btn-outline btn-lg abt-btn--ghost" id="abt-cta-rentals-btn">
+                <span>Explore Rental Fleet</span>
+              </a>
+              <a href="sales.html" class="btn btn-ghost btn-lg abt-btn--sales" id="abt-cta-sales-btn">
+                <span>Browse Sales Showroom</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ===== FOOTER (CONSISTENT WITH HOME 1) ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+
+        <!-- Col 1: Brand -->
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="footer-brand" aria-label="Cart Craft Home">
+            <img src="assets/cart-craft-logo.png" alt="Cart Craft Logo" class="brand-logo-img" />
+            <span class="brand-stack">
+              <span class="brand-name">Cart Craft</span>
+              <span class="brand-tagline">Luxury Rides, Crafted for You</span>
+            </span>
+          </a>
+          <p class="footer-brand-desc">Premium golf carts for modern leisure, communities and everyday journeys.</p>
+          <div class="footer-badges">
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Certified Quality
+            </span>
+            <span class="footer-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+              </svg>
+              Since 1988
+            </span>
+          </div>
+          <span class="footer-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Your City, Country
+          </span>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Services</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="sales.html" class="footer-link">Sales</a></li>
+            <li><a href="rentals.html" class="footer-link">Rentals</a></li>
+            <li><a href="services.html" class="footer-link">Servicing</a></li>
+            <li><a href="services.html#upgrade-your-cart" class="footer-link">Customization</a></li>
+            <li><a href="services.html#golf-cart-parts" class="footer-link">Parts &amp; Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Explore</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="sales.html" class="footer-link">Our Models</a></li>
+            <li><a href="index.html#testimonials" class="footer-link">Testimonials</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#about-timeline" class="footer-link">Our Story</a></li>
+            <li><a href="comingsoon.html" class="footer-link">Coming-soon</a></li>
+            <li><a href="404.html" class="footer-link">404 page</a></li>
+            <li><a href="#about-faqs" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Address & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-col-heading">Address &amp; Contact</h3>
+          <ul class="footer-contact" role="list">
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="footer-text">100 Luxury Drive,<br>Your City, Country</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:hello@cartcraft.com" class="footer-link">hello@cartcraft.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.71 8.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91" />
+              </svg>
+              <a href="tel:+10000000000" class="footer-link">+1 000 000 0000</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span class="footer-text">Mon &ndash; Sat: 9AM &ndash; 6PM</span>
+            </li>
+          </ul>
+          <div class="footer-socials-inline" aria-label="Social media links">
+            <a href="#" class="social-icon" aria-label="Instagram" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Cart Craft. All rights reserved.</p>
+        <nav class="footer-legal-links" aria-label="Legal links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       UNIVERSAL LUXURY BOOKING FORM CARD MODAL (#cc-booking-modal)
+  ============================================================ -->
+  <div class="cc-booking-modal" id="cc-booking-modal" role="dialog" aria-modal="true" aria-labelledby="cc-modal-title" aria-hidden="true">
+    <div class="cc-modal-backdrop" id="cc-modal-backdrop"></div>
+    <div class="cc-modal-wrapper">
+      <div class="cc-modal-card">
+        <!-- Close Button -->
+        <button type="button" class="cc-modal-close" id="cc-modal-close" aria-label="Close booking modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <!-- Modal Header -->
+        <div class="cc-modal-header">
+          <div class="cc-modal-eyebrow">
+            <span class="cc-modal-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Cart Craft Concierge
+            </span>
+            <span class="cc-modal-status-dot"></span>
+            <span class="cc-modal-status-text">Priority Booking Active</span>
+          </div>
+          <h2 class="cc-modal-title" id="cc-modal-title">Reserve Your Luxury Cart Experience</h2>
+          <p class="cc-modal-sub" id="cc-modal-sub">Select your bespoke interest below for immediate priority scheduling, custom configuration, or VIP resort fleet delivery.</p>
+        </div>
+
+        <!-- Service Category Selector (Pills) -->
+        <div class="cc-booking-categories" role="tablist" aria-label="Booking categories">
+          <button type="button" class="cc-cat-pill is-active" role="tab" aria-selected="true" data-category="test-drive">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span>
+            <span class="cc-cat-label">Private Test Drive</span>
+          </button>
+          <button type="button" class="cc-cat-pill" role="tab" aria-selected="false" data-category="custom-build">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg></span>
+            <span class="cc-cat-label">Bespoke Commission</span>
+          </button>
+          <button type="button" class="cc-cat-pill" role="tab" aria-selected="false" data-category="rental-fleet">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg></span>
+            <span class="cc-cat-label">VIP Event Rental</span>
+          </button>
+          <button type="button" class="cc-cat-pill" role="tab" aria-selected="false" data-category="service-lithium">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="cc-cat-label">Service &amp; Lithium</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Category Notice Banner -->
+        <div class="cc-category-notice" id="cc-category-notice">
+          <svg class="cc-notice-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span class="cc-notice-text" id="cc-notice-text">Complimentary private estate or country club test drive with our master artisan concierge.</span>
+        </div>
+
+        <!-- Booking Form Card -->
+        <form class="cc-booking-form" id="cc-booking-form" novalidate>
+          <input type="hidden" name="booking_category" id="cc-selected-category-input" value="test-drive" />
+
+          <div class="cc-form-grid">
+            <!-- Full Name -->
+            <div class="cc-form-field">
+              <label for="cc-book-name" class="cc-form-label">Full Name <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" id="cc-book-name" name="name" class="cc-form-input" placeholder="e.g. Sterling Montgomery" required />
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="cc-form-field">
+              <label for="cc-book-phone" class="cc-form-label">Direct Phone <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <input type="tel" id="cc-book-phone" name="phone" class="cc-form-input" placeholder="+1 (555) 782-9012" required />
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="cc-form-field">
+              <label for="cc-book-email" class="cc-form-label">Email Address <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <input type="email" id="cc-book-email" name="email" class="cc-form-input" placeholder="sterling@private-holdings.com" required />
+              </div>
+            </div>
+
+            <!-- Model / Seating Selection -->
+            <div class="cc-form-field">
+              <label for="cc-book-model" class="cc-form-label">Preferred Cart Configuration <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <select id="cc-book-model" name="model" class="cc-form-select" required>
+                  <option value="4-Passenger Estate Cruiser (Forward-Facing)" selected>4-Passenger Estate Cruiser (Forward-Facing)</option>
+                  <option value="2-Passenger Executive Course Courier">2-Passenger Executive Course Courier</option>
+                  <option value="6-Passenger Grand Touring Limousine">6-Passenger Grand Touring Limousine</option>
+                  <option value="8-Passenger VIP Resort Shuttle">8-Passenger VIP Resort Shuttle</option>
+                  <option value="Bespoke One-of-One Custom Commission">Bespoke One-of-One Custom Commission</option>
+                  <option value="High-Performance Lithium Battery Conversion">High-Performance Lithium Battery Conversion</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Preferred Date -->
+            <div class="cc-form-field">
+              <label for="cc-book-date" class="cc-form-label">Preferred Date <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <input type="date" id="cc-book-date" name="date" class="cc-form-input" required />
+              </div>
+            </div>
+
+            <!-- Preferred Time Window -->
+            <div class="cc-form-field">
+              <label for="cc-book-time" class="cc-form-label">Preferred Time Window <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <select id="cc-book-time" name="time_slot" class="cc-form-select" required>
+                  <option value="Morning (09:00 AM - 12:00 PM)" selected>Morning (09:00 AM – 12:00 PM)</option>
+                  <option value="Midday (12:00 PM - 03:00 PM)">Midday (12:00 PM – 03:00 PM)</option>
+                  <option value="Afternoon (03:00 PM - 06:00 PM)">Afternoon (03:00 PM – 06:00 PM)</option>
+                  <option value="VIP Private Evening Slot (Upon Request)">VIP Private Evening Slot (Upon Request)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Delivery / Estate Address -->
+            <div class="cc-form-field cc-form-field--full">
+              <label for="cc-book-location" class="cc-form-label">Estate, Country Club, or Delivery Destination</label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <input type="text" id="cc-book-location" name="location" class="cc-form-input" placeholder="e.g. Augusta Pines Golf Club / Private Estate, Naples FL" />
+              </div>
+            </div>
+
+            <!-- Notes & Bespoke Desires -->
+            <div class="cc-form-field cc-form-field--full">
+              <label for="cc-book-notes" class="cc-form-label">Bespoke Specifications &amp; Special Requests</label>
+              <textarea id="cc-book-notes" name="notes" class="cc-form-textarea" rows="2" placeholder="Tell us your preferences: bespoke body color, diamond-stitch marine leather, sound bar, solar roof, or event fleet requirements..."></textarea>
+            </div>
+
+            <!-- VIP Concierge Checkboxes -->
+            <div class="cc-form-field cc-form-field--full">
+              <div class="cc-checkbox-group">
+                <label class="cc-checkbox-label">
+                  <input type="checkbox" id="cc-opt-trailer" name="trailer_delivery" class="cc-checkbox-input" checked />
+                  <span class="cc-checkbox-custom"></span>
+                  <span class="cc-checkbox-text">Request Enclosed White-Glove Trailer Delivery to my property</span>
+                </label>
+                <label class="cc-checkbox-label">
+                  <input type="checkbox" id="cc-opt-swatches" name="sample_kit" class="cc-checkbox-input" checked />
+                  <span class="cc-checkbox-custom"></span>
+                  <span class="cc-checkbox-text">Bring physical leather swatch kit and rim finish samples to consultation</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button & Trust Bar -->
+          <div class="cc-form-footer">
+            <button type="submit" class="btn btn-primary cc-btn-submit" id="cc-submit-booking-btn">
+              <span>Confirm VIP Booking Request</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="cc-form-trust">
+              <span class="cc-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 256-Bit SSL Encrypted</span>
+              <span class="cc-trust-sep">•</span>
+              <span class="cc-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Concierge Response &lt; 2 Hours</span>
+              <span class="cc-trust-sep">•</span>
+              <span class="cc-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Zero Commitment</span>
+            </div>
+          </div>
+        </form>
+
+        <!-- Confirmation / Success Card (Initially Hidden) -->
+        <div class="cc-booking-success" id="cc-booking-success" style="display: none;" aria-live="polite">
+          <div class="cc-success-badge-wrapper">
+            <div class="cc-success-badge">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="cc-success-rings"></div>
+          </div>
+
+          <span class="cc-success-eyebrow">Reservation Request Registered</span>
+          <h3 class="cc-success-title">Your Cart Craft Experience is Reserved</h3>
+          <p class="cc-success-desc">A senior client concierge has received your request and is preparing your personalized itinerary and vehicle allocation.</p>
+
+          <!-- VIP Ticket Card -->
+          <div class="cc-vip-ticket">
+            <div class="cc-ticket-header">
+              <span class="cc-ticket-brand">CART CRAFT ATELIER</span>
+              <span class="cc-ticket-code" id="cc-ticket-code">CC-VIP-84920</span>
+            </div>
+            <div class="cc-ticket-body">
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Guest</span>
+                <span class="cc-ticket-value" id="cc-ticket-name">Harrison Vance</span>
+              </div>
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Category</span>
+                <span class="cc-ticket-value" id="cc-ticket-category">Private Test Drive</span>
+              </div>
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Vehicle</span>
+                <span class="cc-ticket-value" id="cc-ticket-model">4-Passenger Estate Cruiser</span>
+              </div>
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Scheduled Date</span>
+                <span class="cc-ticket-value" id="cc-ticket-datetime">Tomorrow • Morning Window</span>
+              </div>
+            </div>
+            <div class="cc-ticket-footer">
+              <span class="cc-ticket-status"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg> Priority Confirmed</span>
+              <span class="cc-ticket-hint">Concierge will call within 2 hours</span>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="cc-success-actions">
+            <button type="button" class="btn btn-secondary cc-btn-calendar" id="cc-btn-calendar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Add to Calendar (.ics)</span>
+            </button>
+            <button type="button" class="btn btn-primary" id="cc-btn-done">
+              <span>Return to Cart Craft</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="about.js"></script>
+</body>
+
+
+
+</html>

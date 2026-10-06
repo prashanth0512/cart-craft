@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Cart Craft — 404 Error Page Stylesheet
    404.css — Bespoke Styling Matching Reference Layout
    ============================================================ */
@@ -310,8 +310,8 @@ html, body {
   font-family: var(--err-font-body);
   font-size: 0.86rem;
   font-weight: 600;
-  padding: 0.65rem 1.6rem;
-  border-radius: 9999px;
+  padding: 0.75rem 1.65rem;
+  border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s var(--err-transition);
@@ -319,18 +319,21 @@ html, body {
   white-space: nowrap;
 }
 
-/* Button 1: Primary Dark/Gold Pill with Arrow */
+/* Button 1: Primary Dark/Gold with Arrow */
 .err-btn--primary {
-  background: var(--err-btn-bg);
-  color: var(--err-btn-text);
-  border: 1.5px solid transparent;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #E1BD72 0%, #D4AA55 50%, #C9A45C 100%);
+  background-color: #DEBA6F;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(222, 186, 111, 0.32);
 }
 
 .err-btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  filter: brightness(1.08);
+  box-shadow: 0 6px 22px rgba(222, 186, 111, 0.48);
+  filter: brightness(1.06);
+  color: #FFFFFF !important;
 }
 
 .err-btn--primary:active {
@@ -345,18 +348,20 @@ html, body {
   transform: translateX(4px);
 }
 
-/* Button 2 & 3: Secondary & Tertiary Outlined Pill Buttons */
+/* Button 2 & 3: Secondary & Tertiary Outlined Buttons */
 .err-btn--outline {
   background: transparent;
-  border: 1.5px solid var(--err-btn-border);
-  color: var(--err-text-title);
+  border: 1.5px solid rgba(201, 164, 92, 0.45);
+  color: #E1BD72;
+  border-radius: 10px;
 }
 
 .err-btn--outline:hover {
-  border-color: var(--err-code-color);
-  background: var(--err-btn-hover);
-  color: var(--err-code-color);
+  border-color: #E1BD72;
+  background: rgba(201, 164, 92, 0.15);
+  color: #FFFFFF !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 164, 92, 0.25);
 }
 
 .err-btn--outline:active {

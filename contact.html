@@ -42,6 +42,7 @@
               <a href="home2.html" class="dropdown-item" role="menuitem">Home 2</a>
             </div>
           </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
           <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
           <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
           <li class="nav-item"><a href="services.html" class="nav-link">Service &amp; Parts</a></li>
@@ -61,7 +62,8 @@
         </button>
         <button class="icon-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR direction" title="Toggle direction">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 6h18M3 12h12M3 18h9"/><path d="M18 9l3 3-3 3"/>
+            <path d="M16 3l4 4-4 4M20 7H4" />
+            <path d="M8 21l-4-4 4-4M4 17h16" />
           </svg>
         </button>
         <a href="#contact-form-section" class="btn btn-primary btn-sm" id="header-book-btn">Book Now</a>
@@ -93,6 +95,7 @@
       <ul class="mobile-nav-list" role="list">
         <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
         <li><a href="home2.html" class="mobile-nav-link">Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
         <li><a href="sales.html" class="mobile-nav-link">Sales</a></li>
         <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
         <li><a href="services.html" class="mobile-nav-link">Service &amp; Parts</a></li>
@@ -138,22 +141,15 @@
         <div class="cnt-deco-ring cnt-deco-ring--2"></div>
       </div>
 
-      <!-- Live Atelier Video Indicator / Control -->
-      <button class="cnt-video-toggle" id="cnt-video-toggle" aria-label="Pause or play background video">
-        <span class="cnt-video-pulse"></span>
-        <svg class="cnt-video-icon-pause" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-        <svg class="cnt-video-icon-play" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        <span class="cnt-video-txt">Atelier Film</span>
-      </button>
 
       <div class="cnt-container cnt-hero-inner">
         <div class="cnt-hero-content">
           <p class="cnt-eyebrow cnt-anim-up" style="--d:0.1s">
-            <span class="cnt-eyebrow-dot"></span>
+            <span class="cnt-pill-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Dedicated Golf Cart Client Support &amp; Concierge
           </p>
           <h1 class="cnt-hero-heading cnt-anim-up" style="--d:0.25s">
-            Let's Get You<br />
+            Let's Get You <br class="cnt-hero-br" />
             <em class="cnt-hero-heading-em">Moving.</em>
           </h1>
           <p class="cnt-hero-desc cnt-anim-up" style="--d:0.4s">
@@ -201,7 +197,7 @@
     <section class="cnt-section cnt-info-section" id="contact-info" aria-labelledby="cnt-info-heading">
       <div class="cnt-container">
         <div class="cnt-section-header cnt-reveal">
-          <p class="cnt-label cnt-label--center">Direct Channels</p>
+          <p class="cnt-label cnt-label--center"><span class="cnt-pill-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span> Direct Channels</p>
           <h2 class="cnt-section-heading cnt-section-heading--center" id="cnt-info-heading">
             Connect With Our Team
           </h2>
@@ -293,13 +289,13 @@
 
 
     <!-- ============================================================
-         SECTION 3 – CONTACT FORM + GOLF CART IMAGE
+         SECTION 3 – CONTACT FORM
     ============================================================ -->
     <section class="cnt-section cnt-form-section" id="contact-form-section" aria-labelledby="cnt-form-heading">
       <div class="cnt-container">
         <div class="cnt-form-layout">
 
-          <!-- Left Side: Interactive Contact Form -->
+          <!-- Centered Interactive Contact Form -->
           <div class="cnt-form-card cnt-reveal" style="--ri:0">
             <div class="cnt-form-header">
               <span class="cnt-form-tag">Personalized Assistance</span>
@@ -458,36 +454,6 @@
             </div>
           </div>
 
-          <!-- Right Side: Large HD Golf Cart Visual & Floating Card -->
-          <div class="cnt-form-visual cnt-reveal" style="--ri:1">
-            <div class="cnt-form-img-frame">
-              <img
-                src="assets/cart-model-01.webp"
-                alt="Luxury Cart Craft Sovereign 6-passenger golf cart in dealership environment"
-                class="cnt-form-img"
-                loading="lazy"
-              />
-              <div class="cnt-form-img-overlay"></div>
-
-              <!-- Floating Concierge Information Card -->
-              <div class="cnt-floating-card">
-                <div class="cnt-floating-badge">
-                  <span class="cnt-live-dot"></span>
-                  Active Concierge Desk
-                </div>
-                <h4 class="cnt-floating-title">Personalized Golf Cart Assistance</h4>
-                <p class="cnt-floating-desc">
-                  Our factory-certified consultants are standing by to guide your cart purchase, schedule maintenance, or assemble custom commercial fleets.
-                </p>
-                <div class="cnt-floating-chips">
-                  <span class="cnt-chip">Instant Quotes</span>
-                  <span class="cnt-chip">Doorstep Delivery</span>
-                  <span class="cnt-chip">OEM Warranties</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -499,7 +465,7 @@
     <section class="cnt-section cnt-map-section" id="find-us" aria-labelledby="cnt-map-heading">
       <div class="cnt-container">
         <div class="cnt-section-header cnt-reveal">
-          <p class="cnt-label cnt-label--center">Our Dealership &amp; Service Hub</p>
+          <p class="cnt-label cnt-label--center"><span class="cnt-pill-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span> Our Dealership &amp; Service Hub</p>
           <h2 class="cnt-section-heading cnt-section-heading--center" id="cnt-map-heading">
             Find Our Showroom
           </h2>
@@ -606,6 +572,68 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             </div>
+
+            <!-- Facility Hours & Arrival Amenities Strip (Fills Blank Space) -->
+            <div class="cnt-map-amenities-strip">
+              <div class="cnt-map-amenities-grid">
+
+                <!-- Operating & Service Hours Block -->
+                <div class="cnt-map-amenity-block">
+                  <div class="cnt-amenity-header">
+                    <span class="cnt-amenity-icon" aria-hidden="true">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </span>
+                    <h4 class="cnt-amenity-title">Showroom &amp; Service Hours</h4>
+                  </div>
+                  <ul class="cnt-amenity-list">
+                    <li><span class="cnt-day">Monday &ndash; Friday</span> <span class="cnt-time">8:30 AM &ndash; 6:30 PM</span></li>
+                    <li><span class="cnt-day">Saturday</span> <span class="cnt-time">9:00 AM &ndash; 5:00 PM</span></li>
+                    <li><span class="cnt-day">Sunday</span> <span class="cnt-time">VIP Concierge / By Appt</span></li>
+                  </ul>
+                </div>
+
+                <!-- On-Site Highlights Block -->
+                <div class="cnt-map-amenity-block">
+                  <div class="cnt-amenity-header">
+                    <span class="cnt-amenity-icon" aria-hidden="true">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </span>
+                    <h4 class="cnt-amenity-title">Facility Highlights</h4>
+                  </div>
+                  <div class="cnt-amenity-badges">
+                    <span class="cnt-amenity-pill">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                      Complimentary EV Charging
+                    </span>
+                    <span class="cnt-amenity-pill">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                      Private 1.2-Mi Test Loop
+                    </span>
+                    <span class="cnt-amenity-pill">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      Pull-Through Trailer Yard
+                    </span>
+                    <span class="cnt-amenity-pill">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                      VIP Owner's Lounge
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Direct Arrival Assistance Bar -->
+              <div class="cnt-map-concierge-bar">
+                <div class="cnt-concierge-callout">
+                  <span class="cnt-live-pulse-dot" aria-hidden="true"></span>
+                  <span>Direct Arrival Assistance &amp; Gate Access</span>
+                </div>
+                <a href="tel:+18005552278" class="cnt-concierge-hotline">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>Concierge Hotline: +1 (800) 555-2278</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Right Side: Golf Cart Visual Beside Map -->
@@ -625,24 +653,35 @@
 
             <!-- Direction Guidelines -->
             <div class="cnt-directions-card">
-              <h3 class="cnt-dir-title">Driving Directions</h3>
-              <p class="cnt-dir-text">
-                Conveniently located off Exit 14 on Motorway Boulevard, minutes from the Grand Dunes Resort and championship golf clubs. Guest parking and trailer turn-around available.
-              </p>
-              <ul class="cnt-dir-list" role="list">
-                <li>
-                  <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
-                  <span><strong>From Resort Communities:</strong> 5 minutes via Coastal Highway North.</span>
-                </li>
-                <li>
-                  <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
-                  <span><strong>From Downtown:</strong> Take Exit 14 and follow Motorway Blvd eastbound.</span>
-                </li>
-                <li>
-                  <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
-                  <span><strong>Trailer Haulers:</strong> Dedicated rear staging yard with pull-through bays.</span>
-                </li>
-              </ul>
+              <div class="cnt-dir-body">
+                <h3 class="cnt-dir-title">Driving Directions</h3>
+                <p class="cnt-dir-text">
+                  Conveniently located off Exit 14 on Motorway Boulevard, minutes from the Grand Dunes Resort and championship golf clubs. Guest parking and trailer turn-around available.
+                </p>
+                <ul class="cnt-dir-list" role="list">
+                  <li>
+                    <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
+                    <span><strong>From Resort Communities:</strong> 5 minutes via Coastal Highway North.</span>
+                  </li>
+                  <li>
+                    <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
+                    <span><strong>From Downtown:</strong> Take Exit 14 and follow Motorway Blvd eastbound.</span>
+                  </li>
+                  <li>
+                    <span class="cnt-dir-icon" aria-hidden="true">&#9679;</span>
+                    <span><strong>Trailer Haulers:</strong> Dedicated rear staging yard with pull-through bays.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Matching Bottom Baseline Bar -->
+              <div class="cnt-dir-footer-bar">
+                <span class="cnt-dir-parking-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+                  Complimentary Valet &amp; Trailer Parking
+                </span>
+                <span class="cnt-dir-gate-badge">Gate 2 Access</span>
+              </div>
             </div>
           </div>
 
@@ -657,7 +696,7 @@
     <section class="cnt-section cnt-faq-section" id="faq-section" aria-labelledby="cnt-faq-heading">
       <div class="cnt-container">
         <div class="cnt-section-header cnt-reveal">
-          <p class="cnt-label cnt-label--center">Clear Answers</p>
+          <p class="cnt-label cnt-label--center"><span class="cnt-pill-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span> Clear Answers</p>
           <h2 class="cnt-section-heading cnt-section-heading--center" id="cnt-faq-heading">
             Frequently Asked Questions
           </h2>
@@ -832,7 +871,7 @@
             <!-- Left Side: Concierge Content -->
             <div class="cnt-cta-content">
               <p class="cnt-cta-eyebrow">
-                <span class="cnt-cta-eyebrow-dot"></span>
+                <span class="cnt-pill-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
                 Direct Client Concierge
               </p>
               <h2 class="cnt-cta-heading" id="cnt-cta-heading">

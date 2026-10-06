@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Cart Craft — Luxury Golf Cart Rentals Stylesheet
    Resort & Vacation Experience Page
    rentals.css
@@ -65,24 +65,66 @@
 
 .rental-section-header {
   margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.rental-label {
+.rental-label,
+.rental-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--rental-font-sans);
-  font-size: 0.78rem;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--rental-font-sans, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--color-supportive);
-  margin-bottom: 0.9rem;
+  letter-spacing: 0.16em;
+  color: #C9A45C;
+  margin-bottom: 16px;
+  background: rgba(201, 164, 92, 0.08);
+  border: 1px solid rgba(201, 164, 92, 0.32);
+  padding: 6px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+[data-theme="light"] .rental-label,
+[data-theme="light"] .rental-eyebrow {
+  background: rgba(160, 98, 42, 0.08);
+  border-color: rgba(160, 98, 42, 0.30);
+  color: #8F5824;
+  box-shadow: 0 4px 16px rgba(160, 98, 42, 0.08);
 }
 
 .rental-label--center {
-  display: flex;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  text-align: center;
+}
+
+.rental-label-dot,
+.rental-eyebrow-dot {
+  color: #C9A45C;
+  font-size: 0.8rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+[data-theme="light"] .rental-label-dot,
+[data-theme="light"] .rental-eyebrow-dot {
+  color: #8F5824;
 }
 
 .rental-section-heading {
@@ -125,13 +167,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 0.75rem 1.75rem;
+  gap: 8px;
+  padding: 0.65rem 1.6rem;
+  min-height: 40px;
   font-family: var(--rental-font-sans, 'Plus Jakarta Sans', system-ui, sans-serif);
-  font-size: 0.95rem;
+  font-size: 0.90rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  border-radius: 8px;
+  letter-spacing: 0.01em;
+  border-radius: 10px;
   transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
   white-space: nowrap;
@@ -143,46 +186,36 @@
 }
 
 .btn-lg {
-  font-size: 0.98rem;
-  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.85rem;
 }
 
 .btn-primary,
 .rental-hero-cta-primary {
   background: linear-gradient(135deg, #E1BD72 0%, #D4AA55 50%, #C9A45C 100%);
   background-color: #DEBA6F;
-  color: #1A0A0F !important;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 20px rgba(225, 189, 114, 0.35);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 14px rgba(222, 186, 111, 0.32);
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
 
-.btn-primary::after,
-.rental-hero-cta-primary::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 40%;
-  height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transform: rotate(25deg);
-  transition: none;
-}
-
-.btn-primary:hover::after,
-.rental-hero-cta-primary:hover::after {
-  left: 130%;
-  transition: left 0.75s ease-in-out;
+.btn-primary span,
+.rental-hero-cta-primary span,
+.btn-primary svg,
+.rental-hero-cta-primary svg {
+  color: #FFFFFF !important;
 }
 
 .btn-primary:hover,
 .rental-hero-cta-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(225, 189, 114, 0.55);
-  color: #1A0A0F !important;
-  filter: brightness(1.05);
+  box-shadow: 0 6px 22px rgba(222, 186, 111, 0.48);
+  color: #FFFFFF !important;
+  filter: brightness(1.06);
 }
 
 .btn-primary svg,
@@ -197,27 +230,33 @@
 
 .btn-ghost,
 .rental-hero-cta-ghost {
-  background: rgba(255, 255, 255, 0.04);
-  color: #FAF7F2 !important;
-  border: 1px solid rgba(225, 189, 114, 0.35);
+  background: rgba(18, 5, 10, 0.75);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border: 1.5px solid rgba(225, 189, 114, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.btn-ghost span,
+.rental-hero-cta-ghost span {
+  color: #FFFFFF !important;
 }
 
 .btn-ghost:hover,
 .rental-hero-cta-ghost:hover {
-  background: rgba(225, 189, 114, 0.15);
-  border-color: #E1BD72;
-  color: #E1BD72 !important;
+  background: rgba(225, 189, 114, 0.22);
+  border-color: #F3D99A;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(225, 189, 114, 0.25);
+  box-shadow: 0 6px 24px rgba(225, 189, 114, 0.35);
 }
 
 .btn-ghost svg,
 .rental-hero-cta-ghost svg {
   transition: transform 0.25s ease;
-  color: #E1BD72;
+  color: #F3D99A !important;
 }
 
 .btn-ghost:hover svg,
@@ -410,27 +449,29 @@
 .rental-eyebrow {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.65rem;
   font-family: var(--rental-font-sans);
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: var(--color-supportive);
+  color: #F3D99A;
   margin-bottom: 1.25rem;
-  background: rgba(201, 164, 92, 0.12);
-  border: 1px solid rgba(201, 164, 92, 0.25);
+  background: rgba(201, 164, 92, 0.16);
+  border: 1.5px solid rgba(225, 189, 114, 0.4);
   padding: 0.4rem 1.15rem;
   border-radius: 9999px;
   backdrop-filter: blur(8px);
+  text-align: center;
 }
 
 .rental-eyebrow-dot {
   width: 7px;
   height: 7px;
-  background-color: var(--color-supportive);
+  background-color: #E1BD72;
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--color-supportive);
+  box-shadow: 0 0 10px #E1BD72;
   animation: rentalDotPulse 2s ease-in-out infinite;
 }
 
@@ -440,15 +481,16 @@
 }
 
 [data-theme="light"] .rental-eyebrow {
-  background: rgba(255, 255, 255, 0.94);
-  border: 1.5px solid rgba(160, 98, 42, 0.45);
-  color: #6E3B12;
-  box-shadow: 0 4px 18px rgba(110, 59, 18, 0.14);
+  background: #FFFFFF !important;
+  border: 1.5px solid #8E521F !important;
+  color: #542A08 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 18px rgba(110, 59, 18, 0.16) !important;
 }
 
 [data-theme="light"] .rental-eyebrow-dot {
-  background-color: #A0622A;
-  box-shadow: 0 0 8px rgba(160, 98, 42, 0.85);
+  background-color: #8E521F !important;
+  box-shadow: 0 0 8px rgba(142, 82, 31, 0.85) !important;
 }
 
 .rental-hero-heading {
@@ -460,39 +502,63 @@
   margin-bottom: 1.4rem;
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    var(--color-supportive) 50%,
-    var(--color-light-accent) 100%
+    #FFFFFF 0%,
+    #FFF4DE 40%,
+    #E2BE76 75%,
+    #C9A45C 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.75));
 }
 
 .rental-hero-heading-em {
   font-style: italic;
   font-weight: 400;
-  background: linear-gradient(135deg, #F5DEB3 0%, #E1BD72 50%, #C9A45C 100%);
+  background: linear-gradient(135deg, #FFF0CF 0%, #F5CE7B 50%, #DFB45E 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
+[data-theme="light"] .rental-hero-heading {
+  background: linear-gradient(
+    135deg,
+    #120509 0%,
+    #290B19 40%,
+    #4A1227 75%,
+    #692708 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.85));
+}
+
 [data-theme="light"] .rental-hero-heading-em {
-  background: linear-gradient(135deg, #7F491E 0%, #A0622A 50%, #C9A45C 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #572004 0%, #7E3609 50%, #481903 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 700 !important;
 }
 
 .rental-hero-desc {
   font-family: var(--rental-font-body);
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  color: var(--color-text-secondary);
+  color: #FAF4E8 !important;
   line-height: 1.7;
   max-width: 660px;
   margin: 0 auto 2.25rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="light"] .rental-hero-desc {
+  color: #17070E !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
 .rental-hero-ctas {
@@ -537,7 +603,12 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-text-primary);
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .rental-widget-title {
+  color: #14060B !important;
+  font-weight: 800;
 }
 
 .rental-widget-badge {
@@ -546,17 +617,18 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-supportive);
-  background: rgba(201, 164, 92, 0.12);
-  border: 1px solid rgba(201, 164, 92, 0.3);
-  padding: 0.3rem 0.75rem;
+  color: #F3D99A;
+  background: rgba(201, 164, 92, 0.18);
+  border: 1.5px solid rgba(225, 189, 114, 0.45);
+  padding: 0.35rem 0.8rem;
   border-radius: 9999px;
 }
 
 [data-theme="light"] .rental-widget-badge {
-  color: #6E3B12;
-  background: rgba(201, 164, 92, 0.22);
-  border: 1.5px solid rgba(160, 98, 42, 0.45);
+  color: #542A08 !important;
+  background: rgba(201, 164, 92, 0.22) !important;
+  border: 1.5px solid rgba(142, 82, 31, 0.55) !important;
+  font-weight: 800;
   box-shadow: 0 2px 8px rgba(110, 59, 18, 0.1);
 }
 
@@ -576,37 +648,48 @@
 .rental-widget-lbl {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   font-family: var(--rental-font-sans);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-muted);
-  margin-bottom: 0.45rem;
+  letter-spacing: 0.08em;
+  color: #FAF4E8 !important;
+  margin-bottom: 0.5rem;
 }
 
 .rental-widget-lbl svg {
-  color: var(--color-supportive);
+  color: #F3D99A !important;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .rental-widget-lbl {
+  color: #14060B !important;
+  font-weight: 800;
+}
+
+[data-theme="light"] .rental-widget-lbl svg {
+  color: #7F491E !important;
 }
 
 .rental-widget-select,
 .rental-widget-input {
   width: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1.5px solid rgba(225, 189, 114, 0.32);
+  background: rgba(14, 4, 8, 0.92) !important;
+  border: 1.5px solid rgba(225, 189, 114, 0.45) !important;
   border-radius: 12px;
   padding: 0.85rem 1rem;
   font-family: var(--rental-font-body, system-ui, sans-serif);
   font-size: 0.92rem;
-  color: #FAF7F2;
+  font-weight: 600;
+  color: #FFFFFF !important;
   transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
 }
 
 .rental-widget-select {
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 2L6 6.5L10.5 2' stroke='%23E1BD72' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 2L6 6.5L10.5 2' stroke='%23F3D99A' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: calc(100% - 1.1rem) center;
   padding-right: 2.75rem;
@@ -616,9 +699,9 @@
 .rental-widget-select:focus,
 .rental-widget-input:focus {
   outline: none;
-  border-color: #E1BD72;
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 0 16px rgba(225, 189, 114, 0.4);
+  border-color: #F3D99A !important;
+  background: rgba(22, 6, 13, 0.98) !important;
+  box-shadow: 0 0 16px rgba(225, 189, 114, 0.55) !important;
 }
 
 /* ============================================================
@@ -631,32 +714,49 @@ input[type="date"] {
   position: relative;
   cursor: pointer;
   color: #FAF7F2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rental-widget-input[type="date"]::-webkit-datetime-edit,
+.rental-form-input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit {
+  padding: 0;
+  color: inherit;
+  font-weight: 600;
 }
 
 .rental-widget-input[type="date"]::-webkit-calendar-picker-indicator,
 .rental-form-input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  filter: invert(0.9) sepia(100%) saturate(450%) hue-rotate(5deg) brightness(1.25);
-  opacity: 1;
+  filter: none !important;
+  opacity: 0.9 !important;
+  display: block;
   width: 22px;
   height: 22px;
-  padding: 3px;
-  border-radius: 6px;
-  background-color: rgba(225, 189, 114, 0.25);
-  border: 1.5px solid rgba(225, 189, 114, 0.6);
-  box-shadow: 0 0 10px rgba(225, 189, 114, 0.35);
-  transition: transform 0.2s ease, background-color 0.2s ease, filter 0.2s ease, border-color 0.2s ease;
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  margin: 0 0.2rem 0 auto;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23F3D99A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3Ccircle cx='8' cy='14' r='1' fill='%23F3D99A'/%3E%3Ccircle cx='12' cy='14' r='1' fill='%23F3D99A'/%3E%3Ccircle cx='16' cy='14' r='1' fill='%23F3D99A'/%3E%3Ccircle cx='8' cy='18' r='1' fill='%23F3D99A'/%3E%3Ccircle cx='12' cy='18' r='1' fill='%23F3D99A'/%3E%3Ccircle cx='16' cy='18' r='1' fill='%23F3D99A'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
 }
 
 .rental-widget-input[type="date"]::-webkit-calendar-picker-indicator:hover,
 .rental-form-input[type="date"]::-webkit-calendar-picker-indicator:hover,
 input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  transform: scale(1.15);
-  background-color: rgba(225, 189, 114, 0.45);
-  border-color: #E1BD72;
-  box-shadow: 0 0 14px rgba(225, 189, 114, 0.6);
-  filter: invert(1) sepia(100%) saturate(700%) brightness(1.4);
+  opacity: 1 !important;
+  transform: scale(1.12);
 }
 
 /* ============================================================
@@ -666,18 +766,19 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .rental-form-select option,
 .rental-select option,
 select option {
-  background-color: #1A0810 !important;
-  color: #FAF7F2 !important;
+  background-color: #14060B !important;
+  color: #FFFFFF !important;
   font-family: var(--rental-font-sans, system-ui, sans-serif);
   font-size: 0.95rem;
+  font-weight: 500;
   padding: 12px 14px;
 }
 
 .rental-widget-select option:checked,
 .rental-form-select option:checked,
 select option:checked {
-  background-color: #350F21 !important;
-  color: #E1BD72 !important;
+  background-color: #381224 !important;
+  color: #F3D99A !important;
   font-weight: 700;
 }
 
@@ -1216,11 +1317,12 @@ select option:checked {
 }
 
 .rental-fleet-btn {
-  padding: 0.55rem 1.15rem;
+  padding: 0.55rem 1.25rem;
   font-size: 0.84rem;
   font-weight: 700;
-  border-radius: 7px;
+  border-radius: 10px;
   gap: 6px;
+  min-height: 36px;
 }
 
 /* Light Theme Overrides for Fleet Cards */
@@ -1542,12 +1644,14 @@ select option:checked {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: var(--rental-font-sans);
-  font-size: 0.84rem;
+  font-family: var(--rental-font-sans, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 0.86rem;
   font-weight: 700;
-  border-radius: 12px;
-  padding: 0.8rem 1.25rem;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 10px;
+  padding: 0.65rem 1.35rem;
+  min-height: 38px;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  text-decoration: none;
 }
 
 .rental-pkg-btn .rental-pkg-btn-arrow {
@@ -1563,16 +1667,18 @@ select option:checked {
 
 /* Primary Button for Featured */
 .rental-pkg-btn--featured {
-  background: linear-gradient(135deg, #F3D99A 0%, #E1BD72 50%, #C9A45C 100%) !important;
-  color: #120508 !important;
-  border: none !important;
-  box-shadow: 0 8px 22px rgba(201, 164, 92, 0.35) !important;
+  background: linear-gradient(135deg, #E1BD72 0%, #D4AA55 50%, #C9A45C 100%) !important;
+  background-color: #DEBA6F !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 4px 14px rgba(222, 186, 111, 0.32) !important;
 }
 
 .rental-pkg-btn--featured:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(201, 164, 92, 0.55) !important;
-  filter: brightness(1.05);
+  box-shadow: 0 6px 22px rgba(222, 186, 111, 0.48) !important;
+  color: #FFFFFF !important;
+  filter: brightness(1.06);
 }
 
 /* Light Theme Overrides for Section 4 */
@@ -2002,11 +2108,12 @@ select option:checked {
   align-items: center;
   gap: 0.85rem;
   font-family: var(--rental-font-sans);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--color-supportive);
+  letter-spacing: 0.22em;
+  color: #F3D99A !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
   margin-bottom: 0.85rem;
 }
 
@@ -2014,26 +2121,30 @@ select option:checked {
   display: inline-block;
   width: 26px;
   height: 1.5px;
-  background: var(--color-supportive);
+  background: #F3D99A !important;
+  box-shadow: 0 0 8px rgba(243, 217, 154, 0.7) !important;
 }
 
 .rental-cta-card--compact .rental-cta-heading {
   font-family: var(--rental-font-serif);
-  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
-  font-weight: 500;
-  line-height: 1.2;
-  color: #FFFFFF;
-  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #FFFFFF !important;
+  margin-bottom: 0.85rem;
   letter-spacing: -0.01em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9) !important;
 }
 
 .rental-cta-card--compact .rental-cta-desc {
   font-family: var(--rental-font-body);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.6;
-  max-width: 500px;
-  margin-bottom: 1.4rem;
+  font-size: 0.96rem;
+  color: #FAF4E8 !important;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 500;
 }
 
 .rental-cta-card--compact .rental-cta-badges {
@@ -2049,19 +2160,20 @@ select option:checked {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(225, 189, 114, 0.28);
-  color: #FFFFFF;
+  background: rgba(18, 5, 10, 0.88) !important;
+  border: 1.5px solid rgba(225, 189, 114, 0.5) !important;
+  color: #FFFFFF !important;
   font-family: var(--rental-font-sans);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 0.95rem;
   border-radius: 9999px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
 }
 
 .rental-cta-card--compact .rental-cta-badge svg {
-  color: var(--rental-gold-1);
+  color: #F3D99A !important;
 }
 
 .rental-cta-card--compact .rental-cta-actions {
@@ -2073,41 +2185,60 @@ select option:checked {
 }
 
 .rental-cta-btn-primary {
-  background: linear-gradient(135deg, #F3D99A 0%, #E1BD72 50%, #C9A45C 100%) !important;
-  color: #120508 !important;
-  border: none !important;
-  padding: 0.78rem 1.6rem !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 6px 20px rgba(201, 164, 92, 0.35) !important;
+  background: linear-gradient(135deg, #E1BD72 0%, #D4AA55 50%, #C9A45C 100%) !important;
+  background-color: #DEBA6F !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  padding: 0.65rem 1.6rem !important;
+  min-height: 40px;
+  font-size: 0.90rem !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 14px rgba(222, 186, 111, 0.32) !important;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.rental-cta-btn-primary span,
+.rental-cta-btn-primary svg {
+  color: #FFFFFF !important;
 }
 
 .rental-cta-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(201, 164, 92, 0.5) !important;
-  filter: brightness(1.05);
+  box-shadow: 0 6px 22px rgba(222, 186, 111, 0.48) !important;
+  filter: brightness(1.06);
 }
 
 .rental-cta-btn-secondary {
-  border: 1px solid rgba(225, 189, 114, 0.4) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  color: #FFFFFF !important;
-  padding: 0.78rem 1.5rem !important;
-  font-size: 0.86rem !important;
-  font-weight: 600 !important;
-  border-radius: 12px !important;
-  transition: all 0.3s ease;
+  border: 1.5px solid rgba(201, 164, 92, 0.45) !important;
+  background: transparent !important;
+  color: #E1BD72 !important;
+  padding: 0.65rem 1.6rem !important;
+  min-height: 40px;
+  font-size: 0.90rem !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.rental-cta-btn-secondary span {
+  color: #E1BD72 !important;
 }
 
 .rental-cta-btn-secondary:hover {
-  background: rgba(201, 164, 92, 0.18) !important;
-  border-color: var(--rental-gold-1) !important;
-  color: var(--rental-gold-1) !important;
+  background: rgba(201, 164, 92, 0.12) !important;
+  border-color: #E1BD72 !important;
+  color: #FFF2CC !important;
+  box-shadow: 0 4px 18px rgba(201, 164, 92, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+.rental-cta-btn-secondary:hover span {
+  color: #FFF2CC !important;
 }
 
 /* Light Theme Overrides for Sections 5 & 6 */
@@ -2146,13 +2277,13 @@ select option:checked {
 }
 
 [data-theme="light"] .rental-cta-card--compact {
-  border-color: rgba(160, 98, 42, 0.35);
-  box-shadow: 0 18px 45px rgba(58, 13, 28, 0.14), 0 0 25px rgba(201, 164, 92, 0.15);
+  border-color: rgba(225, 189, 114, 0.45) !important;
+  box-shadow: 0 20px 50px rgba(58, 13, 28, 0.2), 0 0 35px rgba(201, 164, 92, 0.2) !important;
 }
 
 [data-theme="light"] .rental-cta-overlay {
-  background: radial-gradient(circle at 50% 50%, rgba(201, 164, 92, 0.25) 0%, transparent 65%),
-              linear-gradient(180deg, rgba(25, 7, 14, 0.72) 0%, rgba(35, 12, 22, 0.88) 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(201, 164, 92, 0.22) 0%, transparent 65%),
+              linear-gradient(180deg, rgba(14, 4, 8, 0.86) 0%, rgba(22, 7, 13, 0.96) 100%) !important;
 }
 
 /* ------------------------------------------------------------
@@ -2494,41 +2625,108 @@ select option:checked {
 /* ------------------------------------------------------------
    11. LIGHT THEME REFINEMENTS
    ------------------------------------------------------------ */
-[data-theme="light"] .rental-cta-card-overlay {
-  background: radial-gradient(circle at 50% 50%, rgba(201, 164, 92, 0.25) 0%, transparent 65%),
-              linear-gradient(180deg, rgba(36, 16, 24, 0.85) 0%, rgba(20, 6, 11, 0.94) 100%);
+[data-theme="light"] .rental-cta-overlay {
+  background: radial-gradient(circle at 50% 50%, rgba(201, 164, 92, 0.22) 0%, transparent 65%),
+              linear-gradient(180deg, rgba(14, 4, 8, 0.86) 0%, rgba(22, 7, 13, 0.96) 100%) !important;
 }
 
-[data-theme="light"] .rental-cta-heading,
-[data-theme="light"] .rental-cta-desc,
-[data-theme="light"] .rental-cta-badge {
-  color: #FFFFFF;
+[data-theme="light"] .rental-cta-card--compact .rental-cta-heading,
+[data-theme="light"] .rental-cta-card--compact .rental-cta-desc,
+[data-theme="light"] .rental-cta-card--compact .rental-cta-badge {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .rental-cta-card--compact .rental-cta-eyebrow {
+  color: #F3D99A !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="light"] .rental-cta-card--compact .rental-cta-line {
+  background: #F3D99A !important;
+  box-shadow: 0 0 8px rgba(243, 217, 154, 0.7) !important;
+}
+
+[data-theme="light"] .rental-cta-card--compact .rental-cta-badge svg {
+  color: #F3D99A !important;
 }
 
 [data-theme="light"] .rental-form-input,
-[data-theme="light"] .rental-form-select,
 [data-theme="light"] .rental-form-textarea,
-[data-theme="light"] .rental-widget-select,
 [data-theme="light"] .rental-widget-input {
-  background: #FFFFFF;
-  color: #100B0D;
-  border-color: rgba(160, 98, 42, 0.35);
+  background-color: #FFFFFF !important;
+  color: #100B0D !important;
+  font-weight: 600;
+  border: 1.5px solid rgba(127, 73, 30, 0.40) !important;
+}
+
+[data-theme="light"] .rental-widget-select,
+[data-theme="light"] .rental-form-select {
+  background-color: #FFFFFF !important;
+  color: #100B0D !important;
+  font-weight: 600;
+  border: 1.5px solid rgba(127, 73, 30, 0.40) !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 2L6 6.5L10.5 2' stroke='%237F491E' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: calc(100% - 1.1rem) center !important;
+  background-size: 12px 8px !important;
+  padding-right: 2.75rem !important;
+  cursor: pointer;
+}
+
+[data-theme="light"] .rental-widget-select:focus,
+[data-theme="light"] .rental-widget-input:focus,
+[data-theme="light"] .rental-form-select:focus,
+[data-theme="light"] .rental-form-input:focus {
+  border-color: #7F491E !important;
+  box-shadow: 0 0 14px rgba(127, 73, 30, 0.35) !important;
+  background-color: #FFFFFF !important;
 }
 
 [data-theme="light"] .rental-widget-input[type="date"],
 [data-theme="light"] .rental-form-input[type="date"],
 [data-theme="light"] input[type="date"] {
   color-scheme: light;
-  color: #100B0D;
+  color: #100B0D !important;
+  font-weight: 600;
+}
+
+[data-theme="light"] .rental-widget-input[type="date"]::-webkit-datetime-edit,
+[data-theme="light"] .rental-form-input[type="date"]::-webkit-datetime-edit,
+[data-theme="light"] input[type="date"]::-webkit-datetime-edit {
+  color: #100B0D !important;
 }
 
 [data-theme="light"] .rental-widget-input[type="date"]::-webkit-calendar-picker-indicator,
 [data-theme="light"] .rental-form-input[type="date"]::-webkit-calendar-picker-indicator,
 [data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(0.25) sepia(85%) saturate(400%) hue-rotate(5deg);
-  background-color: rgba(160, 98, 42, 0.12);
-  border: 1.5px solid rgba(160, 98, 42, 0.4);
-  box-shadow: 0 0 8px rgba(160, 98, 42, 0.2);
+  filter: none !important;
+  opacity: 0.85 !important;
+  display: block;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  margin: 0 0.2rem 0 auto;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%237F491E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3Ccircle cx='8' cy='14' r='1' fill='%237F491E'/%3E%3Ccircle cx='12' cy='14' r='1' fill='%237F491E'/%3E%3Ccircle cx='16' cy='14' r='1' fill='%237F491E'/%3E%3Ccircle cx='8' cy='18' r='1' fill='%237F491E'/%3E%3Ccircle cx='12' cy='18' r='1' fill='%237F491E'/%3E%3Ccircle cx='16' cy='18' r='1' fill='%237F491E'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 20px 20px !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .rental-widget-input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="light"] .rental-form-input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1 !important;
+  transform: scale(1.12);
 }
 
 [data-theme="light"] .rental-widget-select option,
@@ -2536,32 +2734,77 @@ select option:checked {
 [data-theme="light"] .rental-select option,
 [data-theme="light"] select option {
   background-color: #FFFFFF !important;
-  color: #1A0810 !important;
+  color: #100B0D !important;
+  font-weight: 500;
 }
 
 [data-theme="light"] .rental-widget-select option:checked,
 [data-theme="light"] .rental-form-select option:checked,
 [data-theme="light"] select option:checked {
-  background-color: #F8EEDD !important;
-  color: #7F491E !important;
+  background-color: #F5E8D3 !important;
+  color: #542A08 !important;
+  font-weight: 700;
+}
+
+[data-theme="light"] .rental-hero-cta-primary,
+[data-theme="light"] .rental-btn--widget {
+  background: linear-gradient(135deg, #8E521F 0%, #6E3B12 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border: 1.5px solid #542A08 !important;
+  box-shadow: 0 8px 24px rgba(110, 59, 18, 0.35) !important;
+}
+
+[data-theme="light"] .rental-hero-cta-primary span,
+[data-theme="light"] .rental-hero-cta-primary svg,
+[data-theme="light"] .rental-btn--widget span,
+[data-theme="light"] .rental-btn--widget svg {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .rental-hero-cta-primary:hover,
+[data-theme="light"] .rental-btn--widget:hover {
+  background: linear-gradient(135deg, #7A4214 0%, #552B0A 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 30px rgba(110, 59, 18, 0.48) !important;
+  transform: translateY(-2px);
 }
 
 [data-theme="light"] .btn-ghost,
 [data-theme="light"] .rental-hero-cta-ghost {
-  background: rgba(255, 255, 255, 0.85);
-  color: #1A0A0F !important;
-  border: 1.5px solid rgba(160, 98, 42, 0.35);
+  background: #FFFFFF !important;
+  color: #120508 !important;
+  border: 2px solid #8E521F !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 18px rgba(110, 59, 18, 0.16) !important;
+}
+
+[data-theme="light"] .btn-ghost span,
+[data-theme="light"] .rental-hero-cta-ghost span {
+  color: #120508 !important;
+}
+
+[data-theme="light"] .btn-ghost svg,
+[data-theme="light"] .rental-hero-cta-ghost svg {
+  color: #8E521F !important;
 }
 
 [data-theme="light"] .btn-ghost:hover,
 [data-theme="light"] .rental-hero-cta-ghost:hover {
-  background: rgba(225, 189, 114, 0.25);
-  border-color: #7F491E;
-  color: #7F491E !important;
+  background: #F8EFE0 !important;
+  border-color: #6E3B12 !important;
+  box-shadow: 0 6px 22px rgba(110, 59, 18, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .btn-ghost:hover span,
+[data-theme="light"] .rental-hero-cta-ghost:hover span,
+[data-theme="light"] .btn-ghost:hover svg,
+[data-theme="light"] .rental-hero-cta-ghost:hover svg {
+  color: #6E3B12 !important;
 }
 
 [data-theme="light"] .rental-label,
-[data-theme="light"] .rental-cta-eyebrow,
 [data-theme="light"] .rental-modal-tag {
   color: #6E3B12;
 }
@@ -2775,23 +3018,67 @@ select option:checked {
 [data-theme="light"] .rental-hero-heading {
   background: linear-gradient(
     135deg,
-    var(--color-text-primary) 0%,
-    var(--color-supportive) 55%,
-    var(--color-light-accent) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    #120509 0%,
+    #290B19 40%,
+    #4A1227 75%,
+    #692708 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.85));
 }
 
 [data-theme="light"] .rental-section-heading {
   background: linear-gradient(
     135deg,
-    var(--color-text-primary) 0%,
-    #8b6414 60%,
-    #c9a45c 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    #120509 0%,
+    #2C0F1B 45%,
+    #6E3B12 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ============================================================
+   LUCIDE SVG ICON ALIGNMENT & SIZING HELPERS
+============================================================ */
+.rental-label-dot,
+.rental-eyebrow-dot,
+.rental-pkg-ribbon-sparkle,
+.rental-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.rental-label-dot svg,
+.rental-eyebrow-dot svg {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+}
+
+.rental-pkg-ribbon-sparkle svg {
+  width: 11px;
+  height: 11px;
+  stroke: currentColor;
+}
+
+.rental-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(201, 164, 92, 0.15);
+  color: var(--rental-gold-1, #C9A45C);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.rental-check svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
 }

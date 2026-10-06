@@ -46,6 +46,7 @@
               <a href="home2.html" class="dropdown-item dropdown-item--active" role="menuitem">Home 2</a>
             </div>
           </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
           <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
           <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
           <li class="nav-item"><a href="services.html" class="nav-link">Service &amp; Parts</a></li>
@@ -70,11 +71,11 @@
           title="Toggle direction">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 6h18M3 12h12M3 18h9" />
-            <path d="M18 9l3 3-3 3" />
+            <path d="M16 3l4 4-4 4M20 7H4" />
+            <path d="M8 21l-4-4 4-4M4 17h16" />
           </svg>
         </button>
-        <a href="#" class="btn btn-primary btn-sm" id="header-book-btn">Book Now</a>
+        <button type="button" class="btn btn-primary btn-sm" id="header-book-btn" data-open-booking-modal="test-drive" aria-haspopup="dialog" aria-controls="cc-booking-modal">Book Now</button>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"
         aria-controls="mobile-menu">
@@ -104,6 +105,7 @@
       <ul class="mobile-nav-list" role="list">
         <li><a href="index.html" class="mobile-nav-link">Home 1</a></li>
         <li><a href="home2.html" class="mobile-nav-link mobile-nav-link--active">Home 2</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
         <li><a href="sales.html" class="mobile-nav-link">Sales</a></li>
         <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
         <li><a href="services.html" class="mobile-nav-link">Service &amp; Parts</a></li>
@@ -111,7 +113,7 @@
       </ul>
     </nav>
     <div class="mobile-menu-footer">
-      <a href="#" class="btn btn-primary mobile-book-btn">Book Now</a>
+      <button type="button" class="btn btn-primary mobile-book-btn" data-open-booking-modal="test-drive" aria-haspopup="dialog" aria-controls="cc-booking-modal">Book Now</button>
     </div>
   </div>
   <div class="mobile-overlay" id="mobile-overlay"></div>
@@ -120,11 +122,12 @@
   <main id="h2-main">
 
     <!-- ============================================================
-         SECTION 1 — PREMIUM HERO BANNER
+         SECTION 1 — FULL-WIDTH GOLF CART SALES & RENTAL HERO
     ============================================================ -->
-    <section class="h2-hero" id="h2-hero" aria-label="Hero section">
+    <section class="h2-hero" id="h2-hero" aria-label="Golf Cart Sales &amp; Rental Showcase">
       <div class="h2-hero-bg" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1920&q=85&auto=format&fit=crop" alt=""
+        <img src="assets/home2-hero-sales-rentals.jpg"
+          alt="Cart Craft Luxury Golf Cart Sales and Rental Fleet Showcase at Resort Clubhouse"
           class="h2-hero-bg-img" loading="eager" fetchpriority="high" />
         <div class="h2-hero-overlay"></div>
       </div>
@@ -136,154 +139,82 @@
       <div class="h2-container h2-hero-inner">
         <div class="h2-hero-content">
           <p class="h2-eyebrow h2-anim-up" style="--d:0.1s">
-            <span class="h2-eyebrow-dot"></span>
-            Redefining Luxury Mobility
+            <span class="h2-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+            Premier Golf Cart Sales &amp; Luxury Fleet Rentals
           </p>
           <h1 class="h2-hero-heading h2-anim-up" style="--d:0.25s">
-            Crafted For<br />
-            <em class="h2-hero-heading-em">Those Who<br />Demand More.</em>
+            Elevate Every Drive.<br />
+            <em class="h2-hero-heading-em">Sales &amp; Fleet Rentals.</em>
           </h1>
           <p class="h2-hero-desc h2-anim-up" style="--d:0.4s">
-            Luxury electric golf carts engineered with precision,<br class="h2-hide-mob" />
-            built for the finest resorts, estates and everyday escapes.
+            Explore our premier showroom collection of bespoke electric golf carts available for acquisition, alongside comprehensive resort, estate, and tournament fleet rentals with white-glove fairway delivery.
           </p>
-          <div class="h2-hero-ctas h2-anim-up" style="--d:0.55s">
+
+          <!-- Dual Service Highlights Strip -->
+          <div class="h2-hero-service-badges h2-anim-up" style="--d:0.5s">
+            <div class="h2-service-badge">
+              <span class="h2-badge-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
+              <div class="h2-badge-text">
+                <strong>Showroom Sales</strong>
+                <span>New &amp; Bespoke Commissions</span>
+              </div>
+            </div>
+            <div class="h2-service-badge-divider" aria-hidden="true"></div>
+            <div class="h2-service-badge">
+              <span class="h2-badge-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></span>
+              <div class="h2-badge-text">
+                <strong>Resort Rentals</strong>
+                <span>Daily, Seasonal &amp; Fleet Hire</span>
+              </div>
+            </div>
+            <div class="h2-service-badge-divider" aria-hidden="true"></div>
+            <div class="h2-service-badge">
+              <span class="h2-badge-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="13" x="1" y="3" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+              <div class="h2-badge-text">
+                <strong>Direct Delivery</strong>
+                <span>Enclosed White-Glove Handover</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Call-to-Action Buttons -->
+          <div class="h2-hero-ctas h2-anim-up" style="--d:0.6s">
             <a href="sales.html" class="btn btn-primary btn-lg h2-hero-cta-primary" id="h2-hero-explore-btn">
-              <span>Explore Collection</span>
+              <span>Explore Sales Inventory</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="#h2-about" class="btn btn-ghost btn-lg h2-hero-cta-ghost" id="h2-hero-about-btn">
-              <span>Our Story</span>
+            <a href="rentals.html" class="btn btn-ghost btn-lg h2-hero-cta-ghost" id="h2-hero-rentals-btn">
+              <span>Book Fleet Rentals</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
             </a>
           </div>
-          <div class="h2-hero-stats h2-anim-up" style="--d:0.7s">
+
+          <!-- Hero Metrics Strip -->
+          <div class="h2-hero-stats h2-anim-up" style="--d:0.75s">
             <div class="h2-stat">
-              <span class="h2-stat-val">98<sup>%</sup></span>
-              <span class="h2-stat-lbl">Client Satisfaction</span>
+              <span class="h2-stat-val">50<sup>+</sup></span>
+              <span class="h2-stat-lbl">Models Available For Sale</span>
             </div>
             <div class="h2-stat-sep" aria-hidden="true"></div>
             <div class="h2-stat">
-              <span class="h2-stat-val">50<sup>+</sup></span>
-              <span class="h2-stat-lbl">Premium Models</span>
+              <span class="h2-stat-val">100<sup>%</sup></span>
+              <span class="h2-stat-lbl">Electric Fleet Rentals</span>
             </div>
             <div class="h2-stat-sep" aria-hidden="true"></div>
             <div class="h2-stat">
               <span class="h2-stat-val">24/7</span>
-              <span class="h2-stat-lbl">Dedicated Support</span>
+              <span class="h2-stat-lbl">Dedicated Concierge</span>
             </div>
           </div>
-        </div>
-        <!-- Redesigned Dual Luxury Showcase Cards -->
-        <div class="h2-hero-dual-stage h2-anim-right" style="--d:0.35s">
-          <div class="h2-stage-ambient-glow" aria-hidden="true"></div>
-
-          <!-- Card 1: Exterior Flagship Edition -->
-          <div class="h2-hero-card h2-hero-card--primary" id="h2-card-exterior">
-            <div class="card-corner tl" aria-hidden="true"></div>
-            <div class="card-corner tr" aria-hidden="true"></div>
-            <div class="card-corner bl" aria-hidden="true"></div>
-            <div class="card-corner br" aria-hidden="true"></div>
-
-            <div class="h2-hero-card-img-wrap">
-              <img src="assets/timeline-bespoke.jpg" alt="Cart Craft Obsidian &amp; Gold Apex Grand Tourer exterior"
-                class="h2-hero-card-img" loading="eager" />
-              <div class="h2-hero-card-badge">
-                <span class="badge-sparkle">&#10022;</span>
-                <span>Flagship Edition 2026</span>
-              </div>
-              <div class="h2-card-spec-pill">
-                <span class="spec-dot"></span>
-                <span>72V AC &bull; 100km Range</span>
-              </div>
-            </div>
-
-            <div class="h2-hero-card-body">
-              <div class="h2-card-meta-row">
-                <span class="h2-card-category">FLAGSHIP EXTERIOR</span>
-                <span class="h2-card-index">01</span>
-              </div>
-              <h3 class="h2-hero-card-title">The Obsidian Apex</h3>
-              <p class="h2-hero-card-sub">Carbon aerodynamic aero-shield with 24K leaf pinstriping and forged monoblock
-                alloys.</p>
-
-              <div class="h2-card-footer">
-                <div class="h2-card-chips">
-                  <span class="h2-mini-chip">Carbon Aero</span>
-                  <span class="h2-mini-chip">Forged 14"</span>
-                </div>
-                <a href="sales.html" class="h2-hero-card-link" id="h2-hero-card-link-1">
-                  <span>Explore Build</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Bespoke Interior Atelier Lounge -->
-          <div class="h2-hero-card h2-hero-card--secondary" id="h2-card-interior">
-            <div class="card-corner tl" aria-hidden="true"></div>
-            <div class="card-corner tr" aria-hidden="true"></div>
-            <div class="card-corner bl" aria-hidden="true"></div>
-            <div class="card-corner br" aria-hidden="true"></div>
-
-            <div class="h2-hero-card-img-wrap">
-              <img src="assets/customization-interior.jpg"
-                alt="Cart Craft bespoke Florentine Napa leather and teak decking interior cabin"
-                class="h2-hero-card-img" loading="eager" />
-              <div class="h2-hero-card-badge h2-badge--atelier">
-                <span class="badge-sparkle">&#10022;</span>
-                <span>Atelier Master Craft</span>
-              </div>
-              <div class="h2-card-spec-pill">
-                <span class="spec-dot"></span>
-                <span>Napa Hide &bull; Yacht Teak</span>
-              </div>
-            </div>
-
-            <div class="h2-hero-card-body">
-              <div class="h2-card-meta-row">
-                <span class="h2-card-category">CABIN CRAFTSMANSHIP</span>
-                <span class="h2-card-index">02</span>
-              </div>
-              <h3 class="h2-hero-card-title">Florentine Lounge</h3>
-              <p class="h2-hero-card-sub">Double diamond-quilted leather seats, 24K gold steering hub, and marine teak
-                decking.</p>
-
-              <div class="h2-card-footer">
-                <div class="h2-card-chips">
-                  <span class="h2-mini-chip">Diamond Hide</span>
-                  <span class="h2-mini-chip">&lt; 36dB Silence</span>
-                </div>
-                <a href="index.html#customization" class="h2-hero-card-link" id="h2-hero-card-link-2">
-                  <span>Tailor Cabin</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Central Floating Certified Seal Badge -->
-          <div class="h2-floating-center-seal" aria-hidden="true">
-            <span class="seal-star">&#10022;</span>
-            <div class="seal-txt">
-              <span class="seal-sub">ATELIER CERTIFIED</span>
-              <span class="seal-main">2026 Commission</span>
-            </div>
-          </div>
-
         </div>
       </div>
       <div class="h2-scroll-cue" aria-hidden="true">
@@ -312,14 +243,14 @@
               <div class="h2-about-img-overlay" aria-hidden="true"></div>
               <!-- Floating Top Tag -->
               <div class="h2-about-floating-tag" aria-hidden="true">
-                <span class="tag-sparkle">✦</span>
+                <span class="tag-sparkle" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
                 <span>ATELIER SPEC 2026</span>
               </div>
             </div>
             <!-- Floating Masterpiece Craft Badge -->
             <div class="h2-about-badge" aria-hidden="true">
               <div class="badge-icon-wrap">
-                <span class="badge-star">&#10022;</span>
+                <span class="badge-star" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
               </div>
               <div class="badge-text-wrap">
                 <span class="h2-about-badge-num">15<sup>+</sup></span>
@@ -331,7 +262,7 @@
           <!-- Content Column -->
           <div class="h2-about-content h2-reveal" style="--ri:1">
             <p class="h2-eyebrow">
-              <span class="h2-eyebrow-dot"></span>
+              <span class="h2-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
               Our Philosophy
             </p>
             <h2 class="h2-section-heading" id="h2-about-heading">
@@ -406,7 +337,7 @@
       <div class="h2-container">
         <div class="h2-section-header h2-reveal">
           <p class="h2-eyebrow h2-eyebrow--center">
-            <span class="h2-eyebrow-dot"></span>
+            <span class="h2-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             What We Offer
           </p>
           <h2 class="h2-section-heading h2-section-heading--center" id="h2-services-heading">
@@ -692,7 +623,7 @@
       <div class="h2-container">
         <div class="h2-section-header h2-reveal">
           <p class="h2-eyebrow h2-eyebrow--center">
-            <span class="h2-eyebrow-dot"></span>
+            <span class="h2-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Captured In Motion
           </p>
           <h2 class="h2-section-heading h2-section-heading--center" id="h2-gallery-heading">
@@ -721,7 +652,7 @@
               <!-- Hover-Only Content Overlay -->
               <div class="h2-gallery-overlay">
                 <div class="h2-gallery-overlay-inner">
-                  <span class="h2-gallery-tag">✦ COMMISSION 2026</span>
+                  <span class="h2-gallery-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>COMMISSION 2026</span>
                   <h3 class="h2-gallery-title">Sunset Fairway Pavilion</h3>
                   <p class="h2-gallery-desc">72V AC Whisper-Drive · Obsidian Apex Edition on travertine marble terrace.
                   </p>
@@ -750,7 +681,7 @@
               <!-- Hover-Only Content Overlay -->
               <div class="h2-gallery-overlay">
                 <div class="h2-gallery-overlay-inner">
-                  <span class="h2-gallery-tag">✦ BESPOKE COCKPIT</span>
+                  <span class="h2-gallery-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>BESPOKE COCKPIT</span>
                   <h3 class="h2-gallery-title">Florentine Lounge</h3>
                   <p class="h2-gallery-desc">Double diamond-quilted hides, 24K gold hub, and marine teak decking.</p>
                   <span class="h2-gallery-action">
@@ -777,7 +708,7 @@
               <!-- Hover-Only Content Overlay -->
               <div class="h2-gallery-overlay">
                 <div class="h2-gallery-overlay-inner">
-                  <span class="h2-gallery-tag">✦ FLAGSHIP SALON</span>
+                  <span class="h2-gallery-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>FLAGSHIP SALON</span>
                   <h3 class="h2-gallery-title">Showroom Noir</h3>
                   <p class="h2-gallery-desc">Bespoke matte obsidian &amp; champagne gold commissions under precision
                     lighting.</p>
@@ -805,7 +736,7 @@
               <!-- Hover-Only Content Overlay -->
               <div class="h2-gallery-overlay">
                 <div class="h2-gallery-overlay-inner">
-                  <span class="h2-gallery-tag">✦ RESORT FLEET</span>
+                  <span class="h2-gallery-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>RESORT FLEET</span>
                   <h3 class="h2-gallery-title">Ocean Fairway Fleet</h3>
                   <p class="h2-gallery-desc">Turnkey fleet operations with whisper telemetry for elite resort
                     sanctuaries.</p>
@@ -833,7 +764,7 @@
               <!-- Hover-Only Content Overlay -->
               <div class="h2-gallery-overlay">
                 <div class="h2-gallery-overlay-inner">
-                  <span class="h2-gallery-tag">✦ PRIVATE ESTATE</span>
+                  <span class="h2-gallery-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>PRIVATE ESTATE</span>
                   <h3 class="h2-gallery-title">Sanctuary Escapes</h3>
                   <p class="h2-gallery-desc">Everyday luxury mobility engineered for gated estates and private club
                     life.</p>
@@ -863,7 +794,7 @@
       <div class="h2-container">
         <div class="h2-section-header h2-section-header--compact h2-reveal">
           <p class="h2-eyebrow h2-eyebrow--center">
-            <span class="h2-eyebrow-dot"></span>
+            <span class="h2-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
             Why Cart Craft
           </p>
           <h2 class="h2-section-heading h2-section-heading--center" id="h2-benefits-heading">
@@ -993,7 +924,7 @@
           <div class="h2-cta-compact-inner">
             <div class="h2-cta-compact-content">
               <p class="h2-eyebrow">
-                <span class="h2-eyebrow-dot"></span>
+                <span class="h2-eyebrow-dot" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span>
                 Private Commissions Open
               </p>
               <h2 class="h2-cta-compact-title" id="h2-cta-heading">
@@ -1202,6 +1133,238 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       UNIVERSAL LUXURY BOOKING FORM CARD MODAL (#cc-booking-modal)
+  ============================================================ -->
+  <div class="cc-booking-modal" id="cc-booking-modal" role="dialog" aria-modal="true" aria-labelledby="cc-modal-title" aria-hidden="true">
+    <div class="cc-modal-backdrop" id="cc-modal-backdrop"></div>
+    <div class="cc-modal-wrapper">
+      <div class="cc-modal-card">
+        <!-- Close Button -->
+        <button type="button" class="cc-modal-close" id="cc-modal-close" aria-label="Close booking modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <!-- Modal Header -->
+        <div class="cc-modal-header">
+          <div class="cc-modal-eyebrow">
+            <span class="cc-modal-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Cart Craft Concierge
+            </span>
+            <span class="cc-modal-status-dot"></span>
+            <span class="cc-modal-status-text">Priority Booking Active</span>
+          </div>
+          <h2 class="cc-modal-title" id="cc-modal-title">Reserve Your Luxury Cart Experience</h2>
+          <p class="cc-modal-sub" id="cc-modal-sub">Select your bespoke interest below for immediate priority scheduling, custom configuration, or VIP resort fleet delivery.</p>
+        </div>
+
+        <!-- Service Category Selector (Pills) -->
+        <div class="cc-booking-categories" role="tablist" aria-label="Booking categories">
+          <button type="button" class="cc-cat-pill is-active" role="tab" aria-selected="true" data-category="test-drive">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span>
+            <span class="cc-cat-label">Private Test Drive</span>
+          </button>
+          <button type="button" class="cc-cat-pill" role="tab" aria-selected="false" data-category="custom-build">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg></span>
+            <span class="cc-cat-label">Bespoke Commission</span>
+          </button>
+          <button type="button" class="cc-cat-pill" role="tab" aria-selected="false" data-category="rental-fleet">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg></span>
+            <span class="cc-cat-label">VIP Event Rental</span>
+          </button>
+          <button type="button" class="cc-cat-pill" role="tab" aria-selected="false" data-category="service-lithium">
+            <span class="cc-cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span class="cc-cat-label">Service &amp; Lithium</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Category Notice Banner -->
+        <div class="cc-category-notice" id="cc-category-notice">
+          <svg class="cc-notice-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span class="cc-notice-text" id="cc-notice-text">Complimentary private estate or country club test drive with our master artisan concierge.</span>
+        </div>
+
+        <!-- Booking Form Card -->
+        <form class="cc-booking-form" id="cc-booking-form" novalidate>
+          <input type="hidden" name="booking_category" id="cc-selected-category-input" value="test-drive" />
+
+          <div class="cc-form-grid">
+            <!-- Full Name -->
+            <div class="cc-form-field">
+              <label for="cc-book-name" class="cc-form-label">Full Name <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input type="text" id="cc-book-name" name="name" class="cc-form-input" placeholder="e.g. Sterling Montgomery" required />
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="cc-form-field">
+              <label for="cc-book-phone" class="cc-form-label">Direct Phone <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <input type="tel" id="cc-book-phone" name="phone" class="cc-form-input" placeholder="+1 (555) 782-9012" required />
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="cc-form-field">
+              <label for="cc-book-email" class="cc-form-label">Email Address <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <input type="email" id="cc-book-email" name="email" class="cc-form-input" placeholder="sterling@private-holdings.com" required />
+              </div>
+            </div>
+
+            <!-- Model / Seating Selection -->
+            <div class="cc-form-field">
+              <label for="cc-book-model" class="cc-form-label">Preferred Cart Configuration <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <select id="cc-book-model" name="model" class="cc-form-select" required>
+                  <option value="4-Passenger Estate Cruiser (Forward-Facing)" selected>4-Passenger Estate Cruiser (Forward-Facing)</option>
+                  <option value="2-Passenger Executive Course Courier">2-Passenger Executive Course Courier</option>
+                  <option value="6-Passenger Grand Touring Limousine">6-Passenger Grand Touring Limousine</option>
+                  <option value="8-Passenger VIP Resort Shuttle">8-Passenger VIP Resort Shuttle</option>
+                  <option value="Bespoke One-of-One Custom Commission">Bespoke One-of-One Custom Commission</option>
+                  <option value="High-Performance Lithium Battery Conversion">High-Performance Lithium Battery Conversion</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Preferred Date -->
+            <div class="cc-form-field">
+              <label for="cc-book-date" class="cc-form-label">Preferred Date <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <input type="date" id="cc-book-date" name="date" class="cc-form-input" required />
+              </div>
+            </div>
+
+            <!-- Preferred Time Window -->
+            <div class="cc-form-field">
+              <label for="cc-book-time" class="cc-form-label">Preferred Time Window <span class="cc-required">*</span></label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <select id="cc-book-time" name="time_slot" class="cc-form-select" required>
+                  <option value="Morning (09:00 AM - 12:00 PM)" selected>Morning (09:00 AM – 12:00 PM)</option>
+                  <option value="Midday (12:00 PM - 03:00 PM)">Midday (12:00 PM – 03:00 PM)</option>
+                  <option value="Afternoon (03:00 PM - 06:00 PM)">Afternoon (03:00 PM – 06:00 PM)</option>
+                  <option value="VIP Private Evening Slot (Upon Request)">VIP Private Evening Slot (Upon Request)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Delivery / Estate Address -->
+            <div class="cc-form-field cc-form-field--full">
+              <label for="cc-book-location" class="cc-form-label">Estate, Country Club, or Delivery Destination</label>
+              <div class="cc-input-wrapper">
+                <svg class="cc-field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <input type="text" id="cc-book-location" name="location" class="cc-form-input" placeholder="e.g. Augusta Pines Golf Club / Private Estate, Naples FL" />
+              </div>
+            </div>
+
+            <!-- Notes & Bespoke Desires -->
+            <div class="cc-form-field cc-form-field--full">
+              <label for="cc-book-notes" class="cc-form-label">Bespoke Specifications &amp; Special Requests</label>
+              <textarea id="cc-book-notes" name="notes" class="cc-form-textarea" rows="2" placeholder="Tell us your preferences: bespoke body color, diamond-stitch marine leather, sound bar, solar roof, or event fleet requirements..."></textarea>
+            </div>
+
+            <!-- VIP Concierge Checkboxes -->
+            <div class="cc-form-field cc-form-field--full">
+              <div class="cc-checkbox-group">
+                <label class="cc-checkbox-label">
+                  <input type="checkbox" id="cc-opt-trailer" name="trailer_delivery" class="cc-checkbox-input" checked />
+                  <span class="cc-checkbox-custom"></span>
+                  <span class="cc-checkbox-text">Request Enclosed White-Glove Trailer Delivery to my property</span>
+                </label>
+                <label class="cc-checkbox-label">
+                  <input type="checkbox" id="cc-opt-swatches" name="sample_kit" class="cc-checkbox-input" checked />
+                  <span class="cc-checkbox-custom"></span>
+                  <span class="cc-checkbox-text">Bring physical leather swatch kit and rim finish samples to consultation</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button & Trust Bar -->
+          <div class="cc-form-footer">
+            <button type="submit" class="btn btn-primary cc-btn-submit" id="cc-submit-booking-btn">
+              <span>Confirm VIP Booking Request</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="cc-form-trust">
+              <span class="cc-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 256-Bit SSL Encrypted</span>
+              <span class="cc-trust-sep">•</span>
+              <span class="cc-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Concierge Response &lt; 2 Hours</span>
+              <span class="cc-trust-sep">•</span>
+              <span class="cc-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Zero Commitment</span>
+            </div>
+          </div>
+        </form>
+
+        <!-- Confirmation / Success Card (Initially Hidden) -->
+        <div class="cc-booking-success" id="cc-booking-success" style="display: none;" aria-live="polite">
+          <div class="cc-success-badge-wrapper">
+            <div class="cc-success-badge">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="cc-success-rings"></div>
+          </div>
+
+          <span class="cc-success-eyebrow">Reservation Request Registered</span>
+          <h3 class="cc-success-title">Your Cart Craft Experience is Reserved</h3>
+          <p class="cc-success-desc">A senior client concierge has received your request and is preparing your personalized itinerary and vehicle allocation.</p>
+
+          <!-- VIP Ticket Card -->
+          <div class="cc-vip-ticket">
+            <div class="cc-ticket-header">
+              <span class="cc-ticket-brand">CART CRAFT ATELIER</span>
+              <span class="cc-ticket-code" id="cc-ticket-code">CC-VIP-84920</span>
+            </div>
+            <div class="cc-ticket-body">
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Guest</span>
+                <span class="cc-ticket-value" id="cc-ticket-name">Harrison Vance</span>
+              </div>
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Category</span>
+                <span class="cc-ticket-value" id="cc-ticket-category">Private Test Drive</span>
+              </div>
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Vehicle</span>
+                <span class="cc-ticket-value" id="cc-ticket-model">4-Passenger Estate Cruiser</span>
+              </div>
+              <div class="cc-ticket-row">
+                <span class="cc-ticket-label">Scheduled Date</span>
+                <span class="cc-ticket-value" id="cc-ticket-datetime">Tomorrow • Morning Window</span>
+              </div>
+            </div>
+            <div class="cc-ticket-footer">
+              <span class="cc-ticket-status"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg> Priority Confirmed</span>
+              <span class="cc-ticket-hint">Concierge will call within 2 hours</span>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="cc-success-actions">
+            <button type="button" class="btn btn-secondary cc-btn-calendar" id="cc-btn-calendar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Add to Calendar (.ics)</span>
+            </button>
+            <button type="button" class="btn btn-primary" id="cc-btn-done">
+              <span>Return to Cart Craft</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <script src="index.js"></script>
   <script src="home2.js"></script>

@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Cart Craft — Coming Soon Page Stylesheet
    coming-soon.css — Recreating the Screenshot Layout & Aesthetics
    ============================================================ */
@@ -337,21 +337,47 @@ html, body {
   margin-bottom: 0.6rem;
 }
 
+.cs-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
 .cs-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
   font-family: var(--cs-font-body);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--cs-text-primary);
-  background: var(--cs-card-bg);
-  border: 1px solid var(--cs-card-border);
-  padding: 0.45rem 1.15rem;
-  border-radius: 9999px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  color: #C9A45C;
+  background: rgba(201, 164, 92, 0.08);
+  border: 1px solid rgba(201, 164, 92, 0.32);
+  padding: 6px 16px;
+  border-radius: 999px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.cs-badge:hover {
+  border-color: rgba(201, 164, 92, 0.55);
+  background: rgba(201, 164, 92, 0.14);
+  transform: translateY(-1px);
+}
+
+.cs-pill-sparkle {
+  color: #E1BD72;
+  font-size: 0.78rem;
+  line-height: 1;
+  display: inline-block;
 }
 
 .cs-badge-icon {
@@ -508,27 +534,29 @@ html, body {
 }
 
 .cs-notify-btn {
-  background: var(--cs-btn-bg);
-  color: var(--cs-btn-text);
-  border: none;
+  background: linear-gradient(135deg, #E1BD72 0%, #D4AA55 50%, #C9A45C 100%);
+  background-color: #DEBA6F;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: var(--cs-font-body);
   font-size: 0.92rem;
   font-weight: 700;
-  padding: 0.75rem 1.6rem;
-  border-radius: 9999px;
+  padding: 0.85rem 1.85rem;
+  border-radius: 10px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   white-space: nowrap;
   transition: all 0.25s var(--cs-transition);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 14px rgba(222, 186, 111, 0.32);
 }
 
 .cs-notify-btn:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.08);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 6px 22px rgba(222, 186, 111, 0.48);
+  color: #FFFFFF !important;
 }
 
 .cs-btn-arrow {

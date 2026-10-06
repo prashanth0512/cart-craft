@@ -52,22 +52,26 @@
     const current = root.getAttribute('dir') || 'ltr';
     const next = current === 'ltr' ? 'rtl' : 'ltr';
 
-    // SAFETY: On desktop, ensure mobile menu is fully closed before switching direction.
-    // Toggling dir on <html> can cause a brief reflow that triggers mobile menu visibility.
-    if (window.innerWidth > 1024) {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const overlay    = document.getElementById('mobile-overlay');
-      const hamburger  = document.getElementById('hamburger');
-      if (mobileMenu)  { mobileMenu.classList.remove('is-open'); }
-      if (overlay)     { overlay.classList.remove('is-open'); }
-      if (hamburger)   {
-        hamburger.classList.remove('is-open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-      document.body.style.overflow = '';
+    // Immediately close any open mobile menu and reset hamburger state
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay    = document.getElementById('mobile-overlay');
+    const hamburger  = document.getElementById('hamburger');
+    if (mobileMenu)  { mobileMenu.classList.remove('is-open'); }
+    if (overlay)     { overlay.classList.remove('is-open'); }
+    if (hamburger)   {
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
     }
+    document.body.style.overflow = '';
 
+    // Disable transitions during direction switch to eliminate any reflow/sliding glitch
+    root.classList.add('no-transitions');
     root.setAttribute('dir', next);
+    void root.offsetHeight; // force synchronous layout computation without transitions
+    requestAnimationFrame(() => {
+      root.classList.remove('no-transitions');
+    });
+
     localStorage.setItem(STORAGE_KEY, next);
     btn.setAttribute('aria-label', `Switch to ${current === 'rtl' ? 'LTR' : 'RTL'} direction`);
   });
@@ -324,7 +328,7 @@
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       // Close mobile menu on resize to desktop
-      if (window.innerWidth > 1024) {
+      if (window.innerWidth > 900) {
         const mobileMenu = document.getElementById('mobile-menu');
         const overlay    = document.getElementById('mobile-overlay');
         const hamburger  = document.getElementById('hamburger');
@@ -646,4 +650,336 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('%cCart Craft — Premium Golf Cart Website', 'color:#9B9AE8;font-size:14px;font-weight:700;');
   console.log('%cBespoke Hero Stage & Sticker Module Initialized.', 'color:#C9A45C;font-size:11px;');
 });
+
+
+/* ============================================================
+   14. UNIVERSAL CART CRAFT BOOKING FORM CARD MODAL
+   ============================================================ */
+(function initBookingModal() {
+  const modal = document.getElementById('cc-booking-modal');
+  if (!modal) return;
+
+  const backdrop = document.getElementById('cc-modal-backdrop');
+  const closeBtn = document.getElementById('cc-modal-close');
+  const bookingForm = document.getElementById('cc-booking-form');
+  const successView = document.getElementById('cc-booking-success');
+  const doneBtn = document.getElementById('cc-btn-done');
+  const calendarBtn = document.getElementById('cc-btn-calendar');
+
+  const categoryPills = modal.querySelectorAll('.cc-cat-pill');
+  const categoryNoticeText = document.getElementById('cc-notice-text');
+  const categoryHiddenInput = document.getElementById('cc-selected-category-input');
+  const modelSelect = document.getElementById('cc-book-model');
+  const dateInput = document.getElementById('cc-book-date');
+
+  // Ticket elements
+  const ticketCode = document.getElementById('cc-ticket-code');
+  const ticketName = document.getElementById('cc-ticket-name');
+  const ticketCategory = document.getElementById('cc-ticket-category');
+  const ticketModel = document.getElementById('cc-ticket-model');
+  const ticketDateTime = document.getElementById('cc-ticket-datetime');
+
+  // Stored state for calendar export
+  let lastBookingData = null;
+
+  // Initialize minimum date to tomorrow
+  if (dateInput) {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const yyyy = tomorrow.getFullYear();
+    const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+    const dd = String(tomorrow.getDate()).padStart(2, '0');
+    const tomorrowStr = `${yyyy}-${mm}-${dd}`;
+    dateInput.min = tomorrowStr;
+    dateInput.value = tomorrowStr;
+  }
+
+  // Category Configuration
+  const categoryConfigs = {
+    'test-drive': {
+      label: 'Private Test Drive',
+      notice: 'Complimentary private estate or country club test drive with our master artisan concierge.',
+      suggestedModel: '4-Passenger Estate Cruiser (Forward-Facing)'
+    },
+    'custom-build': {
+      label: 'Bespoke Commission',
+      notice: 'Bespoke architectural tailoring: custom leather swatches, chassis colors, and lithium power options.',
+      suggestedModel: 'Bespoke One-of-One Custom Commission'
+    },
+    'rental-fleet': {
+      label: 'VIP Event Rental',
+      notice: 'Concierge event delivery, multi-cart tournament fleet coordination, and 24/7 on-site support.',
+      suggestedModel: '6-Passenger Grand Touring Limousine'
+    },
+    'service-lithium': {
+      label: 'Service & Lithium',
+      notice: 'White-glove enclosed trailer pickup, 25-point inspection, and certified lithium conversions.',
+      suggestedModel: 'High-Performance Lithium Battery Conversion'
+    }
+  };
+
+  const selectCategory = (catKey) => {
+    const config = categoryConfigs[catKey] || categoryConfigs['test-drive'];
+
+    categoryPills.forEach(pill => {
+      const isMatch = pill.getAttribute('data-category') === catKey;
+      pill.classList.toggle('is-active', isMatch);
+      pill.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+    });
+
+    if (categoryHiddenInput) categoryHiddenInput.value = catKey;
+    if (categoryNoticeText) categoryNoticeText.textContent = config.notice;
+
+    // Auto-select corresponding model if available
+    if (modelSelect && config.suggestedModel) {
+      for (let i = 0; i < modelSelect.options.length; i++) {
+        if (modelSelect.options[i].value === config.suggestedModel) {
+          modelSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  };
+
+  categoryPills.forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      e.preventDefault();
+      const catKey = pill.getAttribute('data-category');
+      if (catKey) selectCategory(catKey);
+    });
+  });
+
+  // Track trigger element to restore focus
+  let lastActiveTrigger = null;
+
+  const openModal = (triggerElement, categoryToPreselect) => {
+    lastActiveTrigger = triggerElement || document.activeElement;
+
+    // Safety: Close mobile menu if currently open
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-overlay');
+    const hamburger = document.getElementById('hamburger');
+    if (mobileMenu && mobileMenu.classList.contains('is-open')) {
+      mobileMenu.classList.remove('is-open');
+      if (overlay) overlay.classList.remove('is-open');
+      if (hamburger) {
+        hamburger.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if (categoryToPreselect && categoryConfigs[categoryToPreselect]) {
+      selectCategory(categoryToPreselect);
+    }
+
+    // Reset view
+    if (bookingForm && successView) {
+      bookingForm.style.display = 'block';
+      successView.style.display = 'none';
+    }
+
+    modal.classList.add('is-active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    // Focus first input field
+    const nameInput = document.getElementById('cc-book-name');
+    if (nameInput) {
+      setTimeout(() => nameInput.focus(), 120);
+    }
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('is-active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+
+    if (lastActiveTrigger && typeof lastActiveTrigger.focus === 'function') {
+      lastActiveTrigger.focus();
+    }
+  };
+
+  // Attach triggers
+  const triggers = document.querySelectorAll('[data-open-booking-modal], #header-book-btn, .mobile-book-btn');
+  triggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const preselected = btn.getAttribute('data-open-booking-modal') || btn.getAttribute('data-category');
+      openModal(btn, preselected);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  // Close on Escape & Tab Focus Trap
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('is-active')) return;
+
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+
+    if (e.key === 'Tab') {
+      const focusables = Array.from(modal.querySelectorAll(
+        'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(el => el.offsetParent !== null);
+
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  // Handle Form Submission
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Collect form values
+      const nameVal = (document.getElementById('cc-book-name')?.value || '').trim();
+      const phoneVal = (document.getElementById('cc-book-phone')?.value || '').trim();
+      const emailVal = (document.getElementById('cc-book-email')?.value || '').trim();
+      const modelVal = document.getElementById('cc-book-model')?.value || '4-Passenger Estate Cruiser';
+      const dateVal = document.getElementById('cc-book-date')?.value || '';
+      const timeVal = document.getElementById('cc-book-time')?.value || 'Morning Window';
+      const locationVal = (document.getElementById('cc-book-location')?.value || '').trim() || 'Client Residence / Country Club';
+      const currentCatKey = categoryHiddenInput?.value || 'test-drive';
+      const currentCatLabel = categoryConfigs[currentCatKey]?.label || 'VIP Experience';
+
+      if (!nameVal || !phoneVal || !emailVal) {
+        alert('Please provide your name, phone number, and email address.');
+        return;
+      }
+
+      // Generate realistic VIP reference code
+      const randomCode = 'CC-VIP-' + Math.floor(10000 + Math.random() * 90000);
+
+      // Populate Ticket Card
+      if (ticketCode) ticketCode.textContent = randomCode;
+      if (ticketName) ticketName.textContent = nameVal;
+      if (ticketCategory) ticketCategory.textContent = currentCatLabel;
+      if (ticketModel) ticketModel.textContent = modelVal;
+
+      let formattedDate = dateVal;
+      if (dateVal) {
+        try {
+          const parts = dateVal.split('-');
+          const dObj = new Date(parts[0], parts[1] - 1, parts[2]);
+          formattedDate = dObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        } catch (_) {}
+      }
+      if (ticketDateTime) {
+        ticketDateTime.textContent = `${formattedDate || 'Scheduled Date'} • ${timeVal.split('(')[0].trim() || 'Selected Window'}`;
+      }
+
+      // Store booking for Calendar ICS download
+      lastBookingData = {
+        code: randomCode,
+        name: nameVal,
+        category: currentCatLabel,
+        model: modelVal,
+        date: dateVal,
+        time: timeVal,
+        location: locationVal,
+        email: emailVal
+      };
+
+      // Transition views
+      bookingForm.style.display = 'none';
+      if (successView) {
+        successView.style.display = 'block';
+      }
+
+      // Scroll modal card to top
+      const card = modal.querySelector('.cc-modal-card');
+      if (card) card.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Done button
+  if (doneBtn) {
+    doneBtn.addEventListener('click', () => {
+      closeModal();
+      if (bookingForm) {
+        bookingForm.reset();
+        // re-initialize tomorrow date
+        if (dateInput) {
+          const today = new Date();
+          const tomorrow = new Date(today);
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          const yyyy = tomorrow.getFullYear();
+          const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+          const dd = String(tomorrow.getDate()).padStart(2, '0');
+          dateInput.value = `${yyyy}-${mm}-${dd}`;
+        }
+      }
+    });
+  }
+
+  // Add to Calendar (.ics file generation)
+  if (calendarBtn) {
+    calendarBtn.addEventListener('click', () => {
+      if (!lastBookingData || !lastBookingData.date) {
+        alert('Your reservation has been confirmed. An email calendar invite will be sent.');
+        return;
+      }
+
+      const dateClean = lastBookingData.date.replace(/-/g, '');
+      const icsContent = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Cart Craft Luxury Golf Carts//VIP Booking//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        `UID:cartcraft-${lastBookingData.code}@cartcraft.com`,
+        `DTSTAMP:${dateClean}T090000Z`,
+        `DTSTART:${dateClean}T100000Z`,
+        `DTEND:${dateClean}T120000Z`,
+        `SUMMARY:Cart Craft VIP Consultation — ${lastBookingData.category}`,
+        `DESCRIPTION:Cart Craft VIP reservation reference: ${lastBookingData.code}\\nVehicle: ${lastBookingData.model}\\nTime Window: ${lastBookingData.time}\\nConcierge inquiries: concierge@cartcraft.com`,
+        `LOCATION:${lastBookingData.location.replace(/,/g, '\\,')}`,
+        'STATUS:CONFIRMED',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', `CartCraft-VIP-${lastBookingData.code}.ics`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+
+      calendarBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Calendar File Saved!</span>
+      `;
+      setTimeout(() => {
+        calendarBtn.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Add to Calendar (.ics)</span>
+        `;
+      }, 3000);
+    });
+  }
+
+  // Expose global helper if needed
+  window.openCartCraftBookingModal = (category) => openModal(null, category);
+})();
+
 

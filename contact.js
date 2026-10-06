@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Cart Craft — Luxury Golf Cart Contact Page
  * contact.js — FAQ accordion, contact form validation & ticket generation, and scroll reveals
  */
@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
      6. HERO VIDEO PLAYBACK CONTROLLER
      ============================================================ */
   const heroVideo = document.getElementById('contact-hero-video');
-  const videoToggle = document.getElementById('cnt-video-toggle');
 
   if (heroVideo) {
     heroVideo.muted = true;
@@ -236,28 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     startVideo();
-
-    if (videoToggle) {
-      const pauseIcon = videoToggle.querySelector('.cnt-video-icon-pause');
-      const playIcon = videoToggle.querySelector('.cnt-video-icon-play');
-      const txtSpan = videoToggle.querySelector('.cnt-video-txt');
-
-      videoToggle.addEventListener('click', () => {
-        if (heroVideo.paused) {
-          heroVideo.play();
-          if (pauseIcon) pauseIcon.style.display = 'inline-block';
-          if (playIcon) playIcon.style.display = 'none';
-          if (txtSpan) txtSpan.textContent = 'Atelier Film';
-          videoToggle.setAttribute('aria-label', 'Pause background video');
-        } else {
-          heroVideo.pause();
-          if (pauseIcon) pauseIcon.style.display = 'none';
-          if (playIcon) playIcon.style.display = 'inline-block';
-          if (txtSpan) txtSpan.textContent = 'Paused';
-          videoToggle.setAttribute('aria-label', 'Play background video');
-        }
-      });
-    }
   }
 
 });

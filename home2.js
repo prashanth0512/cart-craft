@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Cart Craft — Home 2 JavaScript Module
  * Interactive features, scroll reveals, stats counters, and 3D card tilt
  */
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
      ============================================================ */
   const initCounters = () => {
     const counterElements = [
-      { el: document.querySelector('.h2-stat:nth-child(1) .h2-stat-val'), target: 98, suffix: '<sup>%</sup>' },
-      { el: document.querySelector('.h2-stat:nth-child(3) .h2-stat-val'), target: 50, suffix: '<sup>+</sup>' },
+      { el: document.querySelector('.h2-stat:nth-child(1) .h2-stat-val'), target: 50, suffix: '<sup>+</sup>' },
+      { el: document.querySelector('.h2-stat:nth-child(3) .h2-stat-val'), target: 100, suffix: '<sup>%</sup>' },
       { el: document.querySelector('.h2-about-badge-num'), target: 15, suffix: '<sup>+</sup>' }
     ];
 
