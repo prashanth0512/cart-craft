@@ -750,6 +750,18 @@
   align-items: center;
 }
 
+.cnt-form-input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .cnt-form-input:focus,
 .cnt-form-select:focus,
 .cnt-form-textarea:focus {
@@ -761,7 +773,8 @@
 
 .cnt-form-input::placeholder,
 .cnt-form-textarea::placeholder {
-  color: rgba(201, 190, 192, 0.45);
+  color: rgba(243, 217, 154, 0.65);
+  opacity: 1;
 }
 
 .cnt-error-msg {
@@ -1116,25 +1129,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(36, 16, 24, 0.8);
-  border: 1px solid rgba(201, 164, 92, 0.2);
-  padding: 0.5rem 0.9rem;
+  background: rgba(24, 8, 16, 0.88);
+  border: 1px solid rgba(225, 189, 114, 0.4);
+  padding: 0.55rem 1rem;
   border-radius: var(--cnt-radius-sm);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .cnt-hud-coords {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   font-family: var(--cnt-font-body);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: var(--color-text-secondary);
+  color: #FAF7F2;
+  letter-spacing: 0.03em;
 }
 
 .cnt-hud-coords svg {
-  color: var(--cnt-gold-1);
+  color: #F3D99A;
+  flex-shrink: 0;
 }
 
 .cnt-hud-badge {
@@ -1143,7 +1160,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--cnt-gold-1);
+  color: #F3D99A;
 }
 
 /* Map Actions Strip */
@@ -2390,23 +2407,93 @@
   color: #382428 !important;
 }
 
+[data-theme="light"] .cnt-form-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(142, 82, 31, 0.25) !important;
+  box-shadow: 0 16px 44px rgba(78, 38, 14, 0.08) !important;
+}
+
 [data-theme="light"] .cnt-form-input,
 [data-theme="light"] .cnt-form-select,
 [data-theme="light"] .cnt-form-textarea {
-  background: #FFFDF9;
-  color: #1A090E;
-  border-color: rgba(201, 164, 92, 0.36);
+  background: #FFFFFF !important;
+  color: #100B0D !important;
+  font-weight: 600 !important;
+  border: 1.5px solid rgba(142, 82, 31, 0.38) !important;
 }
 
 [data-theme="light"] .cnt-form-input:focus,
 [data-theme="light"] .cnt-form-select:focus,
 [data-theme="light"] .cnt-form-textarea:focus {
-  background: #FFFFFF;
+  background: #FFFFFF !important;
+  border-color: #8F5218 !important;
+  box-shadow: 0 0 14px rgba(143, 82, 24, 0.25) !important;
+  color: #100B0D !important;
+}
+
+[data-theme="light"] .cnt-form-input::placeholder,
+[data-theme="light"] .cnt-form-textarea::placeholder {
+  color: #6E565C !important;
+  opacity: 1 !important;
+  font-weight: 500;
+}
+
+[data-theme="light"] .cnt-form-input[type="date"] {
+  color-scheme: light;
+  color: #100B0D !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .cnt-form-input[type="date"]::-webkit-datetime-edit {
+  color: #100B0D !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .cnt-field-icon {
+  color: #8F5218 !important;
 }
 
 [data-theme="light"] .cnt-form-select option {
-  background-color: #FFFFFF;
-  color: #1A090E;
+  background-color: #FFFFFF !important;
+  color: #100B0D !important;
+  font-weight: 500;
+}
+
+[data-theme="light"] .cnt-form-select option:checked {
+  background-color: #F5E8D3 !important;
+  color: #542A08 !important;
+  font-weight: 700;
+}
+
+[data-theme="light"] .cnt-form-label {
+  color: #14060B !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .cnt-req {
+  color: #9C521E !important;
+  font-weight: 800;
+}
+
+[data-theme="light"] .cnt-privacy-notice {
+  color: #3D272C !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="light"] .cnt-form-tag {
+  color: #8F5218 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .cnt-form-heading {
+  color: #100B0D !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .cnt-form-sub {
+  color: #2E1B20 !important;
+  font-weight: 500 !important;
+  line-height: 1.65;
 }
 
 [data-theme="light"] .cnt-floating-card {
@@ -2421,16 +2508,24 @@
   background: #EDE4D8;
 }
 
-[data-theme="light"] .cnt-form-tag {
-  color: #8F5218;
+[data-theme="light"] .cnt-map-hud {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid rgba(142, 82, 31, 0.35) !important;
+  box-shadow: 0 4px 18px rgba(78, 38, 14, 0.12) !important;
 }
 
-[data-theme="light"] .cnt-form-heading {
-  color: #100B0D;
+[data-theme="light"] .cnt-hud-coords {
+  color: #100B0D !important;
+  font-weight: 700 !important;
 }
 
-[data-theme="light"] .cnt-form-sub {
-  color: #5C4549;
+[data-theme="light"] .cnt-hud-coords svg {
+  color: #8F5218 !important;
+}
+
+[data-theme="light"] .cnt-hud-badge {
+  color: #8F5218 !important;
+  font-weight: 800 !important;
 }
 
 [data-theme="light"] .cnt-map-address-block strong,
